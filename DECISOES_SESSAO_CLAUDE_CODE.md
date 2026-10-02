@@ -111,10 +111,56 @@ Derivados de `Prompt de geração - T1 (LLM sem revisão).md`, mantendo a especi
 python3 avaliacao/scripts/consolidar.py      # após as quatro condições
 ```
 
-## 7. Pendências
+## 7. Protocolo de execução
 
-- Definir e registrar modelo gerador (versão + esforço) e modelo verificador (leve).
-- Definir limites numéricos por etapa (geração; verificação + correção) e o formato de registro do esforço (`avaliacao/registros/esforco.csv`).
-- Definir os diretórios de geração fora deste repositório e o procedimento de congelamento/cópia dos artefatos (identificador de versão por etapa).
-- T3/T4: verificador e corretor em sessões novas e isoladas (não subagentes na mesma sessão).
-- Atualizar no documento do TCC: versão efetiva do Playwright (suíte local 1.49.1; global 1.63.0), MongoDB 7.0.43, SonarQube 26.9.0.129388 em modo MQR.
+### 7.1 Modelos
+
+| Papel | Etapas | Modelo | Esforço |
+|---|---|---|---|
+| Gerador | T1, T2 | Claude **Sonnet 5.5** (`claude-sonnet-5-5`) | low |
+| Verificador | T3, T4 (prompt 03) | Claude **Opus 5.5** (`claude-opus-5-5`) | low |
+| Corretor | T3, T4 (prompt 04) | Claude **Sonnet 5.5** (`claude-sonnet-5-5`), o mesmo gerador | low |
+
+- Justificativa: o Sonnet 5.5 com esforço baixo dá qualidade consistente com respostas mais rápidas. O corretor é o próprio gerador, como prevê o documento ("O modelo gerador será responsável por aplicar os pareceres").
+- Executados via Claude Code. Antes de cada sessão, registrar a versão do Claude Code, o modelo e o esforço efetivos.
+- ⚠ Ajustar no TCC: o documento descreve o verificador como "de configuração leve". Com o Opus 5.5, a leveza vem do esforço *low*, não do porte do modelo; o texto deve dizer isso.
+
+### 7.2 Sem limites de execução
+
+- Não haverá teto de duração, tokens ou passos em nenhuma etapa; cada modelo decide quando concluir. Os prompts não mencionam limites.
+- O consumo efetivo continua registrado por etapa, como dado complementar (`avaliacao/registros/esforco.csv`), sem ser usado como critério.
+- ⚠ Ajustar no TCC: o documento diz que "os limites de duração, tokens ou passos [...] serão definidos numericamente e registrados", e que T1/T2 e T3/T4 teriam tetos iguais. Esse trecho deve passar a dizer que as execuções não terão limites, que o consumo será observado e reportado, e que, por isso, a comparação considera esforço observado, não esforço controlado.
+
+### 7.3 Isolamento do diretório de geração
+
+- Cada geração e cada correção roda num diretório dedicado, **fora deste repositório**. Os agentes não devem ter motivo nem meio de ler `avaliacao/` (suíte, configuração do Sonar, resultados) nem outras condições.
+- **A definir** (proposta para validar):
+  - diretórios como `~/tcc-execucoes/T1`…`T4`, sem relação de pasta com o repositório do TCC;
+  - em cada diretório, uma regra de permissão do Claude Code negando leitura e execução fora dele (por exemplo, `deny` para `Read(~/Library/Mobile Documents/**)` e `Read(~/tcc-execucoes/<outras condições>/**)`), sem nenhum texto que aponte para a avaliação;
+  - **auditoria de fuga**: depois de cada sessão, um script percorre o transcript da sessão (JSONL) e lista toda chamada de ferramenta (`Read`, `Bash`, `Glob`, `Grep` etc.) que cite um caminho fora do diretório da condição. Toda ocorrência é registrada como desvio de protocolo.
+
+### 7.4 Congelamento por etapa (git)
+
+- Cada artefato tem seu próprio repositório git. Ao fim de cada etapa: commit + tag, sem nenhuma alteração manual.
+  - T1: `T1-final`. T2: `T2-final`.
+  - T3: cópia congelada de `T1-final` (clone a partir da tag) → verificador → tag `T3-parecer` → corretor → `T3-final`.
+  - T4: cópia congelada de `T2-final` → verificador → `T4-parecer` → corretor → `T4-final`.
+- T3 e T4 não geram nada do zero: são uma rodada adicional sobre a base congelada, o que economiza tempo e tokens. T1 e T2 continuam intocados para comparação pareada.
+- O hash do commit de cada tag é registrado como "identificador de versão" exigido pelo documento.
+
+### 7.5 Isolamento de sessão e execução sequencial
+
+- Uma sessão nova do Claude Code por etapa (geração, verificação, correção), sem histórico e sem subagentes compartilhados. Execução **sequencial**: uma condição e uma etapa por vez.
+- Ciclo de avaliação por condição: MongoDB limpo → Sonar + Playwright → saídas salvas em `avaliacao/resultados/Tn/` → **limpeza do MongoDB** (derrubar o contêiner e descartar os dados) antes da próxima condição.
+- ⚠ Implementar: hoje o `executar.sh` só limpa o MongoDB no **início**. Falta a limpeza ao final de cada rodada.
+
+## 8. Pendências
+
+- Definir e validar o mecanismo de isolamento de diretório e o script de auditoria de fuga (7.3).
+- Implementar a limpeza do MongoDB ao final de cada rodada (7.5).
+- Registrar versões do Claude Code, modelos e esforço efetivos no início da coleta.
+- Atualizar no documento do TCC:
+  - versões efetivas (Playwright: suíte local 1.49.1, global 1.63.0; MongoDB 7.0.43; SonarQube 26.9.0.129388 em modo MQR);
+  - os modelos e o esforço (7.1);
+  - a remoção dos limites de execução (7.2);
+  - o verificador "leve" (7.1).
