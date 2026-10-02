@@ -127,3 +127,10 @@ As decisões da fase de preparação já foram incorporadas ao documento do TCC.
   - arquivos `tool-results` gravados pelo próprio Claude Code na pasta da sessão (saídas longas) não contam mais como fuga; a única ocorrência foi uma dessas;
   - a auditoria passou a alertar quando o modelo do transcript difere do exigido para a etapa.
 - **Orientação ao pesquisador:** não usar `/model` nem `/effort` nas sessões; apenas conferir com `/status`.
+
+### 2026-10-02 — T4, verificação (2ª tentativa, válida)
+
+- **Sessão:** Opus 5.5, esforço low, conforme o transcript. O pesquisador usou `/model` (Opus 5.5) e `/effort` (low) na sessão; os valores coincidem com o protocolo.
+- `T4-parecer` = `dd7aa7e5c30cf58ff1a827f21e9c93288d47551a`.
+- **Esforço:** 2,1 min, 244.779 tokens, 1 interação. Auditoria: 0 desvios.
+- **Apontamentos:** 27 (C 4, D 6, E 8, N 5, R 4).
