@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Build artifacts
+dist/
+build/
+
+# macOS
+.DS_Store
+
+# Env
+.env

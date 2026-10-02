@@ -1,0 +1,2062 @@
+[
+  {
+    "project": "Haiku_4.5_high",
+    "files": 24,
+    "parseFail": 0,
+    "loc": 1845,
+    "sloc": 1639,
+    "comment": 8,
+    "blank": 198,
+    "commentDensityPct": 0.4857316332726169,
+    "functions": 72,
+    "ccTotal": 165,
+    "ccAvg": 2.2916666666666665,
+    "ccMax": 9,
+    "ccOver10": 0,
+    "cogTotal": 135,
+    "cogAvg": 1.875,
+    "cogMax": 21,
+    "cogOver15": 1,
+    "halsteadVolume": 62532.52107781044,
+    "miNormAvg": 44.022369974604295,
+    "miNormWeighted": 27.096927278259223,
+    "dupLines": 79,
+    "dupPct": 4.8200122025625385,
+    "fileDetail": [
+      {
+        "file": "backend/src/config/database.js",
+        "cc": 4,
+        "cog": 3,
+        "total": 25,
+        "blank": 3,
+        "comment": 0,
+        "sloc": 22
+      },
+      {
+        "file": "backend/src/controllers/authController.js",
+        "cc": 7,
+        "cog": 6,
+        "total": 32,
+        "blank": 7,
+        "comment": 0,
+        "sloc": 25
+      },
+      {
+        "file": "backend/src/controllers/productController.js",
+        "cc": 24,
+        "cog": 21,
+        "total": 147,
+        "blank": 24,
+        "comment": 0,
+        "sloc": 123
+      },
+      {
+        "file": "backend/src/controllers/storeController.js",
+        "cc": 9,
+        "cog": 8,
+        "total": 40,
+        "blank": 8,
+        "comment": 0,
+        "sloc": 32
+      },
+      {
+        "file": "backend/src/index.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 24,
+        "blank": 6,
+        "comment": 0,
+        "sloc": 18
+      },
+      {
+        "file": "backend/src/middleware/auth.js",
+        "cc": 4,
+        "cog": 3,
+        "total": 18,
+        "blank": 4,
+        "comment": 0,
+        "sloc": 14
+      },
+      {
+        "file": "backend/src/models/Admin.js",
+        "cc": 2,
+        "cog": 1,
+        "total": 36,
+        "blank": 6,
+        "comment": 0,
+        "sloc": 30
+      },
+      {
+        "file": "backend/src/models/Product.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 47,
+        "blank": 3,
+        "comment": 0,
+        "sloc": 44
+      },
+      {
+        "file": "backend/src/models/StoreSettings.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 32,
+        "blank": 3,
+        "comment": 0,
+        "sloc": 29
+      },
+      {
+        "file": "backend/src/routes/auth.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 9,
+        "blank": 4,
+        "comment": 0,
+        "sloc": 5
+      },
+      {
+        "file": "backend/src/routes/products.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 27,
+        "blank": 5,
+        "comment": 2,
+        "sloc": 20
+      },
+      {
+        "file": "backend/src/routes/store.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 14,
+        "blank": 5,
+        "comment": 2,
+        "sloc": 7
+      },
+      {
+        "file": "backend/src/seed.js",
+        "cc": 2,
+        "cog": 1,
+        "total": 95,
+        "blank": 9,
+        "comment": 4,
+        "sloc": 82
+      },
+      {
+        "file": "frontend/src/App.jsx",
+        "cc": 1,
+        "cog": 0,
+        "total": 48,
+        "blank": 7,
+        "comment": 0,
+        "sloc": 41
+      },
+      {
+        "file": "frontend/src/components/ProtectedRoute.jsx",
+        "cc": 3,
+        "cog": 2,
+        "total": 17,
+        "blank": 5,
+        "comment": 0,
+        "sloc": 12
+      },
+      {
+        "file": "frontend/src/hooks/useAuth.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 25,
+        "blank": 6,
+        "comment": 0,
+        "sloc": 19
+      },
+      {
+        "file": "frontend/src/main.jsx",
+        "cc": 1,
+        "cog": 0,
+        "total": 13,
+        "blank": 2,
+        "comment": 0,
+        "sloc": 11
+      },
+      {
+        "file": "frontend/src/pages/AdminDashboard.jsx",
+        "cc": 20,
+        "cog": 37,
+        "total": 393,
+        "blank": 28,
+        "comment": 0,
+        "sloc": 365
+      },
+      {
+        "file": "frontend/src/pages/AdminLogin.jsx",
+        "cc": 4,
+        "cog": 5,
+        "total": 163,
+        "blank": 12,
+        "comment": 0,
+        "sloc": 151
+      },
+      {
+        "file": "frontend/src/pages/AdminProductForm.jsx",
+        "cc": 18,
+        "cog": 31,
+        "total": 260,
+        "blank": 20,
+        "comment": 0,
+        "sloc": 240
+      },
+      {
+        "file": "frontend/src/pages/Home.jsx",
+        "cc": 4,
+        "cog": 8,
+        "total": 186,
+        "blank": 8,
+        "comment": 0,
+        "sloc": 178
+      },
+      {
+        "file": "frontend/src/pages/ProductDetail.jsx",
+        "cc": 4,
+        "cog": 8,
+        "total": 141,
+        "blank": 13,
+        "comment": 0,
+        "sloc": 128
+      },
+      {
+        "file": "frontend/src/utils/api.js",
+        "cc": 2,
+        "cog": 1,
+        "total": 37,
+        "blank": 8,
+        "comment": 0,
+        "sloc": 29
+      },
+      {
+        "file": "frontend/vite.config.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 16,
+        "blank": 2,
+        "comment": 0,
+        "sloc": 14
+      }
+    ],
+    "miDetail": [
+      {
+        "file": "backend/src/config/database.js",
+        "miRaw": 86.64864311690357,
+        "miNorm": 50.67172112099624,
+        "sloc": 22
+      },
+      {
+        "file": "backend/src/controllers/authController.js",
+        "miRaw": 80.2466664558725,
+        "miNorm": 46.927875120393274,
+        "sloc": 25
+      },
+      {
+        "file": "backend/src/controllers/productController.js",
+        "miRaw": 42.23082596746225,
+        "miNorm": 24.696389454656288,
+        "sloc": 123
+      },
+      {
+        "file": "backend/src/controllers/storeController.js",
+        "miRaw": 75.74131453623913,
+        "miNorm": 44.29316639546148,
+        "sloc": 32
+      },
+      {
+        "file": "backend/src/index.js",
+        "miRaw": 89.8330801877838,
+        "miNorm": 52.53396502209579,
+        "sloc": 18
+      },
+      {
+        "file": "backend/src/middleware/auth.js",
+        "miRaw": 93.72701178763805,
+        "miNorm": 54.81111800446669,
+        "sloc": 14
+      },
+      {
+        "file": "backend/src/models/Admin.js",
+        "miRaw": 79.9861501958201,
+        "miNorm": 46.775526430304154,
+        "sloc": 30
+      },
+      {
+        "file": "backend/src/models/Product.js",
+        "miRaw": 75.00464283375004,
+        "miNorm": 43.86236423026318,
+        "sloc": 44
+      },
+      {
+        "file": "backend/src/models/StoreSettings.js",
+        "miRaw": 83.97205838258486,
+        "miNorm": 49.1064668904005,
+        "sloc": 29
+      },
+      {
+        "file": "backend/src/routes/auth.js",
+        "miRaw": 118.74878266164117,
+        "miNorm": 69.44373255066736,
+        "sloc": 5
+      },
+      {
+        "file": "backend/src/routes/products.js",
+        "miRaw": 88.76696215977374,
+        "miNorm": 51.91050418700219,
+        "sloc": 20
+      },
+      {
+        "file": "backend/src/routes/store.js",
+        "miRaw": 110.26661527424733,
+        "miNorm": 64.48340074517387,
+        "sloc": 7
+      },
+      {
+        "file": "backend/src/seed.js",
+        "miRaw": 58.673893481514426,
+        "miNorm": 34.31221841024235,
+        "sloc": 82
+      },
+      {
+        "file": "frontend/src/App.jsx",
+        "miRaw": 73.51347317127846,
+        "miNorm": 42.990335187882145,
+        "sloc": 41
+      },
+      {
+        "file": "frontend/src/components/ProtectedRoute.jsx",
+        "miRaw": 98.55501283603246,
+        "miNorm": 57.634510430428335,
+        "sloc": 12
+      },
+      {
+        "file": "frontend/src/hooks/useAuth.js",
+        "miRaw": 89.25708678462645,
+        "miNorm": 52.19712677463535,
+        "sloc": 19
+      },
+      {
+        "file": "frontend/src/main.jsx",
+        "miRaw": 102.25009302796227,
+        "miNorm": 59.79537603974401,
+        "sloc": 11
+      },
+      {
+        "file": "frontend/src/pages/AdminDashboard.jsx",
+        "miRaw": 20.952469194686742,
+        "miNorm": 12.252905961805112,
+        "sloc": 365
+      },
+      {
+        "file": "frontend/src/pages/AdminLogin.jsx",
+        "miRaw": 43.81663541510805,
+        "miNorm": 25.62376340064798,
+        "sloc": 151
+      },
+      {
+        "file": "frontend/src/pages/AdminProductForm.jsx",
+        "miRaw": 30.493161666635643,
+        "miNorm": 17.832258284582245,
+        "sloc": 240
+      },
+      {
+        "file": "frontend/src/pages/Home.jsx",
+        "miRaw": 40.14960310306266,
+        "miNorm": 23.47930006027056,
+        "sloc": 178
+      },
+      {
+        "file": "frontend/src/pages/ProductDetail.jsx",
+        "miRaw": 46.98550353270123,
+        "miNorm": 27.476902650702474,
+        "sloc": 128
+      },
+      {
+        "file": "frontend/src/utils/api.js",
+        "miRaw": 77.39429980607477,
+        "miNorm": 45.25982444799694,
+        "sloc": 29
+      },
+      {
+        "file": "frontend/vite.config.js",
+        "miRaw": 99.46407817836067,
+        "miNorm": 58.1661275896846,
+        "sloc": 14
+      }
+    ]
+  },
+  {
+    "project": "Opus_4.6_medium",
+    "files": 19,
+    "parseFail": 0,
+    "loc": 779,
+    "sloc": 670,
+    "comment": 1,
+    "blank": 108,
+    "commentDensityPct": 0.14903129657228018,
+    "functions": 65,
+    "ccTotal": 103,
+    "ccAvg": 1.5846153846153845,
+    "ccMax": 6,
+    "ccOver10": 0,
+    "cogTotal": 65,
+    "cogAvg": 1,
+    "cogMax": 14,
+    "cogOver15": 0,
+    "halsteadVolume": 34638.41618194887,
+    "miNormAvg": 46.876626454928044,
+    "miNormWeighted": 40.03294995276783,
+    "dupLines": 86,
+    "dupPct": 12.835820895522387,
+    "fileDetail": [
+      {
+        "file": "backend/src/middleware/auth.js",
+        "cc": 3,
+        "cog": 2,
+        "total": 17,
+        "blank": 4,
+        "comment": 0,
+        "sloc": 13
+      },
+      {
+        "file": "backend/src/models/Admin.js",
+        "cc": 2,
+        "cog": 1,
+        "total": 20,
+        "blank": 5,
+        "comment": 0,
+        "sloc": 15
+      },
+      {
+        "file": "backend/src/models/Product.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 14,
+        "blank": 3,
+        "comment": 0,
+        "sloc": 11
+      },
+      {
+        "file": "backend/src/models/Settings.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 11,
+        "blank": 3,
+        "comment": 0,
+        "sloc": 8
+      },
+      {
+        "file": "backend/src/routes/admin.js",
+        "cc": 9,
+        "cog": 8,
+        "total": 70,
+        "blank": 12,
+        "comment": 0,
+        "sloc": 58
+      },
+      {
+        "file": "backend/src/routes/public.js",
+        "cc": 3,
+        "cog": 2,
+        "total": 25,
+        "blank": 6,
+        "comment": 0,
+        "sloc": 19
+      },
+      {
+        "file": "backend/src/seed.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 68,
+        "blank": 8,
+        "comment": 0,
+        "sloc": 60
+      },
+      {
+        "file": "backend/src/server.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 25,
+        "blank": 6,
+        "comment": 0,
+        "sloc": 19
+      },
+      {
+        "file": "frontend/eslint.config.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 39,
+        "blank": 2,
+        "comment": 0,
+        "sloc": 37
+      },
+      {
+        "file": "frontend/src/App.jsx",
+        "cc": 2,
+        "cog": 1,
+        "total": 27,
+        "blank": 3,
+        "comment": 0,
+        "sloc": 24
+      },
+      {
+        "file": "frontend/src/api.js",
+        "cc": 6,
+        "cog": 5,
+        "total": 47,
+        "blank": 7,
+        "comment": 0,
+        "sloc": 40
+      },
+      {
+        "file": "frontend/src/main.jsx",
+        "cc": 1,
+        "cog": 0,
+        "total": 13,
+        "blank": 2,
+        "comment": 0,
+        "sloc": 11
+      },
+      {
+        "file": "frontend/src/pages/AdminProductForm.jsx",
+        "cc": 8,
+        "cog": 22,
+        "total": 92,
+        "blank": 8,
+        "comment": 0,
+        "sloc": 84
+      },
+      {
+        "file": "frontend/src/pages/AdminProducts.jsx",
+        "cc": 5,
+        "cog": 12,
+        "total": 88,
+        "blank": 10,
+        "comment": 0,
+        "sloc": 78
+      },
+      {
+        "file": "frontend/src/pages/AdminSettings.jsx",
+        "cc": 4,
+        "cog": 5,
+        "total": 79,
+        "blank": 8,
+        "comment": 0,
+        "sloc": 71
+      },
+      {
+        "file": "frontend/src/pages/Home.jsx",
+        "cc": 2,
+        "cog": 1,
+        "total": 51,
+        "blank": 8,
+        "comment": 0,
+        "sloc": 43
+      },
+      {
+        "file": "frontend/src/pages/Login.jsx",
+        "cc": 3,
+        "cog": 4,
+        "total": 42,
+        "blank": 4,
+        "comment": 0,
+        "sloc": 38
+      },
+      {
+        "file": "frontend/src/pages/ProductDetail.jsx",
+        "cc": 3,
+        "cog": 2,
+        "total": 43,
+        "blank": 7,
+        "comment": 0,
+        "sloc": 36
+      },
+      {
+        "file": "frontend/vite.config.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 8,
+        "blank": 2,
+        "comment": 1,
+        "sloc": 5
+      }
+    ],
+    "miDetail": [
+      {
+        "file": "backend/src/middleware/auth.js",
+        "miRaw": 95.3813441050905,
+        "miNorm": 55.77856380414649,
+        "sloc": 13
+      },
+      {
+        "file": "backend/src/models/Admin.js",
+        "miRaw": 92.23686207910828,
+        "miNorm": 53.939685426379114,
+        "sloc": 15
+      },
+      {
+        "file": "backend/src/models/Product.js",
+        "miRaw": 98.44136453754527,
+        "miNorm": 57.56804943716097,
+        "sloc": 11
+      },
+      {
+        "file": "backend/src/models/Settings.js",
+        "miRaw": 106.39846914814481,
+        "miNorm": 62.221326987219186,
+        "sloc": 8
+      },
+      {
+        "file": "backend/src/routes/admin.js",
+        "miRaw": 59.825275510449984,
+        "miNorm": 34.98554123418128,
+        "sloc": 58
+      },
+      {
+        "file": "backend/src/routes/public.js",
+        "miRaw": 85.93126329033164,
+        "miNorm": 50.25220075457991,
+        "sloc": 19
+      },
+      {
+        "file": "backend/src/seed.js",
+        "miRaw": 66.01776933303688,
+        "miNorm": 38.60688265089876,
+        "sloc": 60
+      },
+      {
+        "file": "backend/src/server.js",
+        "miRaw": 87.54334790333614,
+        "miNorm": 51.19494029434862,
+        "sloc": 19
+      },
+      {
+        "file": "frontend/eslint.config.js",
+        "miRaw": 76.76042153479321,
+        "miNorm": 44.889135400463864,
+        "sloc": 37
+      },
+      {
+        "file": "frontend/src/App.jsx",
+        "miRaw": 81.68492075364642,
+        "miNorm": 47.76895950505639,
+        "sloc": 24
+      },
+      {
+        "file": "frontend/src/api.js",
+        "miRaw": 69.39389906717874,
+        "miNorm": 40.58122752466593,
+        "sloc": 40
+      },
+      {
+        "file": "frontend/src/main.jsx",
+        "miRaw": 102.3319844841966,
+        "miNorm": 59.84326578023193,
+        "sloc": 11
+      },
+      {
+        "file": "frontend/src/pages/AdminProductForm.jsx",
+        "miRaw": 53.12085139442115,
+        "miNorm": 31.064825376854476,
+        "sloc": 84
+      },
+      {
+        "file": "frontend/src/pages/AdminProducts.jsx",
+        "miRaw": 56.473785902894164,
+        "miNorm": 33.02560579116618,
+        "sloc": 78
+      },
+      {
+        "file": "frontend/src/pages/AdminSettings.jsx",
+        "miRaw": 57.73558390857842,
+        "miNorm": 33.763499361741765,
+        "sloc": 71
+      },
+      {
+        "file": "frontend/src/pages/Home.jsx",
+        "miRaw": 69.17941271860425,
+        "miNorm": 40.455796911464475,
+        "sloc": 43
+      },
+      {
+        "file": "frontend/src/pages/Login.jsx",
+        "miRaw": 72.05246113217058,
+        "miNorm": 42.135942182555894,
+        "sloc": 38
+      },
+      {
+        "file": "frontend/src/pages/ProductDetail.jsx",
+        "miRaw": 72.18264275822234,
+        "miNorm": 42.21207178843412,
+        "sloc": 36
+      },
+      {
+        "file": "frontend/vite.config.js",
+        "miRaw": 120.32993395886251,
+        "miNorm": 70.36838243208334,
+        "sloc": 5
+      }
+    ]
+  },
+  {
+    "project": "Opus_4.7_extra",
+    "files": 24,
+    "parseFail": 0,
+    "loc": 1115,
+    "sloc": 978,
+    "comment": 0,
+    "blank": 137,
+    "commentDensityPct": 0,
+    "functions": 100,
+    "ccTotal": 180,
+    "ccAvg": 1.8,
+    "ccMax": 8,
+    "ccOver10": 0,
+    "cogTotal": 114,
+    "cogAvg": 1.14,
+    "cogMax": 15,
+    "cogOver15": 0,
+    "halsteadVolume": 43567.38971202022,
+    "miNormAvg": 46.736708702176834,
+    "miNormWeighted": 36.63786380057827,
+    "dupLines": 78,
+    "dupPct": 7.975460122699387,
+    "fileDetail": [
+      {
+        "file": "backend/src/auth.js",
+        "cc": 5,
+        "cog": 4,
+        "total": 23,
+        "blank": 4,
+        "comment": 0,
+        "sloc": 19
+      },
+      {
+        "file": "backend/src/db.js",
+        "cc": 2,
+        "cog": 1,
+        "total": 8,
+        "blank": 2,
+        "comment": 0,
+        "sloc": 6
+      },
+      {
+        "file": "backend/src/index.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 38,
+        "blank": 8,
+        "comment": 0,
+        "sloc": 30
+      },
+      {
+        "file": "backend/src/models/Admin.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 12,
+        "blank": 3,
+        "comment": 0,
+        "sloc": 9
+      },
+      {
+        "file": "backend/src/models/Product.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 17,
+        "blank": 3,
+        "comment": 0,
+        "sloc": 14
+      },
+      {
+        "file": "backend/src/models/Showcase.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 14,
+        "blank": 3,
+        "comment": 0,
+        "sloc": 11
+      },
+      {
+        "file": "backend/src/routes/adminProducts.js",
+        "cc": 11,
+        "cog": 11,
+        "total": 67,
+        "blank": 11,
+        "comment": 0,
+        "sloc": 56
+      },
+      {
+        "file": "backend/src/routes/adminShowcase.js",
+        "cc": 7,
+        "cog": 8,
+        "total": 40,
+        "blank": 7,
+        "comment": 0,
+        "sloc": 33
+      },
+      {
+        "file": "backend/src/routes/auth.js",
+        "cc": 6,
+        "cog": 5,
+        "total": 22,
+        "blank": 4,
+        "comment": 0,
+        "sloc": 18
+      },
+      {
+        "file": "backend/src/routes/public.js",
+        "cc": 3,
+        "cog": 2,
+        "total": 25,
+        "blank": 6,
+        "comment": 0,
+        "sloc": 19
+      },
+      {
+        "file": "backend/src/seed.js",
+        "cc": 6,
+        "cog": 8,
+        "total": 97,
+        "blank": 9,
+        "comment": 0,
+        "sloc": 88
+      },
+      {
+        "file": "frontend/src/App.jsx",
+        "cc": 1,
+        "cog": 0,
+        "total": 27,
+        "blank": 2,
+        "comment": 0,
+        "sloc": 25
+      },
+      {
+        "file": "frontend/src/api.js",
+        "cc": 8,
+        "cog": 7,
+        "total": 51,
+        "blank": 8,
+        "comment": 0,
+        "sloc": 43
+      },
+      {
+        "file": "frontend/src/auth.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 18,
+        "blank": 5,
+        "comment": 0,
+        "sloc": 13
+      },
+      {
+        "file": "frontend/src/components/AdminLayout.jsx",
+        "cc": 2,
+        "cog": 3,
+        "total": 34,
+        "blank": 5,
+        "comment": 0,
+        "sloc": 29
+      },
+      {
+        "file": "frontend/src/components/ProtectedRoute.jsx",
+        "cc": 2,
+        "cog": 1,
+        "total": 8,
+        "blank": 2,
+        "comment": 0,
+        "sloc": 6
+      },
+      {
+        "file": "frontend/src/main.jsx",
+        "cc": 1,
+        "cog": 0,
+        "total": 14,
+        "blank": 2,
+        "comment": 0,
+        "sloc": 12
+      },
+      {
+        "file": "frontend/src/pages/AdminLogin.jsx",
+        "cc": 5,
+        "cog": 6,
+        "total": 62,
+        "blank": 5,
+        "comment": 0,
+        "sloc": 57
+      },
+      {
+        "file": "frontend/src/pages/AdminProductForm.jsx",
+        "cc": 12,
+        "cog": 22,
+        "total": 166,
+        "blank": 12,
+        "comment": 0,
+        "sloc": 154
+      },
+      {
+        "file": "frontend/src/pages/AdminProducts.jsx",
+        "cc": 13,
+        "cog": 18,
+        "total": 106,
+        "blank": 9,
+        "comment": 0,
+        "sloc": 97
+      },
+      {
+        "file": "frontend/src/pages/AdminShowcase.jsx",
+        "cc": 7,
+        "cog": 13,
+        "total": 113,
+        "blank": 11,
+        "comment": 0,
+        "sloc": 102
+      },
+      {
+        "file": "frontend/src/pages/Home.jsx",
+        "cc": 4,
+        "cog": 3,
+        "total": 73,
+        "blank": 7,
+        "comment": 0,
+        "sloc": 66
+      },
+      {
+        "file": "frontend/src/pages/ProductDetail.jsx",
+        "cc": 3,
+        "cog": 2,
+        "total": 69,
+        "blank": 7,
+        "comment": 0,
+        "sloc": 62
+      },
+      {
+        "file": "frontend/vite.config.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 11,
+        "blank": 2,
+        "comment": 0,
+        "sloc": 9
+      }
+    ],
+    "miDetail": [
+      {
+        "file": "backend/src/auth.js",
+        "miRaw": 87.24586584074147,
+        "miNorm": 51.02097417587221,
+        "sloc": 19
+      },
+      {
+        "file": "backend/src/db.js",
+        "miRaw": 113.49961247552665,
+        "miNorm": 66.37404238334892,
+        "sloc": 6
+      },
+      {
+        "file": "backend/src/index.js",
+        "miRaw": 77.40098311124666,
+        "miNorm": 45.26373281359454,
+        "sloc": 30
+      },
+      {
+        "file": "backend/src/models/Admin.js",
+        "miRaw": 104.88627762457484,
+        "miNorm": 61.3370044588157,
+        "sloc": 9
+      },
+      {
+        "file": "backend/src/models/Product.js",
+        "miRaw": 93.55578616345869,
+        "miNorm": 54.71098606050216,
+        "sloc": 14
+      },
+      {
+        "file": "backend/src/models/Showcase.js",
+        "miRaw": 99.86426909377613,
+        "miNorm": 58.400157364781364,
+        "sloc": 11
+      },
+      {
+        "file": "backend/src/routes/adminProducts.js",
+        "miRaw": 61.029257551608765,
+        "miNorm": 35.68962429918641,
+        "sloc": 56
+      },
+      {
+        "file": "backend/src/routes/adminShowcase.js",
+        "miRaw": 74.87314171787578,
+        "miNorm": 43.785462992909814,
+        "sloc": 33
+      },
+      {
+        "file": "backend/src/routes/auth.js",
+        "miRaw": 85.79313598261321,
+        "miNorm": 50.17142455123579,
+        "sloc": 18
+      },
+      {
+        "file": "backend/src/routes/public.js",
+        "miRaw": 86.13847787002156,
+        "miNorm": 50.37337887135764,
+        "sloc": 19
+      },
+      {
+        "file": "backend/src/seed.js",
+        "miRaw": 55.26360032080821,
+        "miNorm": 32.31789492444925,
+        "sloc": 88
+      },
+      {
+        "file": "frontend/src/App.jsx",
+        "miRaw": 81.34744770637708,
+        "miNorm": 47.57160684583455,
+        "sloc": 25
+      },
+      {
+        "file": "frontend/src/api.js",
+        "miRaw": 66.89588502645492,
+        "miNorm": 39.12040060026603,
+        "sloc": 43
+      },
+      {
+        "file": "frontend/src/auth.js",
+        "miRaw": 99.5925405853271,
+        "miNorm": 58.24125180428485,
+        "sloc": 13
+      },
+      {
+        "file": "frontend/src/components/AdminLayout.jsx",
+        "miRaw": 78.75825900561145,
+        "miNorm": 46.057461406790324,
+        "sloc": 29
+      },
+      {
+        "file": "frontend/src/components/ProtectedRoute.jsx",
+        "miRaw": 113.44491755037936,
+        "miNorm": 66.34205704700547,
+        "sloc": 6
+      },
+      {
+        "file": "frontend/src/main.jsx",
+        "miRaw": 100.54241086089573,
+        "miNorm": 58.796731497599836,
+        "sloc": 12
+      },
+      {
+        "file": "frontend/src/pages/AdminLogin.jsx",
+        "miRaw": 64.34055891172456,
+        "miNorm": 37.62605784311378,
+        "sloc": 57
+      },
+      {
+        "file": "frontend/src/pages/AdminProductForm.jsx",
+        "miRaw": 41.27992966266473,
+        "miNorm": 24.140309744248377,
+        "sloc": 154
+      },
+      {
+        "file": "frontend/src/pages/AdminProducts.jsx",
+        "miRaw": 50.37867799219774,
+        "miNorm": 29.461215200115635,
+        "sloc": 97
+      },
+      {
+        "file": "frontend/src/pages/AdminShowcase.jsx",
+        "miRaw": 51.40418212141516,
+        "miNorm": 30.06092521720185,
+        "sloc": 102
+      },
+      {
+        "file": "frontend/src/pages/Home.jsx",
+        "miRaw": 60.38670567021775,
+        "miNorm": 35.31386296503962,
+        "sloc": 66
+      },
+      {
+        "file": "frontend/src/pages/ProductDetail.jsx",
+        "miRaw": 61.87651958429812,
+        "miNorm": 36.18509917210417,
+        "sloc": 62
+      },
+      {
+        "file": "frontend/vite.config.js",
+        "miRaw": 108.27608270752164,
+        "miNorm": 63.319346612585754,
+        "sloc": 9
+      }
+    ]
+  },
+  {
+    "project": "Opus_4.8_high",
+    "files": 41,
+    "parseFail": 0,
+    "loc": 1695,
+    "sloc": 1262,
+    "comment": 201,
+    "blank": 232,
+    "commentDensityPct": 13.738892686261106,
+    "functions": 112,
+    "ccTotal": 212,
+    "ccAvg": 1.8928571428571428,
+    "ccMax": 9,
+    "ccOver10": 0,
+    "cogTotal": 136,
+    "cogAvg": 1.2142857142857142,
+    "cogMax": 17,
+    "cogOver15": 1,
+    "halsteadVolume": 49596.77732619979,
+    "miNormAvg": 51.144542988321604,
+    "miNormWeighted": 40.09126965094934,
+    "dupLines": 38,
+    "dupPct": 3.011093502377179,
+    "fileDetail": [
+      {
+        "file": "backend/src/app.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 24,
+        "blank": 6,
+        "comment": 4,
+        "sloc": 14
+      },
+      {
+        "file": "backend/src/config/db.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 13,
+        "blank": 2,
+        "comment": 4,
+        "sloc": 7
+      },
+      {
+        "file": "backend/src/config/env.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 23,
+        "blank": 3,
+        "comment": 5,
+        "sloc": 15
+      },
+      {
+        "file": "backend/src/controllers/authController.js",
+        "cc": 5,
+        "cog": 4,
+        "total": 40,
+        "blank": 7,
+        "comment": 8,
+        "sloc": 25
+      },
+      {
+        "file": "backend/src/controllers/productController.js",
+        "cc": 9,
+        "cog": 8,
+        "total": 127,
+        "blank": 17,
+        "comment": 38,
+        "sloc": 72
+      },
+      {
+        "file": "backend/src/controllers/settingsController.js",
+        "cc": 3,
+        "cog": 3,
+        "total": 30,
+        "blank": 5,
+        "comment": 8,
+        "sloc": 17
+      },
+      {
+        "file": "backend/src/middleware/auth.js",
+        "cc": 5,
+        "cog": 4,
+        "total": 25,
+        "blank": 4,
+        "comment": 4,
+        "sloc": 17
+      },
+      {
+        "file": "backend/src/middleware/errorHandler.js",
+        "cc": 6,
+        "cog": 5,
+        "total": 37,
+        "blank": 6,
+        "comment": 9,
+        "sloc": 22
+      },
+      {
+        "file": "backend/src/models/Product.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 53,
+        "blank": 3,
+        "comment": 7,
+        "sloc": 43
+      },
+      {
+        "file": "backend/src/models/Settings.js",
+        "cc": 2,
+        "cog": 1,
+        "total": 48,
+        "blank": 4,
+        "comment": 10,
+        "sloc": 34
+      },
+      {
+        "file": "backend/src/routes/adminRoutes.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 30,
+        "blank": 6,
+        "comment": 3,
+        "sloc": 21
+      },
+      {
+        "file": "backend/src/routes/authRoutes.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 9,
+        "blank": 4,
+        "comment": 0,
+        "sloc": 5
+      },
+      {
+        "file": "backend/src/routes/index.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 15,
+        "blank": 5,
+        "comment": 0,
+        "sloc": 10
+      },
+      {
+        "file": "backend/src/routes/publicRoutes.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 18,
+        "blank": 5,
+        "comment": 2,
+        "sloc": 11
+      },
+      {
+        "file": "backend/src/seed.js",
+        "cc": 2,
+        "cog": 1,
+        "total": 93,
+        "blank": 8,
+        "comment": 7,
+        "sloc": 78
+      },
+      {
+        "file": "backend/src/server.js",
+        "cc": 2,
+        "cog": 1,
+        "total": 22,
+        "blank": 3,
+        "comment": 3,
+        "sloc": 16
+      },
+      {
+        "file": "backend/src/utils/ApiError.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 12,
+        "blank": 1,
+        "comment": 5,
+        "sloc": 6
+      },
+      {
+        "file": "backend/src/utils/asyncHandler.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 8,
+        "blank": 1,
+        "comment": 4,
+        "sloc": 3
+      },
+      {
+        "file": "backend/src/utils/slugify.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 14,
+        "blank": 1,
+        "comment": 4,
+        "sloc": 9
+      },
+      {
+        "file": "frontend/src/App.jsx",
+        "cc": 1,
+        "cog": 0,
+        "total": 55,
+        "blank": 7,
+        "comment": 3,
+        "sloc": 45
+      },
+      {
+        "file": "frontend/src/api/auth.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 9,
+        "blank": 2,
+        "comment": 0,
+        "sloc": 7
+      },
+      {
+        "file": "frontend/src/api/client.js",
+        "cc": 9,
+        "cog": 10,
+        "total": 62,
+        "blank": 11,
+        "comment": 11,
+        "sloc": 40
+      },
+      {
+        "file": "frontend/src/api/products.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 38,
+        "blank": 11,
+        "comment": 2,
+        "sloc": 25
+      },
+      {
+        "file": "frontend/src/api/settings.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 10,
+        "blank": 3,
+        "comment": 0,
+        "sloc": 7
+      },
+      {
+        "file": "frontend/src/components/AdminLayout.jsx",
+        "cc": 1,
+        "cog": 0,
+        "total": 44,
+        "blank": 5,
+        "comment": 3,
+        "sloc": 36
+      },
+      {
+        "file": "frontend/src/components/Feedback.jsx",
+        "cc": 2,
+        "cog": 1,
+        "total": 18,
+        "blank": 4,
+        "comment": 4,
+        "sloc": 10
+      },
+      {
+        "file": "frontend/src/components/ProductCard.jsx",
+        "cc": 4,
+        "cog": 3,
+        "total": 26,
+        "blank": 2,
+        "comment": 3,
+        "sloc": 21
+      },
+      {
+        "file": "frontend/src/components/ProtectedRoute.jsx",
+        "cc": 2,
+        "cog": 1,
+        "total": 17,
+        "blank": 4,
+        "comment": 4,
+        "sloc": 9
+      },
+      {
+        "file": "frontend/src/components/PublicLayout.jsx",
+        "cc": 6,
+        "cog": 4,
+        "total": 52,
+        "blank": 6,
+        "comment": 5,
+        "sloc": 41
+      },
+      {
+        "file": "frontend/src/components/WhatsAppButton.jsx",
+        "cc": 2,
+        "cog": 1,
+        "total": 20,
+        "blank": 4,
+        "comment": 4,
+        "sloc": 12
+      },
+      {
+        "file": "frontend/src/context/AuthContext.jsx",
+        "cc": 2,
+        "cog": 1,
+        "total": 42,
+        "blank": 8,
+        "comment": 4,
+        "sloc": 30
+      },
+      {
+        "file": "frontend/src/main.jsx",
+        "cc": 1,
+        "cog": 0,
+        "total": 11,
+        "blank": 2,
+        "comment": 0,
+        "sloc": 9
+      },
+      {
+        "file": "frontend/src/pages/admin/AdminProductFormPage.jsx",
+        "cc": 14,
+        "cog": 33,
+        "total": 169,
+        "blank": 19,
+        "comment": 4,
+        "sloc": 146
+      },
+      {
+        "file": "frontend/src/pages/admin/AdminProductsPage.jsx",
+        "cc": 14,
+        "cog": 19,
+        "total": 129,
+        "blank": 11,
+        "comment": 4,
+        "sloc": 114
+      },
+      {
+        "file": "frontend/src/pages/admin/AdminSettingsPage.jsx",
+        "cc": 9,
+        "cog": 18,
+        "total": 113,
+        "blank": 14,
+        "comment": 3,
+        "sloc": 96
+      },
+      {
+        "file": "frontend/src/pages/admin/LoginPage.jsx",
+        "cc": 3,
+        "cog": 4,
+        "total": 69,
+        "blank": 9,
+        "comment": 3,
+        "sloc": 57
+      },
+      {
+        "file": "frontend/src/pages/public/HomePage.jsx",
+        "cc": 9,
+        "cog": 4,
+        "total": 48,
+        "blank": 5,
+        "comment": 4,
+        "sloc": 39
+      },
+      {
+        "file": "frontend/src/pages/public/NotFoundPage.jsx",
+        "cc": 1,
+        "cog": 0,
+        "total": 14,
+        "blank": 2,
+        "comment": 0,
+        "sloc": 12
+      },
+      {
+        "file": "frontend/src/pages/public/ProductDetailPage.jsx",
+        "cc": 7,
+        "cog": 6,
+        "total": 73,
+        "blank": 8,
+        "comment": 3,
+        "sloc": 62
+      },
+      {
+        "file": "frontend/src/utils/whatsapp.js",
+        "cc": 5,
+        "cog": 4,
+        "total": 24,
+        "blank": 2,
+        "comment": 11,
+        "sloc": 11
+      },
+      {
+        "file": "frontend/vite.config.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 11,
+        "blank": 2,
+        "comment": 1,
+        "sloc": 8
+      }
+    ],
+    "miDetail": [
+      {
+        "file": "backend/src/app.js",
+        "miRaw": 95.75357089487565,
+        "miNorm": 55.996240289400966,
+        "sloc": 14
+      },
+      {
+        "file": "backend/src/config/db.js",
+        "miRaw": 110.18888384592191,
+        "miNorm": 64.43794376954497,
+        "sloc": 7
+      },
+      {
+        "file": "backend/src/config/env.js",
+        "miRaw": 94.08785685941365,
+        "miNorm": 55.02213851427698,
+        "sloc": 15
+      },
+      {
+        "file": "backend/src/controllers/authController.js",
+        "miRaw": 80.33014598889126,
+        "miNorm": 46.97669356075512,
+        "sloc": 25
+      },
+      {
+        "file": "backend/src/controllers/productController.js",
+        "miRaw": 56.76582899353713,
+        "miNorm": 33.196391224290714,
+        "sloc": 72
+      },
+      {
+        "file": "backend/src/controllers/settingsController.js",
+        "miRaw": 90.02835340981949,
+        "miNorm": 52.648159888783326,
+        "sloc": 17
+      },
+      {
+        "file": "backend/src/middleware/auth.js",
+        "miRaw": 89.60508610292283,
+        "miNorm": 52.40063514790809,
+        "sloc": 17
+      },
+      {
+        "file": "backend/src/middleware/errorHandler.js",
+        "miRaw": 83.15076142641962,
+        "miNorm": 48.626176272760006,
+        "sloc": 22
+      },
+      {
+        "file": "backend/src/models/Product.js",
+        "miRaw": 74.3705349994506,
+        "miNorm": 43.49154093535123,
+        "sloc": 43
+      },
+      {
+        "file": "backend/src/models/Settings.js",
+        "miRaw": 78.37273388030204,
+        "miNorm": 45.83200811713569,
+        "sloc": 34
+      },
+      {
+        "file": "backend/src/routes/adminRoutes.js",
+        "miRaw": 87.80464501647234,
+        "miNorm": 51.34774562366803,
+        "sloc": 21
+      },
+      {
+        "file": "backend/src/routes/authRoutes.js",
+        "miRaw": 118.74878266164117,
+        "miNorm": 69.44373255066736,
+        "sloc": 5
+      },
+      {
+        "file": "backend/src/routes/index.js",
+        "miRaw": 101.92605152900303,
+        "miNorm": 59.605878087136276,
+        "sloc": 10
+      },
+      {
+        "file": "backend/src/routes/publicRoutes.js",
+        "miRaw": 102.25009302796227,
+        "miNorm": 59.79537603974401,
+        "sloc": 11
+      },
+      {
+        "file": "backend/src/seed.js",
+        "miRaw": 60.403002264547055,
+        "miNorm": 35.32339313716202,
+        "sloc": 78
+      },
+      {
+        "file": "backend/src/server.js",
+        "miRaw": 92.88065863060383,
+        "miNorm": 54.316174637780016,
+        "sloc": 16
+      },
+      {
+        "file": "backend/src/utils/ApiError.js",
+        "miRaw": 117.08370255074351,
+        "miNorm": 68.47000149166287,
+        "sloc": 6
+      },
+      {
+        "file": "backend/src/utils/asyncHandler.js",
+        "miRaw": 126.31071193478009,
+        "miNorm": 73.8659134121521,
+        "sloc": 3
+      },
+      {
+        "file": "backend/src/utils/slugify.js",
+        "miRaw": 106.75533304233646,
+        "miNorm": 62.430019323003776,
+        "sloc": 9
+      },
+      {
+        "file": "frontend/src/App.jsx",
+        "miRaw": 69.73668344032275,
+        "miNorm": 40.78168622241096,
+        "sloc": 45
+      },
+      {
+        "file": "frontend/src/api/auth.js",
+        "miRaw": 112.63555128711016,
+        "miNorm": 65.86874344275448,
+        "sloc": 7
+      },
+      {
+        "file": "frontend/src/api/client.js",
+        "miRaw": 70.7991840922568,
+        "miNorm": 41.40303163289871,
+        "sloc": 40
+      },
+      {
+        "file": "frontend/src/api/products.js",
+        "miRaw": 82.03267808940724,
+        "miNorm": 47.972326368074405,
+        "sloc": 25
+      },
+      {
+        "file": "frontend/src/api/settings.js",
+        "miRaw": 111.1975443082442,
+        "miNorm": 65.0278036890317,
+        "sloc": 7
+      },
+      {
+        "file": "frontend/src/components/AdminLayout.jsx",
+        "miRaw": 75.89787100638192,
+        "miNorm": 44.384719886773055,
+        "sloc": 36
+      },
+      {
+        "file": "frontend/src/components/Feedback.jsx",
+        "miRaw": 102.09068105134087,
+        "miNorm": 59.702152661602845,
+        "sloc": 10
+      },
+      {
+        "file": "frontend/src/components/ProductCard.jsx",
+        "miRaw": 85.1103484810298,
+        "miNorm": 49.772133614637305,
+        "sloc": 21
+      },
+      {
+        "file": "frontend/src/components/ProtectedRoute.jsx",
+        "miRaw": 106.09454501331335,
+        "miNorm": 62.04359357503704,
+        "sloc": 9
+      },
+      {
+        "file": "frontend/src/components/PublicLayout.jsx",
+        "miRaw": 70.3212251846468,
+        "miNorm": 41.12352349979346,
+        "sloc": 41
+      },
+      {
+        "file": "frontend/src/components/WhatsAppButton.jsx",
+        "miRaw": 99.41853081616759,
+        "miNorm": 58.13949170536116,
+        "sloc": 12
+      },
+      {
+        "file": "frontend/src/context/AuthContext.jsx",
+        "miRaw": 79.04083873298882,
+        "miNorm": 46.22271270935018,
+        "sloc": 30
+      },
+      {
+        "file": "frontend/src/main.jsx",
+        "miRaw": 106.88110997722929,
+        "miNorm": 62.503573086098996,
+        "sloc": 9
+      },
+      {
+        "file": "frontend/src/pages/admin/AdminProductFormPage.jsx",
+        "miRaw": 41.51544857691492,
+        "miNorm": 24.27804010345902,
+        "sloc": 146
+      },
+      {
+        "file": "frontend/src/pages/admin/AdminProductsPage.jsx",
+        "miRaw": 47.37422115929583,
+        "miNorm": 27.704222900173,
+        "sloc": 114
+      },
+      {
+        "file": "frontend/src/pages/admin/AdminSettingsPage.jsx",
+        "miRaw": 51.614494259558484,
+        "miNorm": 30.18391477167163,
+        "sloc": 96
+      },
+      {
+        "file": "frontend/src/pages/admin/LoginPage.jsx",
+        "miRaw": 64.67353912398802,
+        "miNorm": 37.820783113443284,
+        "sloc": 57
+      },
+      {
+        "file": "frontend/src/pages/public/HomePage.jsx",
+        "miRaw": 70.25545334930376,
+        "miNorm": 41.08506043818934,
+        "sloc": 39
+      },
+      {
+        "file": "frontend/src/pages/public/NotFoundPage.jsx",
+        "miRaw": 101.27930261685418,
+        "miNorm": 59.22766234903754,
+        "sloc": 12
+      },
+      {
+        "file": "frontend/src/pages/public/ProductDetailPage.jsx",
+        "miRaw": 61.40379162617374,
+        "miNorm": 35.908650073785815,
+        "sloc": 62
+      },
+      {
+        "file": "frontend/src/utils/whatsapp.js",
+        "miRaw": 99.1606415191909,
+        "miNorm": 57.98867925098883,
+        "sloc": 11
+      },
+      {
+        "file": "frontend/vite.config.js",
+        "miRaw": 110.39348813986373,
+        "miNorm": 64.55759540342908,
+        "sloc": 8
+      }
+    ]
+  },
+  {
+    "project": "Sonnet_4.6_low",
+    "files": 20,
+    "parseFail": 0,
+    "loc": 898,
+    "sloc": 765,
+    "comment": 13,
+    "blank": 120,
+    "commentDensityPct": 1.6709511568123392,
+    "functions": 68,
+    "ccTotal": 115,
+    "ccAvg": 1.6911764705882353,
+    "ccMax": 5,
+    "ccOver10": 0,
+    "cogTotal": 82,
+    "cogAvg": 1.2058823529411764,
+    "cogMax": 20,
+    "cogOver15": 1,
+    "halsteadVolume": 37104.848188886055,
+    "miNormAvg": 46.99654814525931,
+    "miNormWeighted": 37.98935469051909,
+    "dupLines": 0,
+    "dupPct": 0,
+    "fileDetail": [
+      {
+        "file": "backend/src/config/db.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 7,
+        "blank": 2,
+        "comment": 0,
+        "sloc": 5
+      },
+      {
+        "file": "backend/src/middleware/auth.js",
+        "cc": 3,
+        "cog": 2,
+        "total": 15,
+        "blank": 2,
+        "comment": 0,
+        "sloc": 13
+      },
+      {
+        "file": "backend/src/models/Product.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 17,
+        "blank": 3,
+        "comment": 0,
+        "sloc": 14
+      },
+      {
+        "file": "backend/src/models/Settings.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 11,
+        "blank": 3,
+        "comment": 0,
+        "sloc": 8
+      },
+      {
+        "file": "backend/src/routes/auth.js",
+        "cc": 3,
+        "cog": 2,
+        "total": 21,
+        "blank": 4,
+        "comment": 0,
+        "sloc": 17
+      },
+      {
+        "file": "backend/src/routes/products.js",
+        "cc": 7,
+        "cog": 6,
+        "total": 65,
+        "blank": 10,
+        "comment": 7,
+        "sloc": 48
+      },
+      {
+        "file": "backend/src/routes/settings.js",
+        "cc": 2,
+        "cog": 1,
+        "total": 27,
+        "blank": 6,
+        "comment": 2,
+        "sloc": 19
+      },
+      {
+        "file": "backend/src/seed.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 73,
+        "blank": 6,
+        "comment": 0,
+        "sloc": 67
+      },
+      {
+        "file": "backend/src/server.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 28,
+        "blank": 7,
+        "comment": 0,
+        "sloc": 21
+      },
+      {
+        "file": "frontend/src/App.jsx",
+        "cc": 2,
+        "cog": 1,
+        "total": 32,
+        "blank": 4,
+        "comment": 0,
+        "sloc": 28
+      },
+      {
+        "file": "frontend/src/api.js",
+        "cc": 5,
+        "cog": 4,
+        "total": 38,
+        "blank": 7,
+        "comment": 4,
+        "sloc": 27
+      },
+      {
+        "file": "frontend/src/components/AdminLayout.jsx",
+        "cc": 3,
+        "cog": 0,
+        "total": 28,
+        "blank": 4,
+        "comment": 0,
+        "sloc": 24
+      },
+      {
+        "file": "frontend/src/main.jsx",
+        "cc": 1,
+        "cog": 0,
+        "total": 11,
+        "blank": 2,
+        "comment": 0,
+        "sloc": 9
+      },
+      {
+        "file": "frontend/src/pages/Home.jsx",
+        "cc": 3,
+        "cog": 2,
+        "total": 53,
+        "blank": 7,
+        "comment": 0,
+        "sloc": 46
+      },
+      {
+        "file": "frontend/src/pages/ProductDetail.jsx",
+        "cc": 3,
+        "cog": 2,
+        "total": 66,
+        "blank": 8,
+        "comment": 0,
+        "sloc": 58
+      },
+      {
+        "file": "frontend/src/pages/admin/Login.jsx",
+        "cc": 4,
+        "cog": 5,
+        "total": 59,
+        "blank": 4,
+        "comment": 0,
+        "sloc": 55
+      },
+      {
+        "file": "frontend/src/pages/admin/ProductForm.jsx",
+        "cc": 12,
+        "cog": 33,
+        "total": 154,
+        "blank": 19,
+        "comment": 0,
+        "sloc": 135
+      },
+      {
+        "file": "frontend/src/pages/admin/Products.jsx",
+        "cc": 7,
+        "cog": 16,
+        "total": 86,
+        "blank": 8,
+        "comment": 0,
+        "sloc": 78
+      },
+      {
+        "file": "frontend/src/pages/admin/Settings.jsx",
+        "cc": 6,
+        "cog": 8,
+        "total": 95,
+        "blank": 12,
+        "comment": 0,
+        "sloc": 83
+      },
+      {
+        "file": "frontend/vite.config.js",
+        "cc": 1,
+        "cog": 0,
+        "total": 12,
+        "blank": 2,
+        "comment": 0,
+        "sloc": 10
+      }
+    ],
+    "miDetail": [
+      {
+        "file": "backend/src/config/db.js",
+        "miRaw": 118.98002285639245,
+        "miNorm": 69.57896073473243,
+        "sloc": 5
+      },
+      {
+        "file": "backend/src/middleware/auth.js",
+        "miRaw": 95.83103730735428,
+        "miNorm": 56.0415422850025,
+        "sloc": 13
+      },
+      {
+        "file": "backend/src/models/Product.js",
+        "miRaw": 93.55965428134328,
+        "miNorm": 54.71324811774461,
+        "sloc": 14
+      },
+      {
+        "file": "backend/src/models/Settings.js",
+        "miRaw": 106.24201187929015,
+        "miNorm": 62.12983150835681,
+        "sloc": 8
+      },
+      {
+        "file": "backend/src/routes/auth.js",
+        "miRaw": 90.61685114699682,
+        "miNorm": 52.992310612278835,
+        "sloc": 17
+      },
+      {
+        "file": "backend/src/routes/products.js",
+        "miRaw": 64.84294940121286,
+        "miNorm": 37.91985345100167,
+        "sloc": 48
+      },
+      {
+        "file": "backend/src/routes/settings.js",
+        "miRaw": 88.09533385109081,
+        "miNorm": 51.517739094205155,
+        "sloc": 19
+      },
+      {
+        "file": "backend/src/seed.js",
+        "miRaw": 64.5838043731271,
+        "miNorm": 37.768306650951516,
+        "sloc": 67
+      },
+      {
+        "file": "backend/src/server.js",
+        "miRaw": 85.50755066332144,
+        "miNorm": 50.00441559258564,
+        "sloc": 21
+      },
+      {
+        "file": "frontend/src/App.jsx",
+        "miRaw": 78.27524400660975,
+        "miNorm": 45.774996495093426,
+        "sloc": 28
+      },
+      {
+        "file": "frontend/src/api.js",
+        "miRaw": 77.05328904862424,
+        "miNorm": 45.060402952411835,
+        "sloc": 27
+      },
+      {
+        "file": "frontend/src/components/AdminLayout.jsx",
+        "miRaw": 82.73684388351097,
+        "miNorm": 48.384119230123375,
+        "sloc": 24
+      },
+      {
+        "file": "frontend/src/main.jsx",
+        "miRaw": 106.88110997722929,
+        "miNorm": 62.503573086098996,
+        "sloc": 9
+      },
+      {
+        "file": "frontend/src/pages/Home.jsx",
+        "miRaw": 67.20924973839168,
+        "miNorm": 39.30365481777291,
+        "sloc": 46
+      },
+      {
+        "file": "frontend/src/pages/ProductDetail.jsx",
+        "miRaw": 62.19005084141412,
+        "miNorm": 36.368450784452705,
+        "sloc": 58
+      },
+      {
+        "file": "frontend/src/pages/admin/Login.jsx",
+        "miRaw": 64.66562316313806,
+        "miNorm": 37.81615389657197,
+        "sloc": 55
+      },
+      {
+        "file": "frontend/src/pages/admin/ProductForm.jsx",
+        "miRaw": 42.78800291827284,
+        "miNorm": 25.022223928814526,
+        "sloc": 135
+      },
+      {
+        "file": "frontend/src/pages/admin/Products.jsx",
+        "miRaw": 55.66465629758149,
+        "miNorm": 32.55243058338099,
+        "sloc": 78
+      },
+      {
+        "file": "frontend/src/pages/admin/Settings.jsx",
+        "miRaw": 55.30053230888984,
+        "miNorm": 32.339492578298156,
+        "sloc": 83
+      },
+      {
+        "file": "frontend/vite.config.js",
+        "miRaw": 106.2581286240772,
+        "miNorm": 62.1392565053083,
+        "sloc": 10
+      }
+    ]
+  }
+]

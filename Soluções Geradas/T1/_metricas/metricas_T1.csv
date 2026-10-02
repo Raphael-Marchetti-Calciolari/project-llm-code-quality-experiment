@@ -1,0 +1,6 @@
+Projeto,Arquivos,SLOC,Funcoes,CC_media,CC_max,Cognitiva_media,Cognitiva_max,Funcoes_cog>15,Halstead_Volume,IM_0a100,Duplicacao_%,Comentarios_%,Tempo_total_s,Tempo_total,Tempo_geracao_principal_s,Turnos_usuario,Interacoes_passos,Writes,Bash,Edicoes,Loops_correcao
+Haiku_4.5_high,24,1639,72,2.29,9,1.88,21,1,62533,44.0,4.8,0.5,260,4m20s,245,2,49,33,7,1,5
+Sonnet_4.6_low,20,765,68,1.69,5,1.21,20,1,37105,47.0,0,1.7,315,5m15s,286,2,34,27,0,0,1
+Opus_4.6_medium,19,670,65,1.58,6,1,14,0,34638,46.9,12.8,0.1,358,5m58s,358,1,47,23,10,1,8
+Opus_4.7_extra,24,978,100,1.8,8,1.14,15,0,43567,46.7,8.0,0,530,8m50s,530,1,49,31,4,2,1
+Opus_4.8_high,41,1262,112,1.89,9,1.21,17,1,49597,51.1,3.0,13.7,756,12m36s,756,1,98,51,13,3,2
