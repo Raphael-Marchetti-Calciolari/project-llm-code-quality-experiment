@@ -299,3 +299,7 @@ O texto atual diz que geração, verificação e correção ocorrerão "em diret
 - **Pendência do autor:** conferência visual do número de páginas (estimativa de 16 a 18 páginas, abaixo do limite de 30).
 - **Tabela 1 reestruturada:** nenhum modelo disponível tem tabela de texto corrido; os do Resultados Preliminares e o cronograma do template são numéricos. A tabela ganhou a coluna "Etapa", frases curtas e texto alinhado à esquerda (exceção ao "justificado" do manual, para legibilidade). Os detalhes foram para o parágrafo anterior.
 - **Tabelas:** largura declarada como 100% da área de texto (antes era 16 cm fixos, o mesmo valor), margem interna de 2,5 mm e 3 pt acima e abaixo de cada linha, em todas as seis.
+- **Tabelas, ajuste final com renderização no LibreOffice (18 páginas):**
+  - cabeçalhos alinhados como o conteúdo da coluna: à direita sobre números, à esquerda sobre texto. É uma exceção ao "centralizado" do manual, porque os cabeçalhos centralizados ficavam desalinhados dos valores;
+  - larguras de coluna refeitas para que nenhum valor numérico quebre de linha;
+  - margem interna das células de 1,5 mm.
