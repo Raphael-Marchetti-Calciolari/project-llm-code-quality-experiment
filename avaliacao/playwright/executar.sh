@@ -35,6 +35,8 @@ encerrar() {
   [[ -n "${DEV_PID:-}" ]] && kill -TERM -- -"$DEV_PID" 2>/dev/null
   sleep 2
   for p in 5173 3000; do lsof -nP -tiTCP:"$p" -sTCP:LISTEN 2>/dev/null | xargs kill -9 2>/dev/null; done
+  # Limpeza ao final da rodada: derruba o MongoDB e descarta os dados (tmpfs).
+  (cd "$ROOT/avaliacao/infra/mongodb" && docker compose down --volumes --remove-orphans >/dev/null 2>&1) || true
 }
 trap encerrar EXIT
 

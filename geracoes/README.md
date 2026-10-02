@@ -21,30 +21,18 @@ geracoes/
 | T3 | cópia congelada de `T1-final` | parecer → correção | `T3-parecer`, `T3-final` |
 | T4 | cópia congelada de `T2-final` | parecer → correção | `T4-parecer`, `T4-final` |
 
-Cada artefato é gerado em pasta dedicada **fora deste repositório** (proposta: `~/tcc-execucoes/Tn`), com repositório git próprio. O hash do commit de cada tag é o identificador de versão.
+Cada artefato é gerado em pasta dedicada **fora deste repositório** (`~/new-app`, reutilizada a cada etapa), com repositório git próprio. O hash do commit de cada tag é o identificador de versão.
 
-## Importação (convenção proposta)
+## Importação
 
-> **Proposta.** O mecanismo de isolamento das sessões ainda está pendente (ver `documentos/DECISOES_SESSAO_CLAUDE_CODE.md`, seção 8).
-
-Após congelar a etapa, exportar o snapshot da tag (sem `.git`, `node_modules` ou `dist`):
-
-```sh
-TN=T1; TAG=T1-final; SRC=~/tcc-execucoes/$TN
-mkdir -p geracoes/$TN
-git -C "$SRC" archive --format=tar "$TAG" | tar -x -C geracoes/$TN
-printf 'tag: %s\ncommit: %s\norigem: %s\n' "$TAG" \
-  "$(git -C "$SRC" rev-list -n1 "$TAG")" "$SRC" > geracoes/$TN/ORIGEM.txt
-```
-
-`git archive` exporta apenas arquivos versionados; garantir que `node_modules/` e `dist/` estejam no `.gitignore` do artefato.
+Feita por `avaliacao/coleta/congelar.sh <Tn> <Tn>-final` (`git archive` da tag, sem `.git`, `.claude`, `node_modules` e `dist`, mais `ORIGEM.txt` com tag, commit e data). Ver `documentos/ROTEIRO_COLETA.md`.
 
 ## Regras
 
 - Snapshots são somente leitura: nenhuma edição manual, nunca.
 - Nunca alterar um artefato para fazer testes passarem.
 - T3/T4 mantêm `VERIFICATION_REPORT.md` e `CORRECTION_SUMMARY.md` no snapshot.
-- A avaliação usa os comandos de `avaliacao/` (ver `avaliacao/COMO_AVALIAR.md`) apontando para estes snapshots ou para os originais congelados.
+- A avaliação usa os comandos de `avaliacao/` (ver `avaliacao/COMO_AVALIAR.md`) apontando para estes snapshots.
 
 ## Status
 
