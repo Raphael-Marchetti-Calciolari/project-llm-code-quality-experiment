@@ -305,3 +305,38 @@ O texto atual diz que geração, verificação e correção ocorrerão "em diret
   - margem interna das células de 1,5 mm.
   - Tabela 6: duração e tokens centralizados sob os cabeçalhos, com colunas de largura equilibrada. À direita, a duração ficava visualmente colada aos tokens.
   - A pedido do autor, os valores numéricos e seus cabeçalhos ficaram centralizados em todas as tabelas (exceção ao "números à direita" do manual), pela legibilidade. A Tabela 1, de texto, segue alinhada à esquerda.
+
+### 2026-10-02 — Revisão final com três verificadores (formato, referências, coesão)
+
+Três subagentes Opus 5.5 independentes, somente leitura, revisaram o texto. Conferi no manual as regras apontadas antes de aplicá-las.
+
+- **Formato:**
+  - Resumo e palavras-chave em espaçamento simples, sem recuo.
+  - Referências em espaçamento simples, com uma linha entre entradas.
+  - Folha de rosto com pontos no lugar de vírgulas.
+  - "s.d." passou a "n.d." (manual 18.1).
+  - URLs entre "< >" e acesso em "02 out. 2026".
+  - Títulos de livro com iniciais maiúsculas; títulos de artigo só com a primeira palavra em maiúscula.
+  - Citações no meio do parágrafo só com o ano entre parênteses.
+  - Siglas definidas na primeira ocorrência (JSX, JWT, JSON, MQR, SHA-256); HTTP e URL foram reescritos sem sigla.
+  - "sete" por extenso.
+  - Termos estrangeiros entre aspas curvas na primeira ocorrência.
+  - Material e Métodos no pretérito, incluindo os cenários P1–P5.
+  - Nota com a legenda de T1–T4 em todas as tabelas.
+  - Estilo de subtítulo com idioma pt-BR.
+  - Removida uma execução vazia de CommentReference.
+- **Referências:**
+  - Molison et al. e Nunes et al. passaram a citar a versão publicada nos anais (ESEM 2025 e SANER 2025), com DOI conferido no Crossref.
+  - Gil (2008) foi substituído por Bigaton et al. (2024). A citação vinha da paráfrase do material do curso, e o manual proíbe *apud*.
+  - Ajustadas duas frases atribuídas a Souza (2024) e a frase sobre os 68,63% de Nunes et al., que se referem às soluções, não aos participantes.
+- **Coesão:**
+  - Menos conectores repetidos e menos apartes com travessão.
+  - Terminologia unificada: "problemas" para o SonarQube, "ocorrências" para o protocolo, "relato de correção".
+  - Afirmações causais suavizadas, adequadas a n = 1.
+  - Conclusão menos repetitiva e corrigida para T3, cujo corretor não declarou aplicação integral.
+  - Molison et al. retomado na discussão.
+- **Mantidas por decisão:**
+  - O título com "LLMs". O checklist desaconselha termo em inglês no título, mas trocar o título é decisão do autor.
+  - A titulação do orientador, que o autor não informou.
+  - Os subtítulos de Resultados, que correspondem só parcialmente aos de Métodos (recomendação, não obrigação).
+  - As documentações do Playwright e do SonarSource, citadas por serem a definição oficial dos instrumentos.
