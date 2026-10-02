@@ -188,7 +188,7 @@ O texto atual diz que geração, verificação e correção ocorrerão "em diret
 - **Sem mecanismo de bloqueio** (sandbox, contêiner ou regras de negação). O isolamento foi garantido de duas formas:
   1. separação física: a suíte, as configurações do Sonar e os resultados ficam em outra pasta, e nada no diretório de execução aponta para eles;
   2. **auditoria posterior do transcript** de cada sessão: lista toda chamada de ferramenta com caminho fora de `~/new-app` e classifica como desvio os acessos sensíveis (repositório do estudo, transcripts e memória do Claude Code).
-- **Resultado da auditoria:** 0 desvios nas 7 sessões válidas.
+- **Resultado da auditoria:** 0 desvios nas 6 sessões válidas (a 7ª sessão, descartada, foi invalidada pelo modelo errado).
 - **Plugins globais do Claude Code desativados** no diretório de execução, porque injetam instruções em toda sessão (por exemplo, uma skill de TDD que contaminaria T1). É um controle de contaminação que merece uma frase.
 - **Modelo e esforço** fixados por arquivo de configuração local e conferidos pelo pesquisador com `/status` antes de colar o prompt.
 - **Papel do pesquisador** em cada sessão: abrir uma sessão nova, conferir a configuração, colar o prompt integral, não intervir e encerrar ao final. Nenhuma sessão exigiu intervenção (1 interação humana por sessão).
@@ -256,3 +256,18 @@ O texto atual diz que geração, verificação e correção ocorrerão "em diret
 - O isolamento foi verificado por auditoria posterior, não por um bloqueio técnico.
 - A suíte funcional atingiu o teto (5/5) em todas as condições e não discriminou os tratamentos.
 - A aderência ao TDD em T2/T4 foi parcial (ciclos em lotes).
+
+## Sincronização do TCC
+
+### 2026-10-02 — Material e Métodos (itens 1 a 5 e parte do 7)
+
+- O usuário autorizou editar o `.docx` nesta sessão, mantendo a formatação e a estrutura do template.
+- **Tempo verbal:** "Material e Métodos" foi reescrito no pretérito perfeito, na forma impessoal, como exige o manual (item 16.4). Resumo, Introdução, Resultados e Discussão e Conclusão ainda estão no futuro e serão revistos com os resultados.
+- **Delineamento:** classificado como quase-experimental (fatores manipulados, sem repetição nem aleatorização), citando Gil (2008), do material de apoio. A referência foi incluída.
+- **Item 1 (corrigido):** diretório único fora do repositório e do iCloud, esvaziado a cada etapa; sem bloqueio técnico; auditoria posterior do registro (caminhos e modelo); plugins desativados; papel do pesquisador. O texto não traz caminhos locais.
+- **Item 2:** novo subtítulo "Congelamento e derivação das versões". A tabela de marcações e commits não entrou no texto; os identificadores ficam nos registros do repositório.
+- **Item 3:** avaliação sobre cópia fora do iCloud, com o motivo; mesma suíte e SonarQube.
+- **Item 4:** definição operacional de duração, tokens e interações em "Métricas e coleta automatizada".
+- **Item 5:** a regra "refazer só quando o protocolo não foi seguido" entrou em "Rastreabilidade, desvios e limitações" (subtítulo renomeado). A tabela de desvios fica para "Resultados e Discussão", em subtítulo correspondente.
+- **Item 7:** só a limitação de desenho (isolamento por auditoria) entrou nos métodos; suíte no teto e TDD em lotes são resultados e serão discutidos lá.
+- Não houve renderização visual (sem LibreOffice na máquina); o `.docx` passou na validação XSD e os parágrafos novos usam os mesmos estilos dos originais.
