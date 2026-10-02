@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; color: #222; background: #fafafa; }
+a { color: #0b63ce; }
+.container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+.narrow { max-width: 420px; }
+.hero { text-align: center; padding: 24px 0 32px; }
+.store-name { text-transform: uppercase; letter-spacing: 2px; color: #666; margin: 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.card { background: #fff; border: 1px solid #e3e3e3; border-radius: 8px; padding: 12px; text-decoration: none; color: inherit; }
+.card img, .detail img { width: 100%; border-radius: 6px; object-fit: cover; }
+.detail { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 16px; }
+@media (max-width: 640px) { .detail { grid-template-columns: 1fr; } }
+.price { font-size: 1.4rem; }
+form { display: flex; flex-direction: column; gap: 12px; max-width: 520px; }
+label { display: flex; flex-direction: column; gap: 4px; font-size: 0.9rem; }
+label.checkbox { flex-direction: row; align-items: center; gap: 8px; }
+input, textarea { padding: 8px; border: 1px solid #ccc; border-radius: 4px; font: inherit; }
+button, .button { padding: 8px 14px; border: 0; border-radius: 4px; background: #0b63ce; color: #fff; cursor: pointer; font: inherit; text-decoration: none; display: inline-block; }
+button.danger { background: #c62828; }
+.whatsapp { background: #25d366; margin-top: 12px; }
+.error { color: #c62828; }
+table { width: 100%; border-collapse: collapse; background: #fff; margin-bottom: 24px; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid #eee; }
+.actions { display: flex; gap: 8px; align-items: center; }
+.admin-header { display: flex; justify-content: space-between; align-items: center; }
+.admin-header nav { display: flex; gap: 16px; }

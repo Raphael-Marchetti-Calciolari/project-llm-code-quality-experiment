@@ -1,0 +1,20 @@
+
+> dev
+> concurrently -n api,web -c blue,green "npm run dev -w backend" "npm run dev -w frontend"
+
+[34m[api][39m 
+[34m[api][39m > dev
+[34m[api][39m > node --watch src/server.js
+[34m[api][39m 
+[32m[web][39m 
+[32m[web][39m > dev
+[32m[web][39m > vite
+[32m[web][39m 
+[32m[web][39m 
+[32m[web][39m   [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m103[22m[2m[0m ms[22m
+[32m[web][39m 
+[32m[web][39m   [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5173[22m/[39m
+[32m[web][39m [2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[34m[api][39m API em http://localhost:3000/api
+[32m[web][39m [0mnpm run dev -w frontend exited with code SIGTERM[0m
+[34m[api][39m [0mnpm run dev -w backend exited with code 0[0m

@@ -90,3 +90,29 @@ As decisões da fase de preparação já foram incorporadas ao documento do TCC.
 - A base de T3 foi reconstruída e conferida contra os arquivos de `T1-final`: mesma lista e conteúdo idêntico.
 - O registro duplicado de preparação em `sessoes.csv` foi removido.
 - Nenhuma sessão de agente rodou sobre a base com os resíduos.
+
+### 2026-10-02 — T3 (agente sobre T1)
+
+- **Verificação:**
+  - Claude Code 2.1.287, Opus 5.5 (`claude-opus-5-5`), esforço low; somente leitura respeitado (o único arquivo novo é `VERIFICATION_REPORT.md`).
+  - `T3-parecer` = `674f2286bdf80eb335dbbc1b8f1a26ec0f7372bb`.
+  - Esforço: 1,4 min, 237.744 tokens, 1 interação. Auditoria: 0 desvios.
+  - **24 apontamentos:** erros 10, nomes 4, responsabilidades 3, duplicação 4, complexidade 3.
+- **Correção:**
+  - Sonnet 5.5, esforço low.
+  - `T3-final` = `b2363d074ea58849eac8c2534c7fe971ee81a848`. Diff em relação ao parecer: 29 arquivos, +368/−249.
+  - Esforço: 2,5 min, 551.503 tokens, 1 interação. Auditoria: 0 desvios.
+  - **Aplicação:** 21 apontamentos aplicados integralmente, 1 parcialmente (D-03) e 2 não aplicados (D-01 no frontend e D-02), com justificativa em `CORRECTION_SUMMARY.md`.
+- **Evento:** o corretor verificou apenas `which mongod`, concluiu que "MongoDB indisponível" e não validou a API nem a interface de ponta a ponta. O MongoDB do contrato estava ativo e saudável em `127.0.0.1:27017` (reiniciado às 04:58Z, antes da sessão). Validou só o build do frontend, `node --check` e a importação do backend.
+- **Decisão:** a etapa **não foi refeita**. A conclusão errada foi do próprio agente, sem falha do ambiente. Repetir a sessão para obter um resultado melhor seria seleção de resultados. Fica registrado como comportamento observado.
+- **Resultado funcional** (cópia fora do iCloud, sem reinícios): P1–P5 aprovados (5/5).
+- **SonarQube:**
+
+  | Métrica | Valor |
+  |---|---|
+  | LOC | 709 |
+  | Complexidade ciclomática | 163 |
+  | Complexidade cognitiva | 54 |
+  | Duplicação | 0,0% |
+  | Problemas de manutenibilidade | 11 |
+  | Esforço de remediação | 51 min |

@@ -1,0 +1,526 @@
+[
+  {
+    "key": "27213645-12d6-45eb-b836-85a2ef3437f7",
+    "rule": "javascript:S6582",
+    "severity": "MINOR",
+    "component": "tcc-T3:backend/src/routes/auth.js",
+    "project": "tcc-T3",
+    "line": 11,
+    "hash": "e402ad99cdecd569b4dcfca976fbb698",
+    "textRange": {
+      "startLine": 11,
+      "endLine": 11,
+      "startOffset": 6,
+      "endOffset": 60
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Prefer using an optional chain expression instead, as it's more concise and easier to read.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "editable-source",
+      "type-dependent",
+      "es2020"
+    ],
+    "creationDate": "2026-10-02T05:03:52+0000",
+    "updateDate": "2026-10-02T05:03:52+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CLEAR",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+  },
+  {
+    "key": "cd4925db-5f6a-4a86-bf15-a7382ef2ec41",
+    "rule": "javascript:S1128",
+    "severity": "MINOR",
+    "component": "tcc-T3:frontend/src/components/SettingsForm.jsx",
+    "project": "tcc-T3",
+    "line": 4,
+    "hash": "a17a39cfd929f0cd4915849ab51981b3",
+    "textRange": {
+      "startLine": 4,
+      "endLine": 4,
+      "startOffset": 7,
+      "endOffset": 19
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Remove this unused import of 'ErrorMessage'.",
+    "effort": "1min",
+    "debt": "1min",
+    "author": "",
+    "tags": [
+      "es2015",
+      "type-dependent",
+      "unused"
+    ],
+    "creationDate": "2026-10-02T05:03:52+0000",
+    "updateDate": "2026-10-02T05:03:52+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CLEAR",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+  },
+  {
+    "key": "56373c7c-d017-489a-ba7f-e7d301857d68",
+    "rule": "javascript:S6772",
+    "severity": "MAJOR",
+    "component": "tcc-T3:frontend/src/pages/AdminLogin.jsx",
+    "project": "tcc-T3",
+    "line": 29,
+    "hash": "3d74cfa062ef2d5484838203db12ab83",
+    "textRange": {
+      "startLine": 29,
+      "endLine": 29,
+      "startOffset": 0,
+      "endOffset": 124
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Ambiguous spacing before next element input",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "react"
+    ],
+    "creationDate": "2026-10-02T05:03:52+0000",
+    "updateDate": "2026-10-02T05:03:52+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "FORMATTED",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "RELIABILITY",
+        "severity": "LOW"
+      },
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+  },
+  {
+    "key": "9099e2ef-5e68-4097-9ce5-054a577ad571",
+    "rule": "javascript:S6772",
+    "severity": "MAJOR",
+    "component": "tcc-T3:frontend/src/pages/AdminLogin.jsx",
+    "project": "tcc-T3",
+    "line": 33,
+    "hash": "1be8a549aefffe3ee3758087ef746ffa",
+    "textRange": {
+      "startLine": 33,
+      "endLine": 33,
+      "startOffset": 0,
+      "endOffset": 136
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Ambiguous spacing before next element input",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "react"
+    ],
+    "creationDate": "2026-10-02T05:03:52+0000",
+    "updateDate": "2026-10-02T05:03:52+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "FORMATTED",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "RELIABILITY",
+        "severity": "LOW"
+      },
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+  },
+  {
+    "key": "235c7cd6-bd9c-4fc0-89e1-2c7b1eedb4e5",
+    "rule": "javascript:S6772",
+    "severity": "MAJOR",
+    "component": "tcc-T3:frontend/src/pages/AdminProductForm.jsx",
+    "project": "tcc-T3",
+    "line": 57,
+    "hash": "aa8dd6b35ce775eb2b0418cd65dc5c37",
+    "textRange": {
+      "startLine": 57,
+      "endLine": 57,
+      "startOffset": 0,
+      "endOffset": 98
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Ambiguous spacing before next element input",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "react"
+    ],
+    "creationDate": "2026-10-02T05:03:52+0000",
+    "updateDate": "2026-10-02T05:03:52+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "FORMATTED",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "RELIABILITY",
+        "severity": "LOW"
+      },
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+  },
+  {
+    "key": "aac48898-cb9c-4640-a827-2b7a8fb14892",
+    "rule": "javascript:S6772",
+    "severity": "MAJOR",
+    "component": "tcc-T3:frontend/src/pages/AdminProductForm.jsx",
+    "project": "tcc-T3",
+    "line": 61,
+    "hash": "cb8778b290758fd98a3daf035bfb495a",
+    "textRange": {
+      "startLine": 61,
+      "endLine": 61,
+      "startOffset": 0,
+      "endOffset": 104
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Ambiguous spacing before next element input",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "react"
+    ],
+    "creationDate": "2026-10-02T05:03:52+0000",
+    "updateDate": "2026-10-02T05:03:52+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "FORMATTED",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "RELIABILITY",
+        "severity": "LOW"
+      },
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+  },
+  {
+    "key": "4fc82a25-152f-4e1d-8c63-9b66b6db3e3a",
+    "rule": "javascript:S6772",
+    "severity": "MAJOR",
+    "component": "tcc-T3:frontend/src/pages/AdminProductForm.jsx",
+    "project": "tcc-T3",
+    "line": 65,
+    "hash": "e27d350a04e7734696506d50b2ccb25d",
+    "textRange": {
+      "startLine": 65,
+      "endLine": 65,
+      "startOffset": 0,
+      "endOffset": 141
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Ambiguous spacing before next element input",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "react"
+    ],
+    "creationDate": "2026-10-02T05:03:52+0000",
+    "updateDate": "2026-10-02T05:03:52+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "FORMATTED",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "RELIABILITY",
+        "severity": "LOW"
+      },
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+  },
+  {
+    "key": "e6ee6804-9dfc-450b-b576-b0849ecccc29",
+    "rule": "javascript:S6772",
+    "severity": "MAJOR",
+    "component": "tcc-T3:frontend/src/pages/AdminProductForm.jsx",
+    "project": "tcc-T3",
+    "line": 69,
+    "hash": "cfba3c3e4f115a854ab0a73d3d73b93b",
+    "textRange": {
+      "startLine": 69,
+      "endLine": 69,
+      "startOffset": 0,
+      "endOffset": 137
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Ambiguous spacing before next element textarea",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "react"
+    ],
+    "creationDate": "2026-10-02T05:03:52+0000",
+    "updateDate": "2026-10-02T05:03:52+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "FORMATTED",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "RELIABILITY",
+        "severity": "LOW"
+      },
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+  },
+  {
+    "key": "4bb8de9f-d3a8-4f3e-9da7-a19f8d63c962",
+    "rule": "javascript:S6772",
+    "severity": "MAJOR",
+    "component": "tcc-T3:frontend/src/pages/AdminProductForm.jsx",
+    "project": "tcc-T3",
+    "line": 73,
+    "hash": "e260ab71b39157ea44ad858f37212b63",
+    "textRange": {
+      "startLine": 73,
+      "endLine": 73,
+      "startOffset": 0,
+      "endOffset": 107
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Ambiguous spacing before next element input",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "react"
+    ],
+    "creationDate": "2026-10-02T05:03:52+0000",
+    "updateDate": "2026-10-02T05:03:52+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "FORMATTED",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "RELIABILITY",
+        "severity": "LOW"
+      },
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+  },
+  {
+    "key": "69fa9f6a-55cd-4aca-bd99-b34151feb7e1",
+    "rule": "javascript:S6772",
+    "severity": "MAJOR",
+    "component": "tcc-T3:frontend/src/pages/AdminProductForm.jsx",
+    "project": "tcc-T3",
+    "line": 77,
+    "hash": "a42e551c3c7b60a848f4f2e95fb735d9",
+    "textRange": {
+      "startLine": 77,
+      "endLine": 77,
+      "startOffset": 0,
+      "endOffset": 117
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Ambiguous spacing before next element input",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "react"
+    ],
+    "creationDate": "2026-10-02T05:03:52+0000",
+    "updateDate": "2026-10-02T05:03:52+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "FORMATTED",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "RELIABILITY",
+        "severity": "LOW"
+      },
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+  },
+  {
+    "key": "76d57059-8d5d-4853-8a72-8de498d90ee5",
+    "rule": "javascript:S6772",
+    "severity": "MAJOR",
+    "component": "tcc-T3:frontend/src/pages/AdminProductForm.jsx",
+    "project": "tcc-T3",
+    "line": 85,
+    "hash": "18f68d13217048286fcb813f5c627bc0",
+    "textRange": {
+      "startLine": 85,
+      "endLine": 85,
+      "startOffset": 0,
+      "endOffset": 12
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Ambiguous spacing after previous element input",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "react"
+    ],
+    "creationDate": "2026-10-02T05:03:52+0000",
+    "updateDate": "2026-10-02T05:03:52+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "FORMATTED",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "RELIABILITY",
+        "severity": "LOW"
+      },
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+  }
+]

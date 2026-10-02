@@ -1,0 +1,17 @@
+ Container tcc-mongodb Stopping 
+ Container tcc-mongodb Stopped 
+ Container tcc-mongodb Removing 
+ Container tcc-mongodb Removed 
+ Network mongodb_default Removing 
+ Network mongodb_default Removed 
+ Network mongodb_default Creating 
+ Network mongodb_default Creating 
+ Network mongodb_default Created 
+ Network mongodb_default Created 
+ Container tcc-mongodb Creating 
+ Container tcc-mongodb Created 
+ Container tcc-mongodb Starting 
+ Container tcc-mongodb Started 
+ Container tcc-mongodb Waiting 
+ Container tcc-mongodb Healthy 
+MongoDB 7.0.43 pronto em mongodb://127.0.0.1:27017

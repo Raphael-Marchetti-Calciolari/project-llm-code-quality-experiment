@@ -1,0 +1,19 @@
+{
+  "condicao": "T3",
+  "etapa": "verificacao",
+  "transcript": "/Users/raphael/.claude/projects/-Users-raphael-new-app/1afc0b8a-77cc-4b9c-a474-c30454d126ca.jsonl",
+  "modelos": [
+    "claude-opus-5-5"
+  ],
+  "duracao_min": 1.4,
+  "tokens": {
+    "input_tokens": 10,
+    "output_tokens": 8808,
+    "cache_creation_input_tokens": 33818,
+    "cache_read_input_tokens": 195108
+  },
+  "tokens_total": 237744,
+  "interacoes_humanas": 1,
+  "desvios": [],
+  "caminhos_externos_para_revisao": []
+}

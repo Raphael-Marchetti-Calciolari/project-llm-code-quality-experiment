@@ -1,0 +1,4 @@
+tag: T3-final
+commit: b2363d074ea58849eac8c2534c7fe971ee81a848
+origem: /Users/raphael/new-app
+exportado: 2026-10-02T05:03:49Z

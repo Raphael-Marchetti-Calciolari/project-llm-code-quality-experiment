@@ -1,0 +1,19 @@
+{
+  "condicao": "T3",
+  "etapa": "correcao",
+  "transcript": "/Users/raphael/.claude/projects/-Users-raphael-new-app/9ca1e012-2842-4acd-a136-341c0c9dbb78.jsonl",
+  "modelos": [
+    "claude-sonnet-5-5"
+  ],
+  "duracao_min": 2.5,
+  "tokens": {
+    "input_tokens": 18,
+    "output_tokens": 13195,
+    "cache_creation_input_tokens": 45052,
+    "cache_read_input_tokens": 493238
+  },
+  "tokens_total": 551503,
+  "interacoes_humanas": 1,
+  "desvios": [],
+  "caminhos_externos_para_revisao": []
+}
