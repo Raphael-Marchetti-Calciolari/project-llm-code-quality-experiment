@@ -1,0 +1,46 @@
+
+[2mRunning [22m5[2m tests using [22m1[2m worker[22m
+
+  [32m✓[39m  [2m1 [22m[chromium] › cenarios.spec.js:11:1 › P1 — Autenticação administrativa[2m (2.5s)[22m
+  [31m✘[39m  [2m2 [22m[31m[chromium] › cenarios.spec.js:30:1 › P2 — Cadastro e publicação[39m[2m (13.4s)[22m
+  [32m✓[39m  [2m3 [22m[chromium] › cenarios.spec.js:63:1 › P3 — Edição de produto[2m (3.1s)[22m
+  [32m✓[39m  [2m4 [22m[chromium] › cenarios.spec.js:96:1 › P4 — Inativação[2m (2.9s)[22m
+  [32m✓[39m  [2m5 [22m[chromium] › cenarios.spec.js:121:1 › P5 — Contato via WhatsApp[2m (1.0s)[22m
+
+
+[31m  1) [chromium] › cenarios.spec.js:30:1 › P2 — Cadastro e publicação [2m───────────────────────────────[22m[39m
+
+    Error: [31mTimed out 10000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m
+
+    Locator: getByTestId('public-product-card-produto-cenario-p2')
+    Expected string: [32m"Produto Cenário P2"[39m
+    Received: <element(s) not found>
+    Call log:
+    [2m  - expect.toContainText with timeout 10000ms[22m
+    [2m  - waiting for getByTestId('public-product-card-produto-cenario-p2')[22m
+
+
+    [0m [90m 49 |[39m   [36mawait[39m page[33m.[39mreload()[33m;[39m
+     [90m 50 |[39m   [36mawait[39m c[33m.[39msettle(page)[33m;[39m
+    [31m[1m>[22m[39m[90m 51 |[39m   [36mawait[39m expect(page[33m.[39mgetByTestId([32m`public-product-card-${novo.slug}`[39m))[33m.[39mtoContainText(novo[33m.[39mnome)[33m;[39m
+     [90m    |[39m                                                                      [31m[1m^[22m[39m
+     [90m 52 |[39m
+     [90m 53 |[39m   [90m// Página de detalhes, após recarregar.[39m
+     [90m 54 |[39m   [36mawait[39m page[33m.[39mgoto(c[33m.[39murl([32m`/produtos/${novo.slug}`[39m))[33m;[39m[0m
+    [2m    at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:51:70[22m
+
+[36m    attachment #1: screenshot (image/png) [2m──────────────────────────────────────────────────────────[22m[39m
+[36m    ../resultados/T1/playwright/artefatos/cenarios-P2-—-Cadastro-e-publicação-chromium/test-failed-1.png[39m
+[36m    [2m────────────────────────────────────────────────────────────────────────────────────────────────[22m[39m
+
+[36m    attachment #2: trace (application/zip) [2m─────────────────────────────────────────────────────────[22m[39m
+[36m    ../resultados/T1/playwright/artefatos/cenarios-P2-—-Cadastro-e-publicação-chromium/trace.zip[39m
+[36m    Usage:[39m
+
+[36m        npx playwright show-trace ../resultados/T1/playwright/artefatos/cenarios-P2-—-Cadastro-e-publicação-chromium/trace.zip[39m
+
+[36m    [2m────────────────────────────────────────────────────────────────────────────────────────────────[22m[39m
+
+[31m  1 failed[39m
+[31m    [chromium] › cenarios.spec.js:30:1 › P2 — Cadastro e publicação [2m────────────────────────────────[22m[39m
+[32m  4 passed[39m[2m (24.9s)[22m

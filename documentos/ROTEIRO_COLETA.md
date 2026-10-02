@@ -17,7 +17,7 @@ Passo a passo para executar o experimento. **Você** (pesquisador) conduz as ses
 | 4 | Você | Quando o agente concluir, feche a sessão (`/exit`) e avise o assistente: "**Tn etapa concluída**". Relate qualquer evento fora do normal. |
 | 5 | Assistente | `./avaliacao/coleta/congelar.sh <Tn> <tag>`: commit + tag em `~/new-app`; nas tags `*-final`, exporta o snapshot para `geracoes/<Tn>`. |
 | 6 | Assistente | `python3 avaliacao/coleta/auditar_sessao.py <Tn> <etapa>`: esforço (duração, tokens, interações) e auditoria de caminhos fora de `~/new-app`. |
-| 7 | Assistente | Só nas tags `*-final`: Sonar + Playwright sobre `geracoes/<Tn>` (o MongoDB é limpo no início e no fim). |
+| 7 | Assistente | Só nas tags `*-final`: Sonar + Playwright sobre a cópia idêntica `~/tcc-avaliacao/<Tn>`, fora do iCloud (o MongoDB é limpo no início e no fim). |
 | 8 | Assistente | Registra resultados, desvios e eventos em `documentos/DECISOES_SESSAO_CLAUDE_CODE.md` e faz o commit. |
 
 ## Ordem das etapas

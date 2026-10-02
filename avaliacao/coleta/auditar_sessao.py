@@ -5,7 +5,7 @@ Uso: python3 avaliacao/coleta/auditar_sessao.py <Tn> <geracao|verificacao|correc
 
 - Lista chamadas de ferramenta com caminhos fora de ~/new-app; caminhos sensíveis
   (repositório do TCC, transcripts e memória do Claude) são desvios de protocolo.
-- Extrai esforço: duração (1ª → última mensagem), tokens e interações humanas.
+- Extrai esforço: duração (prompt → última mensagem), tokens e interações humanas.
 - Grava avaliacao/registros/auditoria/<Tn>_<etapa>.json e acrescenta esforco.csv.
 """
 import csv, json, re, sys
@@ -39,7 +39,7 @@ def main():
         principal = max(PROJ.glob("*.jsonl"), key=lambda p: p.stat().st_mtime)
     arquivos = [principal] + sorted((principal.parent / principal.stem).rglob("*.jsonl"))
 
-    tempos, usos, chamadas, interacoes, modelos = [], {}, [], 0, set()
+    tempos, usos, chamadas, interacoes, modelos, inicio = [], {}, [], 0, set(), None
     for arq in arquivos:
         for linha in arq.open():
             try: e = json.loads(linha)
@@ -48,8 +48,11 @@ def main():
             msg = e.get("message") or {}
             if e.get("type") == "user" and arq == principal and not e.get("isMeta"):
                 c = msg.get("content")
-                if isinstance(c, str) or (isinstance(c, list) and any(b.get("type") == "text" for b in c)):
+                texto = c if isinstance(c, str) else " ".join(b.get("text", "") for b in c or [] if b.get("type") == "text")
+                # Comandos locais (/model, /exit...) e suas saídas não são interações com o agente.
+                if texto.strip() and not texto.lstrip().startswith(("<command-name>", "<local-command")):
                     interacoes += 1
+                    inicio = inicio or ts(e)
             if e.get("type") == "assistant":
                 if msg.get("model"): modelos.add(msg["model"])
                 if msg.get("id") and msg.get("usage"): usos[msg["id"]] = msg["usage"]
@@ -64,7 +67,8 @@ def main():
 
     tok = {k: sum(u.get(k, 0) or 0 for u in usos.values()) for k in
            ("input_tokens", "output_tokens", "cache_creation_input_tokens", "cache_read_input_tokens")}
-    dur = round((max(tempos) - min(tempos)).total_seconds() / 60, 1) if tempos else None
+    # Duração: do envio do prompt à última mensagem (exclui comandos de configuração).
+    dur = round((max(tempos) - (inicio or min(tempos))).total_seconds() / 60, 1) if tempos else None
     desvios = [c for c in chamadas if c["sensivel"]]
     out = {"condicao": tn, "etapa": etapa, "transcript": str(principal), "modelos": sorted(modelos),
            "duracao_min": dur, "tokens": tok, "tokens_total": sum(tok.values()),

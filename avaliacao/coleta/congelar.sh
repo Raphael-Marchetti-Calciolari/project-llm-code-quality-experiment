@@ -23,4 +23,10 @@ if [[ "$TAG" == *-final ]]; then
   rm -rf "$DEST/.claude"
   printf 'tag: %s\ncommit: %s\norigem: %s\nexportado: %s\n' "$TAG" "$COMMIT" "$APP" "$(date -u +%FT%TZ)" > "$DEST/ORIGEM.txt"
   echo "Snapshot exportado para geracoes/$TN"
+  # Cópia de avaliação fora do iCloud: a sincronização dispara o modo watch
+  # dos servidores de desenvolvimento e derruba a API durante a suíte.
+  AVAL="${AVAL_DIR:-$HOME/tcc-avaliacao}/$TN"
+  rm -rf "$AVAL"; mkdir -p "$AVAL"
+  (cd "$DEST" && tar -cf - --exclude ORIGEM.txt .) | tar -xf - -C "$AVAL"
+  diff -rq --exclude ORIGEM.txt "$DEST" "$AVAL" && echo "Cópia de avaliação idêntica em $AVAL"
 fi

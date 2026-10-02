@@ -32,7 +32,7 @@ Feita por `avaliacao/coleta/congelar.sh <Tn> <Tn>-final` (`git archive` da tag, 
 - Snapshots são somente leitura: nenhuma edição manual, nunca.
 - Nunca alterar um artefato para fazer testes passarem.
 - T3/T4 mantêm `VERIFICATION_REPORT.md` e `CORRECTION_SUMMARY.md` no snapshot.
-- A avaliação usa os comandos de `avaliacao/` (ver `avaliacao/COMO_AVALIAR.md`) apontando para estes snapshots.
+- A avaliação usa os comandos de `avaliacao/` (ver `avaliacao/COMO_AVALIAR.md`) sobre cópias idênticas destes snapshots em `~/tcc-avaliacao/<Tn>`, fora do iCloud (a sincronização reinicia os servidores em modo watch).
 
 ## Status
 

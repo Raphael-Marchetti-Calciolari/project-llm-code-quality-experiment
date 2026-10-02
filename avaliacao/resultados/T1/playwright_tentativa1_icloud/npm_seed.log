@@ -1,0 +1,9 @@
+
+> seed
+> npm run seed -w backend
+
+
+> seed
+> node src/seed.js
+
+Banco populado.
