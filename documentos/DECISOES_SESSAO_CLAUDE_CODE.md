@@ -304,3 +304,4 @@ O texto atual diz que geração, verificação e correção ocorrerão "em diret
   - larguras de coluna refeitas para que nenhum valor numérico quebre de linha;
   - margem interna das células de 1,5 mm.
   - Tabela 6: duração e tokens centralizados sob os cabeçalhos, com colunas de largura equilibrada. À direita, a duração ficava visualmente colada aos tokens.
+  - A pedido do autor, os valores numéricos e seus cabeçalhos ficaram centralizados em todas as tabelas (exceção ao "números à direita" do manual), pela legibilidade. A Tabela 1, de texto, segue alinhada à esquerda.
