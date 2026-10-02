@@ -81,11 +81,33 @@ Derivados de `Prompt de geração - T1 (LLM sem revisão).md`, mantendo a especi
 - Verificação antes do congelamento (`validacao/validar_suite.sh`), com aplicação de referência mínima que cumpre o contrato (`validacao/app-referencia/`) e falhas deliberadas: referência e variante com controles alternativos → 5/5 aprovados; cada mutante (login aceita qualquer senha, criação não persiste, edição ignora preço, inativo na vitrine, número de WhatsApp errado) → reprovado **exatamente** no cenário-alvo (P1…P5). Resultado: **SUÍTE VALIDADA** (`avaliacao/registros/validacao_suite.txt`).
 - Limitação a registrar no TCC: P1–P5 não cobrem exclusão de produto nem configurações da vitrine.
 
-## 6. Pendências
+## 6. Scripts de análise (saídas brutas → tabelas de resultados)
+
+- Arquivo: `avaliacao/scripts/consolidar.py` (Python padrão, sem dependências). Uso: `python3 avaliacao/scripts/consolidar.py` → `avaliacao/resultados/tabelas/`.
+- Entradas por condição: `sonar/resumo.json`, `sonar/testes_desenvolvimento.json`, `playwright/execucao.json`, `playwright/relatorio.json`. Entrada opcional: `avaliacao/registros/esforco.csv` (`condicao,etapa,duracao_min,tokens,interacoes`).
+- Saídas: `estrutural.csv` (indicadores por condição), `comparacoes.csv` (pareadas), `funcional.csv` (P1–P5 com motivo), `testes_desenvolvimento.csv`, `resultados.md` (resumo legível).
+- Regras implementadas conforme o "Plano de análise":
+  - comparações **T2−T1** (TDD), **T3−T1** (agente sobre geração direta), **T4−T2** (agente sobre TDD) e **T4−T3** rotulada como contraste descritivo;
+  - diferença absoluta sempre; variação percentual somente com referência ≠ 0 (senão "não calculável (referência = 0)");
+  - densidade = 1.000 × problemas ÷ LOC, somente com LOC > 0;
+  - dado ausente → "não disponível", nunca zero; nenhuma pontuação agregada;
+  - funcional: aprovado / reprovado / não executado com motivo (inclui Expected/Received da asserção), fração aprovados/5, falhas de inicialização em seção própria;
+  - esforço (duração, tokens, interações) apenas complementar; sem registro → "não registrado".
+- Integridade: a consolidação **é abortada** se o hash da suíte ou a versão do SonarQube diferirem entre condições ("resultados de versões diferentes não serão combinados"); ausência de registro gera aviso.
+- Validado com dados sintéticos cobrindo: execução normal, referência zero (sem %), condição sem dados do SonarQube, falha de inicialização (seed) e hash divergente (abortado).
+
+### Fluxo completo de avaliação por condição
+
+```
+./avaliacao/sonar/analisar.sh      Tn <dir-do-artefato-congelado>
+./avaliacao/playwright/executar.sh Tn <dir-do-artefato-congelado>
+python3 avaliacao/scripts/consolidar.py      # após as quatro condições
+```
+
+## 7. Pendências
 
 - Definir e registrar modelo gerador (versão + esforço) e modelo verificador (leve).
-- Definir limites numéricos por etapa (geração; verificação + correção).
-- Configuração do SonarQube (`sonar-project.properties`, perfil de regras, exclusões) e registro de versões.
-- Suíte Playwright P1–P5 congelada, fora do alcance dos agentes, com hash registrado.
-- Scripts de análise (densidade de problemas, consolidação).
+- Definir limites numéricos por etapa (geração; verificação + correção) e o formato de registro do esforço (`avaliacao/registros/esforco.csv`).
+- Definir os diretórios de geração fora deste repositório e o procedimento de congelamento/cópia dos artefatos (identificador de versão por etapa).
 - T3/T4: verificador e corretor em sessões novas e isoladas (não subagentes na mesma sessão).
+- Atualizar no documento do TCC: versão efetiva do Playwright (suíte local 1.49.1; global 1.63.0), MongoDB 7.0.43, SonarQube 26.9.0.129388 em modo MQR.
