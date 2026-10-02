@@ -10,3 +10,6 @@ build/
 
 # Env
 .env
+
+# Segredos locais
+avaliacao/sonar/.sonar-token

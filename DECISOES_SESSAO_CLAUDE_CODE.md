@@ -47,7 +47,21 @@ Derivados de `Prompt de geração - T1 (LLM sem revisão).md`, mantendo a especi
 - Procedimento: executar `./infra/mongodb/reset.sh` antes de cada geração e de cada avaliação; em seguida, o `npm run seed` da própria aplicação prepara os dados.
 - Texto a incluir no TCC (seção de ambiente): MongoDB 7.0.43 em contêiner Docker, reiniciado em estado vazio antes de cada condição.
 
-## 4. Pendências
+## 4. SonarQube (análise estática → qualidade estrutural)
+
+- Arquivos: `avaliacao/sonar/sonar-common.properties` (configuração única), `avaliacao/sonar/analisar.sh <Tn> <dir>` (execução), `avaliacao/sonar/registrar_versoes.sh` (registro de versões → `avaliacao/registros/versoes_ambiente.txt`), `avaliacao/scripts/coletar_sonar.py` (coleta via API), `avaliacao/scripts/contar_testes.py` (descrição dos testes excluídos).
+- Versões efetivas: servidor **SonarQube 26.9.0.129388** (`sonarqube:community`, image ID `sha256:8e79c4957e1e…7ddc`), **SonarScanner CLI 8.1.0.6389**, Node 20.20.2.
+- Modo de qualidade **MQR** ativo. Métricas do estudo: `ncloc`, `complexity` (ciclomática), `cognitive_complexity`, `duplicated_lines_density`, `software_quality_maintainability_issues` (problemas de manutenibilidade) e `software_quality_maintainability_remediation_effort` (esforço de remediação, minutos). `code_smells`/`sqale_index` (modelo legado) são coletados apenas para auditoria.
+- Perfil de regras: **Sonar way** padrão do servidor (js 420, ts 435, css 40, web 61 regras ativas), sem customização.
+- Escopo analisado (`sonar.sources=.`) com exclusões idênticas para todas as condições: dependências, build/cobertura, testes (`*.test.*`, `*.spec.*`, `__tests__`, `test/`, `tests/`, `e2e/`) e configurações de ferramentas de teste (jest/vitest/playwright/cypress). Justificativa: arquivos de teste e suas configurações existem em T2/T4 por exigência do TDD e distorceriam LOC e problemas de produção.
+- Testes de desenvolvimento são descritos separadamente (quantidade de arquivos e linhas não vazias) por `contar_testes.py`, com os mesmos padrões das exclusões.
+- `sonar.scm.disabled=true` (sem dependência de histórico git); chave de projeto `tcc-T1`…`tcc-T4`.
+- Ausência de métrica é gravada como `null`, nunca como zero.
+- Validado com projeto descartável: só o arquivo de produção foi indexado; testes, `node_modules`, `dist` e `vitest.config` foram excluídos; métricas e problemas coletados corretamente.
+- Token de análise local em `avaliacao/sonar/.sonar-token` (fora do git).
+- Texto a incluir no TCC: versões acima, modo MQR, perfil Sonar way padrão e a lista de exclusões.
+
+## 5. Pendências
 
 - Definir e registrar modelo gerador (versão + esforço) e modelo verificador (leve).
 - Definir limites numéricos por etapa (geração; verificação + correção).

@@ -1,0 +1,15 @@
+data: 2026-10-02T02:47:56Z
+sistema: macOS 26.7.1 arm64
+node: v20.20.2 | npm: 10.8.2
+sonarqube_servidor: 26.9.0.129388
+sonarqube_imagem: sonarqube:community sha256:8e79c4957e1eccd3d1432d1e33e9606d4aeaf6b00a9661fb3cdd87f89adb7ddc
+sonar_scanner: SonarScanner CLI 8.1.0.6389
+modo_qualidade_MQR: true
+perfis_de_regras (padrão):
+  css: Sonar way (40 regras, atualizado 2026-10-02T00:46:36+0000)
+  js: Sonar way (420 regras, atualizado 2026-10-02T00:46:36+0000)
+  ts: Sonar way (435 regras, atualizado 2026-10-02T00:46:37+0000)
+  web: Sonar way (61 regras, atualizado 2026-10-02T00:46:37+0000)
+mongodb: mongo:7.0 sha256:41d8560e5c8dc45b6f45a73c42a43c76534532faad42f0b1f39bba786488e2ce
+playwright_suite: não instalado
+sonar-common.properties sha256: b2e9e2a7a6cd1efea2b6e5d63fb3a0c63639515efc43eec323977b1c5a6e0ad5
