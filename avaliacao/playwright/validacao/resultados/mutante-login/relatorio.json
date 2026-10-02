@@ -75,7 +75,7 @@
                 {
                   "workerIndex": 0,
                   "status": "failed",
-                  "duration": 12118,
+                  "duration": 12071,
                   "error": {
                     "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('admin-product-row-produto-fixture')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveCount with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('admin-product-row-produto-fixture')\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n",
                     "stack": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('admin-product-row-produto-fixture')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveCount with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('admin-product-row-produto-fixture')\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n    at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:26:71",
@@ -113,17 +113,17 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:18:19.123Z",
+                  "startTime": "2026-10-02T03:41:08.801Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/validacao/resultados/mutante-login/artefatos/cenarios-P1-—-Autenticação-administrativa-chromium/test-failed-2.png"
+                      "path": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/validacao/resultados/mutante-login/artefatos/cenarios-P1-—-Autenticação-administrativa-chromium/test-failed-1.png"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/validacao/resultados/mutante-login/artefatos/cenarios-P1-—-Autenticação-administrativa-chromium/test-failed-1.png"
+                      "path": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/validacao/resultados/mutante-login/artefatos/cenarios-P1-—-Autenticação-administrativa-chromium/test-failed-2.png"
                     },
                     {
                       "name": "screenshot",
@@ -166,12 +166,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 4159,
+                  "duration": 4180,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:18:31.512Z",
+                  "startTime": "2026-10-02T03:41:21.141Z",
                   "attachments": []
                 }
               ],
@@ -198,12 +198,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 4148,
+                  "duration": 4129,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:18:35.727Z",
+                  "startTime": "2026-10-02T03:41:25.377Z",
                   "attachments": []
                 }
               ],
@@ -230,12 +230,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 3566,
+                  "duration": 3567,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:18:39.877Z",
+                  "startTime": "2026-10-02T03:41:29.508Z",
                   "attachments": []
                 }
               ],
@@ -262,12 +262,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 762,
+                  "duration": 763,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:18:43.445Z",
+                  "startTime": "2026-10-02T03:41:33.077Z",
                   "attachments": []
                 }
               ],
@@ -284,8 +284,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-02T03:18:18.939Z",
-    "duration": 25291.941000000003,
+    "startTime": "2026-10-02T03:41:08.618Z",
+    "duration": 25247.019,
     "expected": 4,
     "skipped": 0,
     "unexpected": 1,

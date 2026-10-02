@@ -51,7 +51,7 @@ for p in 5173 3000; do
 done
 
 # 3. Banco limpo e preparação pelos comandos do contrato.
-"$ROOT/infra/mongodb/reset.sh" > "$OUT/mongodb.log" 2>&1 || { registrar "falha" "MongoDB não iniciou"; exit 5; }
+"$ROOT/avaliacao/infra/mongodb/reset.sh" > "$OUT/mongodb.log" 2>&1 || { registrar "falha" "MongoDB não iniciou"; exit 5; }
 ( cd "$PROJECT_DIR" && npm install --no-audit --no-fund ) > "$OUT/npm_install.log" 2>&1 \
   || { registrar "falha" "npm install falhou"; exit 0; }
 ( cd "$PROJECT_DIR" && npm run seed ) > "$OUT/npm_seed.log" 2>&1 \

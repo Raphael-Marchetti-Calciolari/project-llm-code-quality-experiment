@@ -75,12 +75,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 2111,
+                  "duration": 2099,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:20:26.786Z",
+                  "startTime": "2026-10-02T03:43:16.093Z",
                   "attachments": []
                 }
               ],
@@ -107,12 +107,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 4099,
+                  "duration": 4098,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:20:28.954Z",
+                  "startTime": "2026-10-02T03:43:18.249Z",
                   "attachments": []
                 }
               ],
@@ -144,7 +144,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:20:33.055Z",
+                  "startTime": "2026-10-02T03:43:22.348Z",
                   "attachments": []
                 }
               ],
@@ -171,12 +171,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 3546,
+                  "duration": 3567,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:20:37.190Z",
+                  "startTime": "2026-10-02T03:43:26.482Z",
                   "attachments": []
                 }
               ],
@@ -203,7 +203,7 @@
                 {
                   "workerIndex": 0,
                   "status": "failed",
-                  "duration": 786,
+                  "duration": 764,
                   "error": {
                     "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"5511\u001b[7m999999999\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"5511\u001b[7m888888888\u001b[27m\"\u001b[39m",
                     "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"5511\u001b[7m999999999\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"5511\u001b[7m888888888\u001b[27m\"\u001b[39m\n    at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:158:37",
@@ -234,7 +234,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:20:40.738Z",
+                  "startTime": "2026-10-02T03:43:30.052Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -267,8 +267,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-02T03:20:26.601Z",
-    "duration": 14956.652,
+    "startTime": "2026-10-02T03:43:15.909Z",
+    "duration": 14938.085,
     "expected": 4,
     "skipped": 0,
     "unexpected": 1,

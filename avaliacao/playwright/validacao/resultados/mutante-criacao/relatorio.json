@@ -80,7 +80,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:18:51.744Z",
+                  "startTime": "2026-10-02T03:41:41.261Z",
                   "attachments": []
                 }
               ],
@@ -107,7 +107,7 @@
                 {
                   "workerIndex": 0,
                   "status": "failed",
-                  "duration": 12479,
+                  "duration": 12493,
                   "error": {
                     "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('public-product-card-produto-cenario-p2')\nExpected string: \u001b[32m\"Produto Cenário P2\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toContainText with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('public-product-card-produto-cenario-p2')\u001b[22m\n",
                     "stack": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('public-product-card-produto-cenario-p2')\nExpected string: \u001b[32m\"Produto Cenário P2\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toContainText with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('public-product-card-produto-cenario-p2')\u001b[22m\n\n    at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:51:70",
@@ -143,7 +143,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:18:53.908Z",
+                  "startTime": "2026-10-02T03:41:43.423Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -186,12 +186,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 4186,
+                  "duration": 4211,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:19:06.598Z",
+                  "startTime": "2026-10-02T03:41:56.122Z",
                   "attachments": []
                 }
               ],
@@ -218,12 +218,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 3567,
+                  "duration": 3583,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:19:10.841Z",
+                  "startTime": "2026-10-02T03:42:00.389Z",
                   "attachments": []
                 }
               ],
@@ -250,12 +250,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 764,
+                  "duration": 781,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:19:14.410Z",
+                  "startTime": "2026-10-02T03:42:03.974Z",
                   "attachments": []
                 }
               ],
@@ -272,8 +272,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-02T03:18:51.560Z",
-    "duration": 23636.992000000002,
+    "startTime": "2026-10-02T03:41:41.076Z",
+    "duration": 23703.242000000002,
     "expected": 4,
     "skipped": 0,
     "unexpected": 1,

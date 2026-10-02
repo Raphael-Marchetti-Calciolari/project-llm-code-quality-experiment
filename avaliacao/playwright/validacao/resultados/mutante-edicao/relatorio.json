@@ -75,12 +75,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 2106,
+                  "duration": 2120,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:19:22.706Z",
+                  "startTime": "2026-10-02T03:42:12.175Z",
                   "attachments": []
                 }
               ],
@@ -107,12 +107,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 4118,
+                  "duration": 4114,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:19:24.874Z",
+                  "startTime": "2026-10-02T03:42:14.355Z",
                   "attachments": []
                 }
               ],
@@ -139,7 +139,7 @@
                 {
                   "workerIndex": 0,
                   "status": "failed",
-                  "duration": 14182,
+                  "duration": 14145,
                   "error": {
                     "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('product-price')\nExpected string: \u001b[32m\"R$ \u001b[7m99,9\u001b[27m0\"\u001b[39m\nReceived string: \u001b[31m\"R$ \u001b[7m10,0\u001b[27m0\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveValue with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('product-price')\u001b[22m\n\u001b[2m    14 × locator resolved to <input name=\"price\" value=\"R$ 10,00\" data-testid=\"product-price\"/>\u001b[22m\n\u001b[2m       - unexpected value \"R$ 10,00\"\u001b[22m\n",
                     "stack": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('product-price')\nExpected string: \u001b[32m\"R$ \u001b[7m99,9\u001b[27m0\"\u001b[39m\nReceived string: \u001b[31m\"R$ \u001b[7m10,0\u001b[27m0\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveValue with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('product-price')\u001b[22m\n\u001b[2m    14 × locator resolved to <input name=\"price\" value=\"R$ 10,00\" data-testid=\"product-price\"/>\u001b[22m\n\u001b[2m       - unexpected value \"R$ 10,00\"\u001b[22m\n\n    at Object.conferirFormulario (/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/contrato.js:148:51)\n    at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:93:3",
@@ -177,7 +177,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:19:28.994Z",
+                  "startTime": "2026-10-02T03:42:18.470Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -225,7 +225,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:19:43.392Z",
+                  "startTime": "2026-10-02T03:42:32.831Z",
                   "attachments": []
                 }
               ],
@@ -252,12 +252,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 763,
+                  "duration": 764,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:19:47.059Z",
+                  "startTime": "2026-10-02T03:42:36.488Z",
                   "attachments": []
                 }
               ],
@@ -274,8 +274,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-02T03:19:22.522Z",
-    "duration": 25335.621000000003,
+    "startTime": "2026-10-02T03:42:11.989Z",
+    "duration": 25286.227,
     "expected": 4,
     "skipped": 0,
     "unexpected": 1,

@@ -7,9 +7,11 @@ Registro das decisões tomadas durante a preparação do experimento, para poste
 - Repositório versionado com git (`.gitignore`: `node_modules/`, `dist/`, `build/`, `.DS_Store`, `.env`).
 - A execução do escopo anterior (comparação entre modelos em `Soluções Geradas/T1/`) foi removida da árvore de trabalho; permanece apenas no commit inicial `5cdec36`. Não será usada como resultado de T1–T4.
 
-## 2. Prompts (`New Prompts/`)
+- Estrutura do repositório (reorganizada para publicação no GitHub): `avaliacao/` (instrumentos de avaliação, MongoDB e runbook), `documentos/` (documentos do TCC, material de apoio e este registro), `geracoes/` (artefatos congelados T1–T4), `prompts/` (prompts do experimento e prompt-base legado).
 
-Derivados de `Prompt de geração - T1 (LLM sem revisão).md`, mantendo a especificação funcional original (objetivo, stack, escopo, dados mínimos, regras e expectativas de qualidade) idêntica em T1 e T2.
+## 2. Prompts (`prompts/`)
+
+Derivados de `prompts/legado/Prompt de geração - T1 (LLM sem revisão).md`, mantendo a especificação funcional original (objetivo, stack, escopo, dados mínimos, regras e expectativas de qualidade) idêntica em T1 e T2.
 
 | Arquivo | Uso | Papel |
 |---|---|---|
@@ -41,10 +43,10 @@ Derivados de `Prompt de geração - T1 (LLM sem revisão).md`, mantendo a especi
 ## 3. MongoDB
 
 - Um único servidor MongoDB compartilhado, em Docker; as condições são executadas **uma por vez** (sem instância por repositório).
-- Arquivos: `infra/mongodb/docker-compose.yml` e `infra/mongodb/reset.sh`.
+- Arquivos: `avaliacao/infra/mongodb/docker-compose.yml` e `avaliacao/infra/mongodb/reset.sh`.
 - Imagem `mongo:7.0` (versão efetiva verificada: **7.0.43**; image ID `sha256:41d8560e5c8d…e2ce`), porta `127.0.0.1:27017`, contêiner `tcc-mongodb`.
 - Dados em `tmpfs` (sem persistência): `reset.sh` derruba o contêiner, descarta os dados e sobe uma instância limpa, aguardando o healthcheck. Reset validado (dados inseridos não persistem após o reset).
-- Procedimento: executar `./infra/mongodb/reset.sh` antes de cada geração e de cada avaliação; em seguida, o `npm run seed` da própria aplicação prepara os dados.
+- Procedimento: executar `./avaliacao/infra/mongodb/reset.sh` antes de cada geração e de cada avaliação; em seguida, o `npm run seed` da própria aplicação prepara os dados.
 - Texto a incluir no TCC (seção de ambiente): MongoDB 7.0.43 em contêiner Docker, reiniciado em estado vazio antes de cada condição.
 
 ## 4. SonarQube (análise estática → qualidade estrutural)
@@ -76,7 +78,7 @@ Derivados de `Prompt de geração - T1 (LLM sem revisão).md`, mantendo a especi
   - **P5:** em `/produtos/produto-fixture`, o `whatsapp-button` aponta para WhatsApp (`wa.me`, `api/web.whatsapp.com` ou `whatsapp://`) com o número `5511999999999`; requisições ao WhatsApp são interceptadas e respondidas localmente (nada é enviado).
 - Tolerâncias aplicadas igualmente a todas as condições (não há exceções por tratamento): `product-active` pode ser checkbox/radio, select ou controle `aria-checked/aria-pressed`; o botão de WhatsApp pode ser link (`href`) ou botão com `window.open`; após o login, se a aplicação não redirecionar, a suíte acessa a rota `/admin` do contrato.
 - Premissa documentada: a sessão administrativa deve sobreviver à navegação direta para as rotas do contrato no mesmo navegador (cookie/localStorage).
-- Execução (`executar.sh <Tn> <dir>`): verifica o hash da suíte → exige portas 5173/3000 livres → MongoDB limpo (`infra/mongodb/reset.sh`) → `npm install` → `npm run seed` → `npm run dev` → aguarda até 180 s por `:5173` e `:3000/api` → executa P1–P5 → encerra todos os processos. Falhas de install/seed/inicialização são gravadas em `execucao.json` (cenários ficam "não executados"). Saídas em `avaliacao/resultados/<Tn>/playwright/`.
+- Execução (`executar.sh <Tn> <dir>`): verifica o hash da suíte → exige portas 5173/3000 livres → MongoDB limpo (`avaliacao/infra/mongodb/reset.sh`) → `npm install` → `npm run seed` → `npm run dev` → aguarda até 180 s por `:5173` e `:3000/api` → executa P1–P5 → encerra todos os processos. Falhas de install/seed/inicialização são gravadas em `execucao.json` (cenários ficam "não executados"). Saídas em `avaliacao/resultados/<Tn>/playwright/`.
 - Congelamento: SHA-256 da suíte (config, dependências fixadas e testes) = **`ed6b7cc531641ab932b5ecdb4e2eb06720fb1fcd293141643dc24ceeeb8b1685`** (`SUITE_SHA256`; versão anterior `e6033d6c065a…` substituída antes de qualquer coleta). A execução é recusada se o hash divergir. Qualquer correção futura exige novo hash e reavaliação de todas as condições.
 - Verificação antes do congelamento (`validacao/validar_suite.sh`), com aplicação de referência mínima que cumpre o contrato (`validacao/app-referencia/`) e falhas deliberadas: referência e variante com controles alternativos → 5/5 aprovados; cada mutante (login aceita qualquer senha, criação não persiste, edição ignora preço, inativo na vitrine, número de WhatsApp errado) → reprovado **exatamente** no cenário-alvo (P1…P5). Resultado: **SUÍTE VALIDADA** (`avaliacao/registros/validacao_suite.txt`).
 - Limitação a registrar no TCC: P1–P5 não cobrem exclusão de produto nem configurações da vitrine.

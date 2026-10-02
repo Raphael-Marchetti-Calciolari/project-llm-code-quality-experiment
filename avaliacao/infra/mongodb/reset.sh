@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Derruba o MongoDB compartilhado, descarta todos os dados e sobe uma instância limpa.
-# Uso: ./infra/mongodb/reset.sh   (antes de cada geração/avaliação de condição)
+# Uso: ./avaliacao/infra/mongodb/reset.sh   (antes de cada geração/avaliação de condição)
 set -euo pipefail
 cd "$(dirname "$0")"
 

@@ -62,7 +62,7 @@ A consolidação **aborta** quando o hash da suíte ou a versão do SonarQube di
 ## 5. Regras do protocolo (não violar)
 
 - **Nunca corrija o artefato** para fazê-lo passar. Falhas de build, de inicialização ou de testes entram nos resultados.
-- Se precisar de um ajuste de **ambiente**, registre-o em `DECISOES_SESSAO_CLAUDE_CODE.md` e aplique-o igualmente às quatro condições.
+- Se precisar de um ajuste de **ambiente**, registre-o em `documentos/DECISOES_SESSAO_CLAUDE_CODE.md` e aplique-o igualmente às quatro condições.
 - **Não altere a suíte.** Se um defeito dela for comprovado, siga esta ordem:
   1. corrija o defeito;
   2. rode `./avaliacao/playwright/validacao/validar_suite.sh` e confirme que o resultado é "SUÍTE VALIDADA";

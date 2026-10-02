@@ -75,12 +75,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 2111,
+                  "duration": 2095,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:19:55.338Z",
+                  "startTime": "2026-10-02T03:42:44.717Z",
                   "attachments": []
                 }
               ],
@@ -107,12 +107,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 4134,
+                  "duration": 4113,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:19:57.506Z",
+                  "startTime": "2026-10-02T03:42:46.868Z",
                   "attachments": []
                 }
               ],
@@ -139,12 +139,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 4113,
+                  "duration": 4150,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:20:01.642Z",
+                  "startTime": "2026-10-02T03:42:50.983Z",
                   "attachments": []
                 }
               ],
@@ -171,7 +171,7 @@
                 {
                   "workerIndex": 0,
                   "status": "failed",
-                  "duration": 12474,
+                  "duration": 12459,
                   "error": {
                     "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('public-product-card-produto-fixture')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveCount with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('public-product-card-produto-fixture')\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n",
                     "stack": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('public-product-card-produto-fixture')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveCount with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('public-product-card-produto-fixture')\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n    at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:110:75",
@@ -209,7 +209,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:20:05.757Z",
+                  "startTime": "2026-10-02T03:42:55.136Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -252,12 +252,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 790,
+                  "duration": 824,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:20:18.444Z",
+                  "startTime": "2026-10-02T03:43:07.803Z",
                   "attachments": []
                 }
               ],
@@ -274,8 +274,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-02T03:19:55.155Z",
-    "duration": 24154.115999999998,
+    "startTime": "2026-10-02T03:42:44.528Z",
+    "duration": 24175.392,
     "expected": 4,
     "skipped": 0,
     "unexpected": 1,
