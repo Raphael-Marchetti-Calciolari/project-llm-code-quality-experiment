@@ -340,3 +340,4 @@ Três subagentes Opus 5.5 independentes, somente leitura, revisaram o texto. Con
   - A titulação do orientador, que o autor não informou.
   - Os subtítulos de Resultados, que correspondem só parcialmente aos de Métodos (recomendação, não obrigação).
   - As documentações do Playwright e do SonarSource, citadas por serem a definição oficial dos instrumentos.
+- **Repositório do estudo** incluído como referência (Calciolari, 2026), citado na primeira menção em Material e Métodos. A URL pública foi conferida (HTTP 200).
