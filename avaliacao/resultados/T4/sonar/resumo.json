@@ -1,0 +1,17 @@
+{
+  "condicao": "T4",
+  "projectKey": "tcc-T4",
+  "sonarqube_versao": "26.9.0.129388",
+  "metricas": {
+    "ncloc": "752",
+    "complexity": "178",
+    "cognitive_complexity": "71",
+    "duplicated_lines": "0",
+    "duplicated_lines_density": "0.0",
+    "software_quality_maintainability_issues": "10",
+    "software_quality_maintainability_remediation_effort": "50",
+    "code_smells": "11",
+    "sqale_index": "70"
+  },
+  "problemas_manutenibilidade_listados": 10
+}

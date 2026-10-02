@@ -1,0 +1,52 @@
+{
+  "component": {
+    "key": "tcc-T4",
+    "name": "TCC T4",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "complexity",
+        "value": "178"
+      },
+      {
+        "metric": "code_smells",
+        "value": "11",
+        "bestValue": false
+      },
+      {
+        "metric": "duplicated_lines_density",
+        "value": "0.0",
+        "bestValue": true
+      },
+      {
+        "metric": "duplicated_lines",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "cognitive_complexity",
+        "value": "71",
+        "bestValue": false
+      },
+      {
+        "metric": "ncloc",
+        "value": "752"
+      },
+      {
+        "metric": "software_quality_maintainability_issues",
+        "value": "10",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_maintainability_remediation_effort",
+        "value": "50",
+        "bestValue": false
+      },
+      {
+        "metric": "sqale_index",
+        "value": "70",
+        "bestValue": false
+      }
+    ]
+  }
+}

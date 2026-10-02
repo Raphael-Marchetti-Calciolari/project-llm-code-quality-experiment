@@ -1,0 +1,29 @@
+comparacao,descricao,metrica,unidade,referencia,alvo,diferenca_absoluta,variacao_pct
+T2−T1,TDD na geração,Linhas de código,linhas,644,671,27,4.19
+T2−T1,TDD na geração,Complexidade ciclomática,total,140,157,17,12.14
+T2−T1,TDD na geração,Complexidade cognitiva,total,40,62,22,55.00
+T2−T1,TDD na geração,Linhas duplicadas,%,0.00,0.00,0.00,não calculável (referência = 0)
+T2−T1,TDD na geração,Problemas de manutenibilidade,problemas,10,9,-1,-10.00
+T2−T1,TDD na geração,Densidade de problemas,problemas/1.000 LOC,15.53,13.41,-2.12,-13.62
+T2−T1,TDD na geração,Esforço estimado de remediação,minutos,50,45,-5,-10.00
+T3−T1,verificação por agente sobre a geração direta,Linhas de código,linhas,644,709,65,10.09
+T3−T1,verificação por agente sobre a geração direta,Complexidade ciclomática,total,140,163,23,16.43
+T3−T1,verificação por agente sobre a geração direta,Complexidade cognitiva,total,40,54,14,35.00
+T3−T1,verificação por agente sobre a geração direta,Linhas duplicadas,%,0.00,0.00,0.00,não calculável (referência = 0)
+T3−T1,verificação por agente sobre a geração direta,Problemas de manutenibilidade,problemas,10,11,1,10.00
+T3−T1,verificação por agente sobre a geração direta,Densidade de problemas,problemas/1.000 LOC,15.53,15.51,-0.01,-0.08
+T3−T1,verificação por agente sobre a geração direta,Esforço estimado de remediação,minutos,50,51,1,2.00
+T4−T2,verificação por agente sobre a geração com TDD,Linhas de código,linhas,671,752,81,12.07
+T4−T2,verificação por agente sobre a geração com TDD,Complexidade ciclomática,total,157,178,21,13.38
+T4−T2,verificação por agente sobre a geração com TDD,Complexidade cognitiva,total,62,71,9,14.52
+T4−T2,verificação por agente sobre a geração com TDD,Linhas duplicadas,%,0.00,0.00,0.00,não calculável (referência = 0)
+T4−T2,verificação por agente sobre a geração com TDD,Problemas de manutenibilidade,problemas,9,10,1,11.11
+T4−T2,verificação por agente sobre a geração com TDD,Densidade de problemas,problemas/1.000 LOC,13.41,13.30,-0.11,-0.86
+T4−T2,verificação por agente sobre a geração com TDD,Esforço estimado de remediação,minutos,45,50,5,11.11
+T4−T3,contraste descritivo (origens distintas),Linhas de código,linhas,709,752,43,6.06
+T4−T3,contraste descritivo (origens distintas),Complexidade ciclomática,total,163,178,15,9.20
+T4−T3,contraste descritivo (origens distintas),Complexidade cognitiva,total,54,71,17,31.48
+T4−T3,contraste descritivo (origens distintas),Linhas duplicadas,%,0.00,0.00,0.00,não calculável (referência = 0)
+T4−T3,contraste descritivo (origens distintas),Problemas de manutenibilidade,problemas,11,10,-1,-9.09
+T4−T3,contraste descritivo (origens distintas),Densidade de problemas,problemas/1.000 LOC,15.51,13.30,-2.22,-14.29
+T4−T3,contraste descritivo (origens distintas),Esforço estimado de remediação,minutos,51,50,-1,-1.96

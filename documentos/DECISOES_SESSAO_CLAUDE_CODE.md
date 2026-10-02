@@ -134,3 +134,44 @@ As decisões da fase de preparação já foram incorporadas ao documento do TCC.
 - `T4-parecer` = `dd7aa7e5c30cf58ff1a827f21e9c93288d47551a`.
 - **Esforço:** 2,1 min, 244.779 tokens, 1 interação. Auditoria: 0 desvios.
 - **Apontamentos:** 27 (C 4, D 6, E 8, N 5, R 4).
+
+### 2026-10-02 — T4, correção e avaliação
+
+- **Sessão:** Sonnet 5.5, esforço low. `/model` e `/effort` foram usados, com valores iguais aos do protocolo.
+- `T4-final` = `e9886459b6b3d545e2a5913777fd02614ef194c5`. Diff em relação ao parecer: 26 arquivos, +310/−180.
+- **Testes de TDD:** nenhum arquivo de teste foi alterado.
+- **Esforço:** 2,1 min, 661.100 tokens, 1 interação. Auditoria: 0 desvios.
+- **Aplicação:** o corretor declarou os 27 apontamentos aplicados, com uma ressalva parcial em E5. Validou com `npm test` (servidor 14/14, cliente 7/7) e com o build.
+- **Resultado funcional** (cópia fora do iCloud, sem reinícios): P1–P5 aprovados (5/5).
+- **SonarQube:**
+
+  | Métrica | Valor |
+  |---|---|
+  | LOC | 752 |
+  | Complexidade ciclomática | 178 |
+  | Complexidade cognitiva | 71 |
+  | Duplicação | 0,0% |
+  | Problemas de manutenibilidade | 10 |
+  | Esforço de remediação | 50 min |
+
+- **Testes de desenvolvimento:** 6 arquivos, 191 linhas não vazias (iguais a T2).
+
+### 2026-10-02 — Coleta concluída e consolidação
+
+- As quatro condições foram coletadas e avaliadas com a mesma suíte (`ed6b7cc5…`) e o mesmo SonarQube (26.9.0.129388). A consolidação rodou sem erro de integridade; tabelas em `avaliacao/resultados/tabelas/`.
+- **Funcional:** 5/5 em T1, T2, T3 e T4. A suíte não discrimina as condições; a comparação recai sobre os indicadores estruturais e o esforço.
+- **Destaques estruturais**, descritivos e sem inferência (n = 1 por condição):
+  - **T2−T1:** +27 LOC, complexidade cognitiva +22 (+55%), problemas −1, densidade 15,53 → 13,41 por 1.000 LOC.
+  - **T3−T1:** +65 LOC, complexidade cognitiva +14, problemas +1, densidade praticamente igual (−0,01).
+  - **T4−T2:** +81 LOC, complexidade cognitiva +9, problemas +1, densidade praticamente igual (−0,11).
+  - Duplicação: 0% em todas as condições.
+- **Esforço total por condição:**
+
+  | Condição | Duração | Tokens |
+  |---|---|---|
+  | T1 | 3,7 min | 271.886 |
+  | T2 | 2,9 min | 690.806 |
+  | T3 | 3,9 min (verificação + correção) | 789.247 |
+  | T4 | 4,2 min (verificação + correção) | 905.879 |
+
+  T4 não inclui a tentativa descartada.

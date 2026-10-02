@@ -1,0 +1,8 @@
+metrica,unidade,T1,T2,T3,T4
+Linhas de código,linhas,644,671,709,752
+Complexidade ciclomática,total,140,157,163,178
+Complexidade cognitiva,total,40,62,54,71
+Linhas duplicadas,%,0.00,0.00,0.00,0.00
+Problemas de manutenibilidade,problemas,10,9,11,10
+Densidade de problemas,problemas/1.000 LOC,15.53,13.41,15.51,13.30
+Esforço estimado de remediação,minutos,50,45,51,50

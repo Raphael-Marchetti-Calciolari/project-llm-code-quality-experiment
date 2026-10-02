@@ -1,0 +1,125 @@
+02:17:50.128 INFO  Scanner configuration file: /opt/homebrew/Cellar/sonar-scanner/8.1.0.6389/libexec/conf/sonar-scanner.properties
+02:17:50.130 INFO  Project root configuration file: /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/sonar/sonar-common.properties
+02:17:50.137 INFO  SonarScanner CLI 8.1.0.6389
+02:17:50.138 INFO  Mac OS X 26.7.1 aarch64
+02:17:51.275 INFO  Communicating with SonarQube Community Build 26.9.0.129388
+02:17:51.276 INFO  JRE provisioning: os[macos], arch[arm64]
+WARNING: Final field id in class org.sonarsource.scanner.lib.internal.facade.forked.JavaRunnerFactory$JreMetadata has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @5442a311 (file:/opt/homebrew/Cellar/sonar-scanner/8.1.0.6389/libexec/lib/sonar-scanner-cli-8.1.0.6389.jar)
+WARNING: Use --enable-final-field-mutation=ALL-UNNAMED to avoid a warning
+WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
+02:17:51.514 INFO  Starting SonarScanner Engine...
+02:17:51.514 INFO  Java 21.0.11 Eclipse Adoptium (64-bit)
+02:17:52.749 INFO  Load global settings
+02:17:52.807 INFO  Load global settings (done) | time=56ms
+02:17:52.807 INFO  Server id: 147B411E-AaD6E5klP_65WviX-zIj
+02:17:52.811 INFO  Loading required plugins
+02:17:52.811 INFO  Load plugins index
+02:17:52.820 INFO  Load plugins index (done) | time=9ms
+02:17:52.820 INFO  Load/download plugins
+02:17:52.834 INFO  Load/download plugins (done) | time=14ms
+02:17:52.949 INFO  Process project properties
+02:17:52.956 INFO  Process project properties (done) | time=6ms
+02:17:52.961 INFO  Project key: tcc-T4
+02:17:52.961 INFO  Base dir: /Users/raphael/tcc-avaliacao/T4
+02:17:52.961 INFO  Working dir: /Users/raphael/tcc-avaliacao/T4/.scannerwork
+02:17:52.964 INFO  Load project settings for component key: 'tcc-T4'
+02:17:52.977 INFO  Load quality profiles
+02:17:53.005 INFO  Load quality profiles (done) | time=28ms
+02:17:53.018 INFO  Load active rules
+02:17:53.124 INFO  Load active rules (done) | time=106ms
+02:17:53.126 INFO  Load analysis cache
+02:17:53.130 INFO  Load analysis cache (404) | time=4ms
+02:17:53.164 INFO  Preprocessing files...
+02:17:53.191 INFO  4 languages detected in 42 preprocessed files (done) | time=27ms
+02:17:53.191 INFO  0 files ignored because of inclusion/exclusion patterns
+02:17:53.191 INFO  2 directories skipped because of exclusion patterns (content not counted)
+02:17:53.191 INFO  Loading plugins for detected languages
+02:17:53.192 INFO  Load/download plugins
+02:17:53.196 INFO  Load/download plugins (done) | time=5ms
+02:17:53.254 INFO  Load project repositories
+02:17:53.258 INFO  Load project repositories (done) | time=4ms
+02:17:53.264 INFO  Indexing files...
+02:17:53.264 INFO  Project configuration:
+02:17:53.264 INFO    Excluded sources: **/node_modules/**, **/dist/**, **/build/**, **/coverage/**, **/.vite/**, **/*.min.js, **/*.test.*, **/*.spec.*, **/__tests__/**, **/__mocks__/**, **/test/**, **/tests/**, **/e2e/**, **/jest.config.*, **/vitest.config.*, **/vitest.setup.*, **/jest.setup.*, **/setupTests.*, **/playwright.config.*, **/cypress.config.*, **/.git/**
+02:17:53.264 INFO    Excluded sources for coverage: **/*
+02:17:53.269 INFO  42 files indexed (done) | time=5ms
+02:17:53.269 INFO  Quality profile for css: Sonar way
+02:17:53.269 INFO  Quality profile for js: Sonar way
+02:17:53.269 INFO  Quality profile for json: Sonar way
+02:17:53.270 INFO  Quality profile for web: Sonar way
+02:17:53.270 INFO  ------------- Run sensors on module TCC T4
+02:17:53.284 INFO  Load metrics repository
+02:17:53.294 INFO  Load metrics repository (done) | time=11ms
+02:17:53.413 INFO  Reflections took 24 ms to scan 1 urls, producing 30 keys and 295 values
+02:17:53.447 INFO  Sensor IaC YAML File Type Classification Sensor [iac]
+02:17:53.467 INFO  Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=20ms
+02:17:53.467 INFO  Sensor IaC CloudFormation Sensor [iac]
+02:17:53.467 INFO  There are no files to be analyzed for the CloudFormation language
+02:17:53.467 INFO  Sensor IaC CloudFormation Sensor [iac] (done) | time=0ms
+02:17:53.467 INFO  Sensor IaC cfn-lint report Sensor [iac]
+02:17:53.467 INFO  Sensor IaC cfn-lint report Sensor [iac] (done) | time=0ms
+02:17:53.467 INFO  Sensor IaC hadolint report Sensor [iac]
+02:17:53.468 INFO  Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+02:17:53.468 INFO  Sensor IaC Azure Resource Manager Sensor [iac]
+02:17:53.468 INFO  There are no files to be analyzed for the Azure Resource Manager language
+02:17:53.468 INFO  Sensor IaC Azure Resource Manager Sensor [iac] (done) | time=0ms
+02:17:53.468 INFO  Sensor Java Config Sensor [iac]
+02:17:53.468 INFO  There are no files to be analyzed for the Java language
+02:17:53.468 INFO  Sensor Java Config Sensor [iac] (done) | time=0ms
+02:17:53.468 INFO  Sensor IaC Docker Sensor [iac]
+02:17:53.468 INFO  There are no files to be analyzed for the Docker language
+02:17:53.468 INFO  Sensor IaC Docker Sensor [iac] (done) | time=0ms
+02:17:53.468 INFO  Sensor HTML [web]
+02:17:53.489 INFO  Sensor HTML [web] (done) | time=20ms
+02:17:53.489 INFO  Sensor TextAndSecretsSensor [text]
+02:17:53.499 INFO  Available processors: 12
+02:17:53.499 INFO  Using 12 threads for analysis.
+02:17:53.590 INFO  The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test", "tests", "mock" or "mocks"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+02:17:53.598 INFO  Start fetching files for the text and secrets analysis
+02:17:53.613 INFO  Using Git CLI to retrieve dirty files
+02:17:53.624 WARN  Retrieving only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+02:17:53.624 INFO  Starting the text and secrets analysis
+02:17:53.625 INFO  38 source files to be analyzed for the text and secrets analysis
+02:17:53.686 INFO  38/38 source files have been analyzed for the text and secrets analysis
+02:17:53.687 INFO  Sensor TextAndSecretsSensor [text] (done) | time=198ms
+02:17:53.688 INFO  ------------- Run sensors on project
+02:17:53.778 INFO  Sensor JavaScript/TypeScript/CSS analysis [javascript]
+02:17:53.968 INFO  Detected os: Mac OS X arch: aarch64 alpine: false. Platform: DARWIN_ARM64
+02:17:53.968 INFO  Deploy location /Users/raphael/.sonar/js/node-runtime, tagetRuntime: /Users/raphael/.sonar/js/node-runtime/node,  version: /Users/raphael/.sonar/js/node-runtime/version.txt
+02:17:54.032 INFO  Using embedded Node.js runtime.
+02:17:54.032 INFO  Using Node.js executable: '/Users/raphael/.sonar/js/node-runtime/node'.
+02:17:54.934 INFO  Memory configuration: OS (24576 MB), Node.js (4288 MB).
+02:17:54.943 INFO  gRPC analyze-project server listening on 127.0.0.1:55211
+02:17:55.012 INFO  Plugin version: [13.8.0.44569]
+02:17:55.678 INFO  Found 0 tsconfig.json file(s): []
+02:17:56.427 INFO  34 source files to be analyzed
+02:17:56.427 INFO  Analyzing 32 file(s) using default options [lib: lib.esnext.d.ts, lib.dom.d.ts]
+02:17:56.427 INFO  34/34 source files have been analyzed
+02:17:56.433 INFO  Hit the cache for 0 out of 33
+02:17:56.433 INFO  Miss the cache for 33 out of 33: ANALYSIS_MODE_INELIGIBLE [33/33]
+02:17:56.433 INFO  Sensor JavaScript/TypeScript/CSS analysis [javascript] (done) | time=2654ms
+02:17:56.433 INFO  Sensor IaC Project Sensor [iac]
+02:17:56.433 INFO  Sensor IaC Project Sensor [iac] (done) | time=0ms
+02:17:56.434 INFO  Sensor Zero Coverage Sensor
+02:17:56.434 INFO  Sensor Zero Coverage Sensor (done) | time=0ms
+02:17:56.434 INFO  ------------- Gather SCA dependencies on project
+02:17:56.436 INFO  Dependency analysis skipped
+02:17:56.437 INFO  SCM Publisher is disabled
+02:17:56.438 INFO  CPD Executor 12 files had no CPD blocks
+02:17:56.438 INFO  CPD Executor Calculating CPD for 22 files
+02:17:56.444 INFO  CPD Executor CPD calculation finished (done) | time=5ms
+02:17:56.509 INFO  Analysis report generated in 61ms, dir size=394.4 kB
+02:17:56.543 INFO  Analysis report compressed in 35ms, zip size=121.7 kB
+02:17:56.679 INFO  Analysis report uploaded in 135ms
+02:17:56.679 INFO  ------------- Check Quality Gate status
+02:17:56.679 INFO  Waiting for the analysis report to be processed (max 600s)
+02:18:01.720 INFO  QUALITY GATE STATUS: PASSED - View details on http://localhost:9000/dashboard?id=tcc-T4
+02:18:01.803 INFO  Analysis total time: 8.953 s
+02:18:01.818 INFO  SonarScanner Engine completed successfully
+02:18:01.839 INFO  EXECUTION SUCCESS
+02:18:01.840 INFO  Total time: 11.713s

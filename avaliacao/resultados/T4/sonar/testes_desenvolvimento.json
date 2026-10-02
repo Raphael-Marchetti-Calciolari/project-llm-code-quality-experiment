@@ -1,0 +1,36 @@
+{
+  "arquivos_de_teste": 6,
+  "linhas_nao_vazias": 191,
+  "arquivos": [
+    {
+      "arquivo": "client/test/api.test.js",
+      "linhas": 28,
+      "linhas_nao_vazias": 23
+    },
+    {
+      "arquivo": "client/test/components.test.jsx",
+      "linhas": 36,
+      "linhas_nao_vazias": 32
+    },
+    {
+      "arquivo": "client/test/whatsapp.test.js",
+      "linhas": 7,
+      "linhas_nao_vazias": 6
+    },
+    {
+      "arquivo": "server/test/api.test.js",
+      "linhas": 122,
+      "linhas_nao_vazias": 106
+    },
+    {
+      "arquivo": "server/test/auth.test.js",
+      "linhas": 20,
+      "linhas_nao_vazias": 17
+    },
+    {
+      "arquivo": "server/test/slug.test.js",
+      "linhas": 8,
+      "linhas_nao_vazias": 7
+    }
+  ]
+}

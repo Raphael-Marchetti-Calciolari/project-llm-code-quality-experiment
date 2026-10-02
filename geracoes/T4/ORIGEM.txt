@@ -1,0 +1,4 @@
+tag: T4-final
+commit: e9886459b6b3d545e2a5913777fd02614ef194c5
+origem: /Users/raphael/new-app
+exportado: 2026-10-02T05:17:42Z
