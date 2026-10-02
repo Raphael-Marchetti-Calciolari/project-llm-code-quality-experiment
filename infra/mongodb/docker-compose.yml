@@ -1,0 +1,15 @@
+# Servidor MongoDB único e compartilhado. As condições (T1–T4) rodam uma por vez.
+# Sem volume persistente: cada reset recria o banco vazio.
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: tcc-mongodb
+    ports:
+      - "127.0.0.1:27017:27017"
+    tmpfs:
+      - /data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
