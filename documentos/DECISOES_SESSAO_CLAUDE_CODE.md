@@ -295,4 +295,5 @@ O texto atual diz que geração, verificação e correção ocorrerão "em diret
   - o título tem 12 palavras;
   - a sigla [MVP] foi incluída na primeira ocorrência;
   - não restou verbo no futuro.
-- **Pendências do autor:** e-mail do orientador ("[a informar]") e conferência visual do número de páginas (estimativa de 16 a 18 páginas, abaixo do limite de 30).
+- Campo de e-mail do orientador removido a pedido do autor (não disponível).
+- **Pendência do autor:** conferência visual do número de páginas (estimativa de 16 a 18 páginas, abaixo do limite de 30).
