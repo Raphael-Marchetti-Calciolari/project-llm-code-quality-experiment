@@ -1,0 +1,9 @@
+
+> seed
+> npm run seed -w server
+
+
+> seed
+> node src/seed.js
+
+Seed concluído.

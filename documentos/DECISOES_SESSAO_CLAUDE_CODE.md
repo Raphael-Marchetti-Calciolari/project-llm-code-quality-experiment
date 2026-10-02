@@ -55,3 +55,30 @@ As decisões da fase de preparação já foram incorporadas ao documento do TCC.
   | Duplicação | 0,0% |
   | Problemas de manutenibilidade | 10 |
   | Esforço de remediação | 50 min |
+
+### 2026-10-02 — T2 (geração com TDD)
+
+- **Sessão:** Claude Code 2.1.287, Sonnet 5.5, esforço low; sem `/model` nem `/effort` na sessão.
+- **Congelamento:** `T2-final` = `6eee00a22413965ed9f9ea04ac1ae34d8b4753a3`.
+- **Esforço:** 2,9 min, 690.806 tokens, 1 interação.
+- **Auditoria:** 0 desvios e nenhum caminho externo.
+- **Observação sobre o TDD:** o transcript mostra testes escritos antes da implementação e executados até falhar (módulo ausente) e depois passar. Os ciclos, porém, foram em **lotes**: arquivos de teste inteiros antes de cada módulo, não um teste por vez. O ajuste dos testes de componente (`components.test.jsx`) aconteceu durante o desenvolvimento, antes do congelamento. O agente informou 21 testes aprovados (14 no servidor, 7 no cliente).
+- **Escopo extra relatado pelo agente:**
+  - exclusão de produto (`product-delete-{slug}`);
+  - configurações da loja em `/admin/loja`.
+
+  Ambos estão previstos no MVP e não são avaliados pela suíte.
+- **Evento:** um `sed -i` com sintaxe GNU falhou no macOS (exit 1), e o agente corrigiu na tentativa seguinte.
+- **Resultado funcional** (cópia em `~/tcc-avaliacao/T2`, sem reinícios do servidor): P1–P5 aprovados (5/5).
+- **SonarQube:**
+
+  | Métrica | Valor |
+  |---|---|
+  | LOC | 671 |
+  | Complexidade ciclomática | 157 |
+  | Complexidade cognitiva | 62 |
+  | Duplicação | 0,0% |
+  | Problemas de manutenibilidade | 9 |
+  | Esforço de remediação | 45 min |
+
+- **Testes de desenvolvimento** (fora do SonarQube): 6 arquivos, 191 linhas não vazias.

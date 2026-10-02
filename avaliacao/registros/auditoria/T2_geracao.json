@@ -1,0 +1,19 @@
+{
+  "condicao": "T2",
+  "etapa": "geracao",
+  "transcript": "/Users/raphael/.claude/projects/-Users-raphael-new-app/327c1c4f-b31c-466f-a2ec-dd24107070c5.jsonl",
+  "modelos": [
+    "claude-sonnet-5-5"
+  ],
+  "duracao_min": 2.9,
+  "tokens": {
+    "input_tokens": 28,
+    "output_tokens": 20202,
+    "cache_creation_input_tokens": 33686,
+    "cache_read_input_tokens": 636890
+  },
+  "tokens_total": 690806,
+  "interacoes_humanas": 1,
+  "desvios": [],
+  "caminhos_externos_para_revisao": []
+}

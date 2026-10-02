@@ -1,0 +1,13 @@
+{
+  "name": "server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "seed": "node src/seed.js",
+    "reset-db": "node src/seed.js --reset",
+    "test": "node --test --test-concurrency=1 test/"
+  },
+  "dependencies": { "cors": "^2.8.5", "express": "^5.0.0", "mongodb": "^6.9.0" }
+}

@@ -1,0 +1,4 @@
+tag: T2-final
+commit: 6eee00a22413965ed9f9ea04ac1ae34d8b4753a3
+origem: /Users/raphael/new-app
+exportado: 2026-10-02T04:48:00Z
