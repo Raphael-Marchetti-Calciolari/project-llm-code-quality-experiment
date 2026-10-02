@@ -1,0 +1,25 @@
+{
+  "condicao": "T4",
+  "etapa": "verificacao",
+  "transcript": "/Users/raphael/.claude/projects/-Users-raphael-new-app/dadc3571-55d3-4c3a-9caa-dbe7eb8a68ae.jsonl",
+  "modelos": [
+    "claude-sonnet-5-5"
+  ],
+  "duracao_min": 1.2,
+  "tokens": {
+    "input_tokens": 12,
+    "output_tokens": 9532,
+    "cache_creation_input_tokens": 35982,
+    "cache_read_input_tokens": 243570
+  },
+  "tokens_total": 289096,
+  "interacoes_humanas": 1,
+  "desvios": [
+    {
+      "ferramenta": "Read",
+      "caminho": "/Users/raphael/.claude/projects/-Users-raphael-new-app/dadc3571-55d3-4c3a-9caa-dbe7eb8a68ae/tool-results/b1j3xmzrq.txt",
+      "sensivel": true
+    }
+  ],
+  "caminhos_externos_para_revisao": []
+}

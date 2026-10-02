@@ -116,3 +116,14 @@ As decisões da fase de preparação já foram incorporadas ao documento do TCC.
   | Duplicação | 0,0% |
   | Problemas de manutenibilidade | 11 |
   | Esforço de remediação | 51 min |
+
+### 2026-10-02 — T4, 1ª verificação descartada
+
+- **Desvio de protocolo (operação):** na sessão `dadc3571…`, o comando `/model` foi usado e selecionou **Sonnet 5.5**, sobrepondo o Opus 5.5 fixado em `.claude/settings.local.json`; o próprio Claude Code avisou do conflito. O verificador rodou em `claude-sonnet-5-5`, em vez de `claude-opus-5-5`.
+- **Decisão:** a etapa foi **refeita**. Diferentemente do evento do MongoDB em T3, aqui o protocolo não foi seguido, o que torna o parecer inválido; refazer não é seleção de resultados.
+- O parecer descartado (tag `T4-parecer` = `0ffa2be1…`, 34 apontamentos), sua auditoria e seu esforço (1,2 min; 289.096 tokens) foram arquivados em `avaliacao/registros/descartados/T4_verificacao_tentativa1_modelo_errado/` e ficam fora dos resultados.
+- A base T2 foi restaurada do zero para a nova tentativa.
+- **Ajustes no script de auditoria:**
+  - arquivos `tool-results` gravados pelo próprio Claude Code na pasta da sessão (saídas longas) não contam mais como fuga; a única ocorrência foi uma dessas;
+  - a auditoria passou a alertar quando o modelo do transcript difere do exigido para a etapa.
+- **Orientação ao pesquisador:** não usar `/model` nem `/effort` nas sessões; apenas conferir com `/status`.

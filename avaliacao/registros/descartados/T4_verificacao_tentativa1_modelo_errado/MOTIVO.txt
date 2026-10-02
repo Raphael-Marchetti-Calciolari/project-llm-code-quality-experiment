@@ -1,0 +1,3 @@
+T4-parecer (descartado) = 0ffa2be1a2dccfa22bcebe19a4625d154d5949fd
+Sessão dadc3571-55d3-4c3a-9caa-dbe7eb8a68ae rodou em claude-sonnet-5-5 (via /model), não em claude-opus-5-5 como exige o protocolo.
+T4,verificacao,1.2,289096,1

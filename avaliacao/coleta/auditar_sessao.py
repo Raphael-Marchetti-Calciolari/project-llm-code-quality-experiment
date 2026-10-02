@@ -61,7 +61,9 @@ def main():
                         for s in strings(b.get("input")):
                             for p in PATH_RE.findall(s):
                                 full = str(Path(p.replace("~", str(HOME), 1)))
-                                if not full.startswith(str(APP)):
+                                # Saídas longas que o próprio Claude Code grava na pasta da sessão não são fuga.
+                                proprio = full.startswith(str(PROJ / principal.stem / "tool-results"))
+                                if not full.startswith(str(APP)) and not proprio:
                                     chamadas.append({"ferramenta": b.get("name"), "caminho": p,
                                                      "sensivel": any(k in full for k in SENSIVEIS)})
 
@@ -85,6 +87,9 @@ def main():
         w.writerow([tn, etapa, dur, out["tokens_total"], interacoes])
 
     print(f"{tn}/{etapa}: {dur} min, {out['tokens_total']} tokens, {interacoes} interação(ões), modelos {out['modelos']}")
+    esperado = "claude-opus-5-5" if etapa == "verificacao" else "claude-sonnet-5-5"
+    if modelos and modelos != {esperado}:
+        print(f"ALERTA: modelo(s) {sorted(modelos)} diferente(s) do protocolo ({esperado}). Etapa inválida.")
     print(f"DESVIOS: {len(desvios)}" + "".join(f"\n  {c['ferramenta']}: {c['caminho']}" for c in desvios))
     print(f"Caminhos externos não sensíveis (revisar): {len(out['caminhos_externos_para_revisao'])}")
 

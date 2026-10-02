@@ -4,3 +4,4 @@ data_utc,condicao,etapa,claude_code,modelo,esforco
 2026-10-02T04:51:30Z,T3,verificacao,2.1.287,claude-opus-5-5,low
 2026-10-02T04:58:37Z,T3,correcao,2.1.287,claude-sonnet-5-5,low
 2026-10-02T05:04:49Z,T4,verificacao,2.1.287,claude-opus-5-5,low
+2026-10-02T05:08:58Z,T4,verificacao,2.1.287,claude-opus-5-5,low
