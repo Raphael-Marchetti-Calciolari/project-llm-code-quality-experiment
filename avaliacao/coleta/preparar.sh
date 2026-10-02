@@ -18,7 +18,8 @@ case "$TN/$ETAPA" in
 esac
 
 if [[ "$BASE" != "-" ]]; then
-  rm -rf "$APP"; mkdir -p "$APP"
+  # Esvazia sem remover a pasta: terminais abertos nela continuam válidos.
+  mkdir -p "$APP"; find "$APP" -mindepth 1 -delete
   if [[ -n "$BASE" ]]; then
     [[ -f "$ROOT/geracoes/$BASE/ORIGEM.txt" ]] || { echo "Snapshot geracoes/$BASE ausente." >&2; exit 3; }
     (cd "$ROOT/geracoes/$BASE" && tar -cf - --exclude ORIGEM.txt --exclude node_modules --exclude .scannerwork --exclude dist .) | tar -xf - -C "$APP"
