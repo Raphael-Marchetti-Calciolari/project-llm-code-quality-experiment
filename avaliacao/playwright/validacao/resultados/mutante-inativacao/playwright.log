@@ -1,0 +1,48 @@
+
+Running 5 tests using 1 worker
+
+  ✓  1 [chromium] › cenarios.spec.js:10:1 › P1 — Autenticação administrativa (2.1s)
+  ✓  2 [chromium] › cenarios.spec.js:29:1 › P2 — Cadastro e publicação (4.1s)
+  ✓  3 [chromium] › cenarios.spec.js:65:1 › P3 — Edição de produto (4.2s)
+  ✘  4 [chromium] › cenarios.spec.js:101:1 › P4 — Inativação (12.5s)
+  ✓  5 [chromium] › cenarios.spec.js:127:1 › P5 — Contato via WhatsApp (790ms)
+
+
+  1) [chromium] › cenarios.spec.js:101:1 › P4 — Inativação ─────────────────────────────────────────
+
+    Error: [31mTimed out 10000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoHaveCount[2m([22m[32mexpected[39m[2m)[22m
+
+    Locator: getByTestId('public-product-card-produto-fixture')
+    Expected: [32m0[39m
+    Received: [31m1[39m
+    Call log:
+    [2m  - expect.toHaveCount with timeout 10000ms[22m
+    [2m  - waiting for getByTestId('public-product-card-produto-fixture')[22m
+    [2m    14 × locator resolved to 1 element[22m
+    [2m       - unexpected value "1"[22m
+
+
+      114 |   await page.reload();
+      115 |   await c.settle(page);
+    > 116 |   await expect(page.getByTestId(`public-product-card-${c.FIXTURE.slug}`)).toHaveCount(0);
+          |                                                                           ^
+      117 |
+      118 |   // Registro preservado na administração, com estado inativo.
+      119 |   await page.goto(c.url('/admin'));
+        at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:116:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    validacao/resultados/mutante-inativacao/artefatos/cenarios-P4-—-Inativação-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    validacao/resultados/mutante-inativacao/artefatos/cenarios-P4-—-Inativação-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace validacao/resultados/mutante-inativacao/artefatos/cenarios-P4-—-Inativação-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › cenarios.spec.js:101:1 › P4 — Inativação ──────────────────────────────────────────
+  4 passed (24.2s)

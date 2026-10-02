@@ -61,7 +61,27 @@ Derivados de `Prompt de geração - T1 (LLM sem revisão).md`, mantendo a especi
 - Token de análise local em `avaliacao/sonar/.sonar-token` (fora do git).
 - Texto a incluir no TCC: versões acima, modo MQR, perfil Sonar way padrão e a lista de exclusões.
 
-## 5. Pendências
+## 5. Suíte Playwright congelada (avaliação funcional → "funciona?")
+
+- Local: `avaliacao/playwright/` — fora dos diretórios de geração; **as sessões de geração/correção devem rodar em diretórios fora deste repositório** para que os agentes não acessem a suíte.
+- Versões: **@playwright/test 1.49.1** fixado localmente (`package-lock.json`), **Chromium 131.0.6778.33** (build 1148). Observação: o Playwright global instalado na máquina é 1.63.0; a suíte usa apenas a versão local 1.49.1, conforme o documento.
+- Configuração (`playwright.config.js`): somente Chromium, headless, `workers: 1`, `retries: 0`, timeout por cenário 90 s, asserções 10 s, ações 10 s, navegação 30 s; trace/screenshot apenas em falha.
+- Um teste por cenário (`testes/cenarios.spec.js`), utilitários e valores do contrato em `testes/contrato.js`. Todos os valores vêm exclusivamente de "CONTRATOS FIXOS" dos prompts (URLs, credenciais, rotas, seed, `data-testid`).
+- Preparação independente: antes de cada cenário, `npm run reset-db` (contrato) no projeto avaliado; imagens de teste (`https://example.com/tcc/*`) respondidas localmente pelo Playwright.
+- Cenários:
+  - **P1:** sessão limpa com credenciais válidas → linha `admin-product-row-produto-fixture` visível em `/admin`; outra sessão limpa com senha inválida → `/admin` não exibe a linha.
+  - **P2:** cria produto ativo em `/admin/produtos/novo` → após recarregar, card em `/` e detalhes em `/produtos/:slug` (nome, descrição completa, preço) → reabre a edição e confere os 7 campos persistidos.
+  - **P3:** edita o `Produto Fixture` (nome, descrições, preço, imagem; slug mantido) → após recarregar, vitrine e detalhes exibem os novos valores → reabre a edição e confere os campos.
+  - **P4:** pré-condição (card visível) → `product-toggle-active-produto-fixture` → card ausente em `/` após recarregar → linha preservada em `/admin` com estado inativo no formulário.
+  - **P5:** em `/produtos/produto-fixture`, o `whatsapp-button` aponta para WhatsApp (`wa.me`, `api/web.whatsapp.com` ou `whatsapp://`) com o número `5511999999999`; requisições ao WhatsApp são interceptadas e respondidas localmente (nada é enviado).
+- Tolerâncias aplicadas igualmente a todas as condições (não há exceções por tratamento): `product-active` pode ser checkbox/radio, select ou controle `aria-checked/aria-pressed`; o botão de WhatsApp pode ser link (`href`) ou botão com `window.open`; após o login, se a aplicação não redirecionar, a suíte acessa a rota `/admin` do contrato.
+- Premissa documentada: a sessão administrativa deve sobreviver à navegação direta para as rotas do contrato no mesmo navegador (cookie/localStorage).
+- Execução (`executar.sh <Tn> <dir>`): verifica o hash da suíte → exige portas 5173/3000 livres → MongoDB limpo (`infra/mongodb/reset.sh`) → `npm install` → `npm run seed` → `npm run dev` → aguarda até 180 s por `:5173` e `:3000/api` → executa P1–P5 → encerra todos os processos. Falhas de install/seed/inicialização são gravadas em `execucao.json` (cenários ficam "não executados"). Saídas em `avaliacao/resultados/<Tn>/playwright/`.
+- Congelamento: SHA-256 da suíte (config, dependências fixadas e testes) = **`e6033d6c065abca0a4a0e36da5847b0e7ffd06955b125c26d7152a4bcc71f299`** (`SUITE_SHA256`). A execução é recusada se o hash divergir. Qualquer correção futura exige novo hash e reavaliação de todas as condições.
+- Verificação antes do congelamento (`validacao/validar_suite.sh`), com aplicação de referência mínima que cumpre o contrato (`validacao/app-referencia/`) e falhas deliberadas: referência e variante com controles alternativos → 5/5 aprovados; cada mutante (login aceita qualquer senha, criação não persiste, edição ignora preço, inativo na vitrine, número de WhatsApp errado) → reprovado **exatamente** no cenário-alvo (P1…P5). Resultado: **SUÍTE VALIDADA** (`avaliacao/registros/validacao_suite.txt`).
+- Limitação a registrar no TCC: P1–P5 não cobrem exclusão de produto nem configurações da vitrine.
+
+## 6. Pendências
 
 - Definir e registrar modelo gerador (versão + esforço) e modelo verificador (leve).
 - Definir limites numéricos por etapa (geração; verificação + correção).

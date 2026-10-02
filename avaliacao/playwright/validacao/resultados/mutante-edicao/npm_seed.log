@@ -1,0 +1,4 @@
+
+> seed
+> node db.js seed
+

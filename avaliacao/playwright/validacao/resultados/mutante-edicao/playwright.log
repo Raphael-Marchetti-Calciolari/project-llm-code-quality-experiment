@@ -1,0 +1,55 @@
+
+Running 5 tests using 1 worker
+
+  ✓  1 [chromium] › cenarios.spec.js:10:1 › P1 — Autenticação administrativa (2.1s)
+  ✓  2 [chromium] › cenarios.spec.js:29:1 › P2 — Cadastro e publicação (4.1s)
+  ✘  3 [chromium] › cenarios.spec.js:65:1 › P3 — Edição de produto (13.0s)
+  ✓  4 [chromium] › cenarios.spec.js:101:1 › P4 — Inativação (3.6s)
+  ✓  5 [chromium] › cenarios.spec.js:127:1 › P5 — Contato via WhatsApp (759ms)
+
+
+  1) [chromium] › cenarios.spec.js:65:1 › P3 — Edição de produto ───────────────────────────────────
+
+    Error: [31mTimed out 10000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m
+
+    Locator: getByTestId('product-detail')
+    [32m- Expected string  - 1[39m
+    [31m+ Received string  + 3[39m
+
+    [32m- R$ 99,90[39m
+    [31m+ Produto Fixture Editado[39m
+    [31m+       Descrição completa editada no cenário P3R$ 10,00[39m
+    [31m+       WhatsApp[39m
+    Call log:
+    [2m  - expect.toContainText with timeout 10000ms[22m
+    [2m  - waiting for getByTestId('product-detail')[22m
+    [2m    14 × locator resolved to <div data-testid="product-detail">…</div>[22m
+    [2m       - unexpected value "Produto Fixture Editado[22m
+    [2m      Descrição completa editada no cenário P3R$ 10,00[22m
+    [2m      WhatsApp"[22m
+
+
+      94 |   await expect(detalhe).toContainText(editado.nome);
+      95 |   await expect(detalhe).toContainText(editado.descricao);
+    > 96 |   await expect(detalhe).toContainText(editado.preco);
+         |                         ^
+      97 |
+      98 |   await c.conferirFormulario(page, c.FIXTURE.slug, editado);
+      99 | });
+        at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:96:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    validacao/resultados/mutante-edicao/artefatos/cenarios-P3-—-Edição-de-produto-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    validacao/resultados/mutante-edicao/artefatos/cenarios-P3-—-Edição-de-produto-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace validacao/resultados/mutante-edicao/artefatos/cenarios-P3-—-Edição-de-produto-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › cenarios.spec.js:65:1 › P3 — Edição de produto ────────────────────────────────────
+  4 passed (24.2s)

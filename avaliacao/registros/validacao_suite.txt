@@ -1,0 +1,10 @@
+suite_sha256: e6033d6c065abca0a4a0e36da5847b0e7ffd06955b125c26d7152a4bcc71f299
+data: 2026-10-02T03:04:01Z
+OK   referencia           reprovados=- esperado=-
+OK   referencia-alternativa reprovados=- esperado=-
+OK   mutante-login        reprovados=['P1'] esperado=['P1']
+OK   mutante-criacao      reprovados=['P2'] esperado=['P2']
+OK   mutante-edicao       reprovados=['P3'] esperado=['P3']
+OK   mutante-inativacao   reprovados=['P4'] esperado=['P4']
+OK   mutante-whatsapp     reprovados=['P5'] esperado=['P5']
+SUÍTE VALIDADA

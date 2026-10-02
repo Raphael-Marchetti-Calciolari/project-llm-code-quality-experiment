@@ -13,3 +13,9 @@ build/
 
 # Segredos locais
 avaliacao/sonar/.sonar-token
+
+# Artefatos volumosos do Playwright (traces/screenshots); relatórios JSON e logs são versionados
+**/playwright/**/artefatos/
+avaliacao/resultados/*/playwright/artefatos/
+avaliacao/playwright/test-results/
+avaliacao/playwright/relatorio.json

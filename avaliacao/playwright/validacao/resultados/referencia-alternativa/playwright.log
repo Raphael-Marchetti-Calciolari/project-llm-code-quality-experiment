@@ -1,0 +1,12 @@
+
+Running 5 tests using 1 worker
+
+  ✓  1 [chromium] › cenarios.spec.js:10:1 › P1 — Autenticação administrativa (2.0s)
+  ✓  2 [chromium] › cenarios.spec.js:29:1 › P2 — Cadastro e publicação (4.1s)
+  ✓  3 [chromium] › cenarios.spec.js:65:1 › P3 — Edição de produto (4.2s)
+  ✓  4 [chromium] › cenarios.spec.js:101:1 › P4 — Inativação (3.6s)
+  ✓  5 [chromium] › cenarios.spec.js:127:1 › P5 — Contato via WhatsApp (1.3s)
+
+  Slow test file: [chromium] › cenarios.spec.js (15.2s)
+  Consider splitting slow test files to speed up parallel execution
+  5 passed (15.5s)

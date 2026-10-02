@@ -1,0 +1,46 @@
+
+Running 5 tests using 1 worker
+
+  ✓  1 [chromium] › cenarios.spec.js:10:1 › P1 — Autenticação administrativa (2.0s)
+  ✘  2 [chromium] › cenarios.spec.js:29:1 › P2 — Cadastro e publicação (12.5s)
+  ✓  3 [chromium] › cenarios.spec.js:65:1 › P3 — Edição de produto (4.2s)
+  ✓  4 [chromium] › cenarios.spec.js:101:1 › P4 — Inativação (3.6s)
+  ✓  5 [chromium] › cenarios.spec.js:127:1 › P5 — Contato via WhatsApp (799ms)
+
+
+  1) [chromium] › cenarios.spec.js:29:1 › P2 — Cadastro e publicação ───────────────────────────────
+
+    Error: [31mTimed out 10000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m
+
+    Locator: getByTestId('public-product-card-produto-cenario-p2')
+    Expected string: [32m"Produto Cenário P2"[39m
+    Received: <element(s) not found>
+    Call log:
+    [2m  - expect.toContainText with timeout 10000ms[22m
+    [2m  - waiting for getByTestId('public-product-card-produto-cenario-p2')[22m
+
+
+      48 |   await page.reload();
+      49 |   await c.settle(page);
+    > 50 |   await expect(page.getByTestId(`public-product-card-${novo.slug}`)).toContainText(novo.nome);
+         |                                                                      ^
+      51 |
+      52 |   // Página de detalhes, após recarregar.
+      53 |   await page.goto(c.url(`/produtos/${novo.slug}`));
+        at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:50:70
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    validacao/resultados/mutante-criacao/artefatos/cenarios-P2-—-Cadastro-e-publicação-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    validacao/resultados/mutante-criacao/artefatos/cenarios-P2-—-Cadastro-e-publicação-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace validacao/resultados/mutante-criacao/artefatos/cenarios-P2-—-Cadastro-e-publicação-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › cenarios.spec.js:29:1 › P2 — Cadastro e publicação ────────────────────────────────
+  4 passed (23.7s)

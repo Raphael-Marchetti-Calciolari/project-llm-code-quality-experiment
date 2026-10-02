@@ -1,0 +1,282 @@
+{
+  "config": {
+    "configFile": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/playwright.config.js",
+    "rootDir": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes",
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/validacao/resultados/mutante-criacao/relatorio.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/validacao/resultados/mutante-criacao/artefatos",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.49.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "cenarios.spec.js",
+      "file": "cenarios.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "P1 — Autenticação administrativa",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 2046,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T03:02:11.166Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8eba096eda7259abc12a-f45775ff0c9f9302df28",
+          "file": "cenarios.spec.js",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "P2 — Cadastro e publicação",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 12488,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('public-product-card-produto-cenario-p2')\nExpected string: \u001b[32m\"Produto Cenário P2\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toContainText with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('public-product-card-produto-cenario-p2')\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('public-product-card-produto-cenario-p2')\nExpected string: \u001b[32m\"Produto Cenário P2\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toContainText with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('public-product-card-produto-cenario-p2')\u001b[22m\n\n    at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:50:70",
+                    "matcherResult": {
+                      "name": "toContainText",
+                      "expected": "Produto Cenário P2",
+                      "message": "\u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('public-product-card-produto-cenario-p2')\nExpected string: \u001b[32m\"Produto Cenário P2\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toContainText with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('public-product-card-produto-cenario-p2')\u001b[22m\n",
+                      "pass": false,
+                      "actual": "<element(s) not found>",
+                      "log": [
+                        "  - expect.toContainText with timeout 10000ms",
+                        "  - waiting for getByTestId('public-product-card-produto-cenario-p2')"
+                      ],
+                      "timeout": 10000
+                    },
+                    "location": {
+                      "file": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js",
+                      "column": 70,
+                      "line": 50
+                    },
+                    "snippet": "  48 |   await page.reload();\n  49 |   await c.settle(page);\n> 50 |   await expect(page.getByTestId(`public-product-card-${novo.slug}`)).toContainText(novo.nome);\n     |                                                                      ^\n  51 |\n  52 |   // Página de detalhes, após recarregar.\n  53 |   await page.goto(c.url(`/produtos/${novo.slug}`));"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js",
+                        "column": 70,
+                        "line": 50
+                      },
+                      "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('public-product-card-produto-cenario-p2')\nExpected string: \u001b[32m\"Produto Cenário P2\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toContainText with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('public-product-card-produto-cenario-p2')\u001b[22m\n\n\n  48 |   await page.reload();\n  49 |   await c.settle(page);\n> 50 |   await expect(page.getByTestId(`public-product-card-${novo.slug}`)).toContainText(novo.nome);\n     |                                                                      ^\n  51 |\n  52 |   // Página de detalhes, após recarregar.\n  53 |   await page.goto(c.url(`/produtos/${novo.slug}`));\n    at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:50:70"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T03:02:13.269Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/validacao/resultados/mutante-criacao/artefatos/cenarios-P2-—-Cadastro-e-publicação-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/validacao/resultados/mutante-criacao/artefatos/cenarios-P2-—-Cadastro-e-publicação-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js",
+                    "column": 70,
+                    "line": 50
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8eba096eda7259abc12a-6b8e09d2ce659f7fa1f5",
+          "file": "cenarios.spec.js",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "P3 — Edição de produto",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 4203,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T03:02:25.970Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8eba096eda7259abc12a-9e5a64fc0ca3008893be",
+          "file": "cenarios.spec.js",
+          "line": 65,
+          "column": 1
+        },
+        {
+          "title": "P4 — Inativação",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 3583,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T03:02:30.229Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8eba096eda7259abc12a-f3f21c661f3266b07f0e",
+          "file": "cenarios.spec.js",
+          "line": 101,
+          "column": 1
+        },
+        {
+          "title": "P5 — Contato via WhatsApp",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 799,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T03:02:33.814Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8eba096eda7259abc12a-fefea4322770aca43a60",
+          "file": "cenarios.spec.js",
+          "line": 127,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-02T03:02:10.974Z",
+    "duration": 23661.426000000003,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "tcc-suite-playwright",
+  "private": true,
+  "description": "Suíte funcional congelada (P1–P5), comum a T1–T4. Não acessível aos agentes.",
+  "devDependencies": {
+    "@playwright/test": "1.49.1"
+  }
+}

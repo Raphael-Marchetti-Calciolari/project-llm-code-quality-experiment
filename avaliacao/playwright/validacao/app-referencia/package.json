@@ -1,0 +1,13 @@
+{
+  "name": "tcc-app-referencia",
+  "private": true,
+  "description": "Aplicação mínima que cumpre os CONTRATOS FIXOS, usada só para validar a suíte (respostas controladas e falhas deliberadas via MUTANTE).",
+  "scripts": {
+    "dev": "node server.js",
+    "seed": "node db.js seed",
+    "reset-db": "node db.js seed"
+  },
+  "dependencies": {
+    "mongodb": "6.10.0"
+  }
+}

@@ -1,4 +1,4 @@
-data: 2026-10-02T02:47:56Z
+data: 2026-10-02T03:04:01Z
 sistema: macOS 26.7.1 arm64
 node: v20.20.2 | npm: 10.8.2
 sonarqube_servidor: 26.9.0.129388
@@ -11,5 +11,5 @@ perfis_de_regras (padrão):
   ts: Sonar way (435 regras, atualizado 2026-10-02T00:46:37+0000)
   web: Sonar way (61 regras, atualizado 2026-10-02T00:46:37+0000)
 mongodb: mongo:7.0 sha256:41d8560e5c8dc45b6f45a73c42a43c76534532faad42f0b1f39bba786488e2ce
-playwright_suite: não instalado
+playwright_suite: Version 1.49.1
 sonar-common.properties sha256: b2e9e2a7a6cd1efea2b6e5d63fb3a0c63639515efc43eec323977b1c5a6e0ad5

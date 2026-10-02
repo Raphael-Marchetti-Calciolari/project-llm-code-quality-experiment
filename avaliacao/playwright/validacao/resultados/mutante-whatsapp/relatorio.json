@@ -1,0 +1,277 @@
+{
+  "config": {
+    "configFile": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/playwright.config.js",
+    "rootDir": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes",
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/validacao/resultados/mutante-whatsapp/relatorio.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/validacao/resultados/mutante-whatsapp/artefatos",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.49.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "cenarios.spec.js",
+      "file": "cenarios.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "P1 — Autenticação administrativa",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 2056,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T03:03:44.970Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8eba096eda7259abc12a-f45775ff0c9f9302df28",
+          "file": "cenarios.spec.js",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "P2 — Cadastro e publicação",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 4125,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T03:03:47.082Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8eba096eda7259abc12a-6b8e09d2ce659f7fa1f5",
+          "file": "cenarios.spec.js",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "P3 — Edição de produto",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 4165,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T03:03:51.209Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8eba096eda7259abc12a-9e5a64fc0ca3008893be",
+          "file": "cenarios.spec.js",
+          "line": 65,
+          "column": 1
+        },
+        {
+          "title": "P4 — Inativação",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 3565,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T03:03:55.376Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8eba096eda7259abc12a-f3f21c661f3266b07f0e",
+          "file": "cenarios.spec.js",
+          "line": 101,
+          "column": 1
+        },
+        {
+          "title": "P5 — Contato via WhatsApp",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 784,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"5511\u001b[7m999999999\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"5511\u001b[7m888888888\u001b[27m\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"5511\u001b[7m999999999\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"5511\u001b[7m888888888\u001b[27m\"\u001b[39m\n    at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:163:37",
+                    "matcherResult": {
+                      "actual": "5511888888888",
+                      "expected": "5511999999999",
+                      "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"5511\u001b[7m999999999\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"5511\u001b[7m888888888\u001b[27m\"\u001b[39m",
+                      "name": "toBe",
+                      "pass": false
+                    },
+                    "location": {
+                      "file": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js",
+                      "column": 37,
+                      "line": 163
+                    },
+                    "snippet": "  161 |   else if (alvo.protocol === 'whatsapp:') numero = alvo.searchParams.get('phone');\n  162 |   expect(numero, `destino não é WhatsApp: ${destino}`).toBeTruthy();\n> 163 |   expect(numero.replace(/\\D/g, '')).toBe(c.WHATSAPP);\n      |                                     ^\n  164 | });\n  165 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js",
+                        "column": 37,
+                        "line": 163
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"5511\u001b[7m999999999\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"5511\u001b[7m888888888\u001b[27m\"\u001b[39m\n\n  161 |   else if (alvo.protocol === 'whatsapp:') numero = alvo.searchParams.get('phone');\n  162 |   expect(numero, `destino não é WhatsApp: ${destino}`).toBeTruthy();\n> 163 |   expect(numero.replace(/\\D/g, '')).toBe(c.WHATSAPP);\n      |                                     ^\n  164 | });\n  165 |\n    at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:163:37"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-02T03:03:58.944Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/validacao/resultados/mutante-whatsapp/artefatos/cenarios-P5-—-Contato-via-WhatsApp-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/validacao/resultados/mutante-whatsapp/artefatos/cenarios-P5-—-Contato-via-WhatsApp-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js",
+                    "column": 37,
+                    "line": 163
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8eba096eda7259abc12a-fefea4322770aca43a60",
+          "file": "cenarios.spec.js",
+          "line": 127,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-02T03:03:44.779Z",
+    "duration": 14982.185,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
