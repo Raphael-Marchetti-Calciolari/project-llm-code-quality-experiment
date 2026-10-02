@@ -19,3 +19,7 @@ avaliacao/sonar/.sonar-token
 avaliacao/resultados/*/playwright/artefatos/
 avaliacao/playwright/test-results/
 avaliacao/playwright/relatorio.json
+
+# Cópias duplicadas criadas pelo iCloud ("arquivo 2.ext")
+* [0-9].*
+* [0-9]
