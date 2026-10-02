@@ -284,3 +284,15 @@ O texto atual diz que geração, verificação e correção ocorrerão "em diret
   - a correção de T4 mudou comportamento sem cobertura da suíte (resposta "JSON inválido" para qualquer 4xx; login com campo ausente → 400).
 - **Discrepância técnica:** a métrica legada `code_smells` é sempre o total MQR + 1 (11/10/12/11), e `issues_raw.json` não explica o item extra. O TCC usa só a contagem MQR, e as métricas legadas ficam fora da análise principal, como já declarado em Material e Métodos.
 - Citação adicional de Nunes et al. (2025): legibilidade percebida melhorou para 68,63% dos participantes, embora a maioria das soluções tenha introduzido erros ou novos problemas. O texto não traz o percentual.
+
+### 2026-10-02 — Conclusão, Resumo, Introdução e revisão final
+
+- **Conclusão:** responde à questão de pesquisa sem citações nem tabelas, como pede o manual (16.6).
+- **Resumo:** reescrito no pretérito, com 240 palavras, incluindo resultados e conclusão. As palavras-chave foram mantidas, pois nenhuma repete o título.
+- **Introdução:** questão e objetivos passados para o pretérito.
+- **Revisão:**
+  - as seis referências estão citadas e todas as citações têm referência;
+  - o título tem 12 palavras;
+  - a sigla [MVP] foi incluída na primeira ocorrência;
+  - não restou verbo no futuro.
+- **Pendências do autor:** e-mail do orientador ("[a informar]") e conferência visual do número de páginas (estimativa de 16 a 18 páginas, abaixo do limite de 30).
