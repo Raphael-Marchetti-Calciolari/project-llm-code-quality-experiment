@@ -303,3 +303,4 @@ O texto atual diz que geração, verificação e correção ocorrerão "em diret
   - cabeçalhos alinhados como o conteúdo da coluna: à direita sobre números, à esquerda sobre texto. É uma exceção ao "centralizado" do manual, porque os cabeçalhos centralizados ficavam desalinhados dos valores;
   - larguras de coluna refeitas para que nenhum valor numérico quebre de linha;
   - margem interna das células de 1,5 mm.
+  - Tabela 6: duração e tokens centralizados sob os cabeçalhos, com colunas de largura equilibrada. À direita, a duração ficava visualmente colada aos tokens.
