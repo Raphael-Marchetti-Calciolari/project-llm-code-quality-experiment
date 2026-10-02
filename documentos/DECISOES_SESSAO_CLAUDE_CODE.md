@@ -271,3 +271,16 @@ O texto atual diz que geração, verificação e correção ocorrerão "em diret
 - **Item 5:** a regra "refazer só quando o protocolo não foi seguido" entrou em "Rastreabilidade, desvios e limitações" (subtítulo renomeado). A tabela de desvios fica para "Resultados e Discussão", em subtítulo correspondente.
 - **Item 7:** só a limitação de desenho (isolamento por auditoria) entrou nos métodos; suíte no teto e TDD em lotes são resultados e serão discutidos lá.
 - Não houve renderização visual (sem LibreOffice na máquina); o `.docx` passou na validação XSD e os parágrafos novos usam os mesmos estilos dos originais.
+
+### 2026-10-02 — Resultados e Discussão (itens 5 a 7)
+
+- Subtítulos: aderência ao protocolo e desvios; avaliação funcional; indicadores estruturais; verificação por agente e correção; esforço observado; limitações observadas. Seis tabelas no padrão do manual (item 15.2): título acima, fonte e nota abaixo, só bordas horizontais, sem negrito nem cor.
+- **Análise qualitativa** feita por um subagente Opus 5.5 com contexto limpo, somente leitura, comparando pareceres, resumos de correção, diffs e issues do SonarQube. Conferi por amostragem os achados principais antes de usá-los.
+- **Achados incorporados:**
+  - nenhuma correção removeu issues do Sonar; cada uma acrescentou uma (T3: S1128, import não usado da correção D-03; T4: S6819, literal `role="status"` vindo da C4);
+  - a regra S6772 responde por 34 das 40 issues; os critérios do verificador quase não se sobrepõem ao perfil Sonar way;
+  - T2 e T1 têm pilhas diferentes (Express 5 + driver nativo + token próprio × Express 4 + Mongoose + jsonwebtoken), o que confunde o efeito do TDD;
+  - os resumos de correção superestimam a aplicação (T3 D-03; T4 D3 e D4 parciais);
+  - a correção de T4 mudou comportamento sem cobertura da suíte (resposta "JSON inválido" para qualquer 4xx; login com campo ausente → 400).
+- **Discrepância técnica:** a métrica legada `code_smells` é sempre o total MQR + 1 (11/10/12/11), e `issues_raw.json` não explica o item extra. O TCC usa só a contagem MQR, e as métricas legadas ficam fora da análise principal, como já declarado em Material e Métodos.
+- Citação adicional de Nunes et al. (2025): legibilidade percebida melhorou para 68,63% dos participantes, embora a maioria das soluções tenha introduzido erros ou novos problemas. O texto não traz o percentual.
