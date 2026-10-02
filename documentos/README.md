@@ -1,38 +1,38 @@
 # documentos/
 
-Documentos do TCC (MBA Engenharia de Software, USP/Esalq), material de apoio do curso e registro de decisões da implementação do experimento.
+Registro de decisões do experimento e roteiro da coleta.
 
 ## Arquivos
 
-| Arquivo | O que é | Status |
-|---|---|---|
-| `tcc/TCC_Raphael_Marchetti_base_novo_escopo_v1.docx` | Texto do TCC no escopo atual (T1–T4) | **Fonte de verdade** |
-| `tcc/TCC_Raphael_Marchetti_escopo_atualizado.docx` | Texto do TCC com escopo atualizado, anterior à v1 | Versão anterior |
-| `tcc/[Projeto de pesquisa] - Raphael Marchetti Calciolari_original.docx` | Projeto de pesquisa original | Entrega de etapa anterior |
-| `tcc/[Resultados Preliminares] - Raphael Marchetti Calciolari_original.docx` | Resultados preliminares | Entrega de etapa anterior |
-| `tcc/[FDE] - Raphael Marchetti Calciolari.pdf` | Entrega FDE | Entrega de etapa anterior |
-| `tcc/Resultado - Raphael Marchetti Calciolari-1.pdf` | Resultado de etapa | Entrega de etapa anterior |
-| `material-de-apoio/*` | Manual de normas, metodologias de pesquisa, templates, termo de anuência etc. | Material do curso |
-| `DECISOES_SESSAO_CLAUDE_CODE.md` | Registro de decisões da implementação | Documento vivo |
+| Arquivo | Conteúdo |
+|---|---|
+| [`DECISOES_SESSAO_CLAUDE_CODE.md`](DECISOES_SESSAO_CLAUDE_CODE.md) | Log cronológico das decisões, desvios e eventos da coleta e da redação do TCC |
+| [`ROTEIRO_COLETA.md`](ROTEIRO_COLETA.md) | Procedimento executado em cada etapa (geração, verificação e correção) |
 
-## Desenho do estudo (resumo da v1)
+## Documentos não versionados
 
-Estudo aplicado, exploratório e quantitativo, com dois fatores (TDD sim/não; verificação de boas práticas por agente + uma rodada de correção sim/não) aplicados à geração de uma mesma aplicação web (catálogo de produtos para pequenas lojas):
-**T1** geração direta · **T2** geração com TDD · **T3** T1 + verificação/correção por agente · **T4** T2 + verificação/correção por agente.
-Instrumentos comuns às quatro condições: **SonarQube** (complexidades ciclomática e cognitiva, duplicação, problemas de manutenibilidade, esforço de remediação) e uma **suíte Playwright congelada** antes da geração, com cenários **P1–P5**.
-Comparações pareadas e descritivas (melhorias, ausência de alteração e regressões), sem revisão humana do código como tratamento.
+O texto do TCC, as entregas das etapas anteriores e o material de apoio do curso (manual de normas, metodologias de pesquisa e modelos) ficam fora do repositório: contêm dados pessoais ou são material de terceiros (PECEGE/USP-Esalq). Foram removidos também do histórico do git em 2026-10-02.
 
-## `DECISOES_SESSAO_CLAUDE_CODE.md`
+- **TCC:** "Validações programáticas e por agentes na qualidade de código gerado por modelos de linguagem", MBA em Engenharia de Software, USP/Esalq, 2026. É a fonte oficial de resultados, discussão e limitações.
+- **Normas de formatação:** seguem o manual de normas para trabalhos de conclusão de curso do MBA USP/Esalq, disponível aos alunos do curso.
 
-Registro vivo das decisões tomadas durante a preparação do experimento, que precisam ser incorporadas ao texto final do TCC. Seções:
+## Desenho do estudo
 
-1. **Repositório** — versionamento, remoção do escopo anterior e estrutura de pastas.
-2. **Prompts** — prompts T1/T2, verificador e corretor; contratos fixos de execução e interface.
-3. **MongoDB** — instância Docker única, efêmera, reiniciada antes de cada condição.
-4. **SonarQube** — versões, modo MQR, perfil Sonar way, métricas e exclusões.
-5. **Suíte Playwright congelada** — cenários P1–P5, tolerâncias, hash de congelamento e validação.
-6. **Scripts de análise** — consolidação das saídas brutas em tabelas e regras de comparação.
-7. **Protocolo de execução** — modelos, ausência de limites, isolamento de diretório/sessão e congelamento por git.
-8. **Pendências** — o que falta implementar e atualizar no documento.
+Estudo aplicado, exploratório, quantitativo e quase-experimental: dois fatores manipulados (TDD sim/não; verificação por agente seguida de correção sim/não), sem repetição nem aleatorização, aplicados à geração de uma mesma aplicação web (catálogo de produtos para pequenas lojas).
 
-> Itens marcados com **"⚠ Ajustar no TCC"** e a seção **Pendências** indicam o que ainda precisa ser refletido no `.docx` fonte de verdade.
+- **T1** geração direta · **T2** geração com TDD · **T3** T1 + verificação por agente seguida de correção · **T4** T2 + verificação por agente seguida de correção.
+- **Modelos:** Claude Code 2.1.287; gerador e corretor Claude Sonnet 5.5, verificador Claude Opus 5.5, todos com esforço low.
+- **Instrumentos comuns:** SonarQube (complexidades ciclomática e cognitiva, duplicação, problemas de manutenibilidade e esforço de remediação) e uma suíte Playwright congelada antes da geração, com os cenários P1–P5.
+- **Análise:** comparações pareadas e descritivas, com uma execução por condição (n = 1), sem revisão humana do código como tratamento.
+
+## Log de decisões
+
+O [`DECISOES_SESSAO_CLAUDE_CODE.md`](DECISOES_SESSAO_CLAUDE_CODE.md) é cronológico; entradas novas são acrescentadas ao final. Seções:
+
+1. **Ajustes de alinhamento aplicados ao TCC:** decisões da fase de preparação já incorporadas ao texto. O registro completo dessa fase está no histórico do git.
+2. **Decisões da coleta:** fluxo de execução e uma entrada por etapa (T1 a T4), com sessão, congelamento, esforço, auditoria, eventos e resultados; inclui a verificação descartada de T4 e a consolidação.
+3. **Síntese para o TCC:** resumo do fluxo efetivamente executado, dos desvios e das limitações. Todo o conteúdo já foi incorporado ao texto.
+4. **Sincronização do TCC:** registro das revisões do texto (Material e Métodos, Resultados e Discussão, Conclusão, Resumo e revisão final).
+5. **Documentação do repositório:** revisão da documentação, licenças e remoção de dados pessoais do histórico.
+
+As menções a `documentos/tcc/` no log referem-se a arquivos que hoje não são versionados.
