@@ -297,3 +297,4 @@ O texto atual diz que geração, verificação e correção ocorrerão "em diret
   - não restou verbo no futuro.
 - Campo de e-mail do orientador removido a pedido do autor (não disponível).
 - **Pendência do autor:** conferência visual do número de páginas (estimativa de 16 a 18 páginas, abaixo do limite de 30).
+- **Tabela 1 reestruturada:** nenhum modelo disponível tem tabela de texto corrido; os do Resultados Preliminares e o cronograma do template são numéricos. A tabela ganhou a coluna "Etapa", frases curtas e texto alinhado à esquerda (exceção ao "justificado" do manual, para legibilidade). Os detalhes foram para o parágrafo anterior.
