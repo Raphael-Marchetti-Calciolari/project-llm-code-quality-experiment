@@ -82,3 +82,11 @@ As decisões da fase de preparação já foram incorporadas ao documento do TCC.
   | Esforço de remediação | 45 min |
 
 - **Testes de desenvolvimento** (fora do SonarQube): 6 arquivos, 191 linhas não vazias.
+
+### 2026-10-02 — Preparação de T3
+
+- `geracoes/T1` continha `node_modules/` e `.scannerwork/`, resíduos da 1ª avaliação, feita dentro do iCloud. O `.scannerwork/` chegou a ser versionado.
+- Os resíduos foram removidos e `preparar.sh` passou a excluir `node_modules`, `.scannerwork` e `dist` ao restaurar uma base.
+- A base de T3 foi reconstruída e conferida contra os arquivos de `T1-final`: mesma lista e conteúdo idêntico.
+- O registro duplicado de preparação em `sessoes.csv` foi removido.
+- Nenhuma sessão de agente rodou sobre a base com os resíduos.

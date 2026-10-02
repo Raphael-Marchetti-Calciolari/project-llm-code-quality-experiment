@@ -1,6 +1,0 @@
-projectKey=tcc-T1
-serverUrl=http://localhost:9000
-serverVersion=26.9.0.129388
-dashboardUrl=http://localhost:9000/dashboard?id=tcc-T1
-ceTaskId=b3ce87a5-6724-40f8-bc51-304703d8496c
-ceTaskUrl=http://localhost:9000/api/ce/task?id=b3ce87a5-6724-40f8-bc51-304703d8496c

@@ -21,7 +21,7 @@ if [[ "$BASE" != "-" ]]; then
   rm -rf "$APP"; mkdir -p "$APP"
   if [[ -n "$BASE" ]]; then
     [[ -f "$ROOT/geracoes/$BASE/ORIGEM.txt" ]] || { echo "Snapshot geracoes/$BASE ausente." >&2; exit 3; }
-    (cd "$ROOT/geracoes/$BASE" && tar -cf - --exclude ORIGEM.txt .) | tar -xf - -C "$APP"
+    (cd "$ROOT/geracoes/$BASE" && tar -cf - --exclude ORIGEM.txt --exclude node_modules --exclude .scannerwork --exclude dist .) | tar -xf - -C "$APP"
     git -C "$APP" init -q
     git -C "$APP" add -A
     git -C "$APP" -c user.name=tcc -c user.email=tcc@local commit -qm "Base: $BASE-final"
