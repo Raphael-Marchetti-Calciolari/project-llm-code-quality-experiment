@@ -1,6 +1,6 @@
 # Roteiro da coleta (T1–T4)
 
-Procedimento executado em 2026-10-02 para gerar, verificar e corrigir os artefatos. Os papéis são dois: o **pesquisador** conduz as sessões dos agentes, e um **assistente** (sessão do Claude Code aberta neste repositório) prepara, congela, audita e avalia. Desvios e eventos de cada etapa estão em [`DECISOES_SESSAO_CLAUDE_CODE.md`](DECISOES_SESSAO_CLAUDE_CODE.md).
+Procedimento executado em 2026-10-02 para gerar, verificar e corrigir os artefatos. Os papéis são dois: o **pesquisador** conduz as sessões dos agentes, e um **assistente** (sessão do Claude Code aberta neste repositório) prepara, congela, audita e avalia. Desvios e ocorrências de cada etapa estão em [`DECISOES_SESSAO_CLAUDE_CODE.md`](DECISOES_SESSAO_CLAUDE_CODE.md).
 
 ## Antes de começar (uma vez)
 
@@ -9,7 +9,9 @@ Procedimento executado em 2026-10-02 para gerar, verificar e corrigir os artefat
 
 ## Diretório de execução
 
-Todas as etapas rodam no mesmo diretório, `~/new-app` (configurável por `APP_DIR`), fora deste repositório e do iCloud. Antes de cada etapa, ele é esvaziado e recebe apenas o conteúdo da etapa: vazio para T1 e T2; para T3 e T4, a base restaurada do snapshot `geracoes/T1` ou `geracoes/T2`, com um commit e a marcação `T1-final` ou `T2-final`. Não há bloqueio técnico de acesso; o isolamento é verificado depois, pela auditoria do transcript.
+Todas as etapas rodam no mesmo diretório, `~/new-app`, fora deste repositório e do iCloud. Antes de cada geração e de cada verificação, ele é esvaziado e recebe apenas o conteúdo da etapa: vazio para T1 e T2; para T3 e T4, a base restaurada do snapshot `geracoes/T1` ou `geracoes/T2`, com um commit e a marcação (tag git) `T1-final` ou `T2-final`. Na correção, o diretório é mantido como ficou após o parecer congelado.
+
+`preparar.sh` e `congelar.sh` aceitam outro diretório pela variável `APP_DIR`, mas `auditar_sessao.py` procura o transcript da sessão de `~/new-app`; com outro diretório, passe o arquivo `.jsonl` da sessão como terceiro argumento. Não há bloqueio técnico de acesso; o isolamento é verificado depois, pela auditoria do transcript.
 
 ## Ciclo de cada etapa
 
@@ -18,22 +20,22 @@ Todas as etapas rodam no mesmo diretório, `~/new-app` (configurável por `APP_D
 | 1 | Assistente | `./avaliacao/coleta/preparar.sh <Tn> <etapa>`: prepara `~/new-app`, reinicia o MongoDB, desativa os plugins globais na pasta, fixa modelo e esforço em `.claude/settings.local.json` e registra a sessão em `avaliacao/registros/sessoes.csv`. |
 | 2 | Pesquisador | Em outro terminal: `cd ~/new-app && claude` (**sessão nova**). Confira modelo e esforço apenas com `/status`. **Não use `/model` nem `/effort`**: eles sobrepõem a configuração fixada. |
 | 3 | Pesquisador | Cole o conteúdo **integral** do prompt da etapa (tabela abaixo) e envie. Não intervenha. Se o agente perguntar algo, responda apenas: *"Siga as regras do prompt e decida de forma autônoma."* Cada resposta conta como interação. |
-| 4 | Pesquisador | Quando o agente concluir, feche a sessão (`/exit`) e avise o assistente. Relate qualquer evento fora do normal. |
+| 4 | Pesquisador | Quando o agente concluir, feche a sessão (`/exit`) e avise o assistente. Relate qualquer ocorrência fora do normal. |
 | 5 | Assistente | `./avaliacao/coleta/congelar.sh <Tn> <tag>`: commit e marcação em `~/new-app`; nas tags `*-final`, exporta o snapshot para `geracoes/<Tn>` e cria a cópia de avaliação `~/tcc-avaliacao/<Tn>`. |
 | 6 | Assistente | `python3 avaliacao/coleta/auditar_sessao.py <Tn> <etapa>`: esforço (duração, tokens e interações), auditoria de caminhos fora de `~/new-app` e conferência do modelo. |
 | 7 | Assistente | Só nas tags `*-final`: SonarQube e Playwright sobre `~/tcc-avaliacao/<Tn>` (o MongoDB é limpo no início e derrubado no fim). |
-| 8 | Assistente | Registra resultados, desvios e eventos no log de decisões e faz o commit. |
+| 8 | Assistente | Registra resultados, desvios e ocorrências no log de decisões e faz o commit. |
 
 ## Ordem das etapas
 
-| Ordem | Condição / etapa | Prompt ([`prompts/`](../prompts/)) | Modelo | Tag |
-|---|---|---|---|---|
-| 1 | T1 geracao | `01_T1_geracao_direta.md` | Sonnet 5.5, low | `T1-final` |
-| 2 | T2 geracao | `02_T2_geracao_TDD.md` | Sonnet 5.5, low | `T2-final` |
-| 3 | T3 verificacao (base T1) | `03_verificador_T3_T4.md` | Opus 5.5, low | `T3-parecer` |
-| 4 | T3 correcao | `04_corretor_T3_T4.md` | Sonnet 5.5, low | `T3-final` |
-| 5 | T4 verificacao (base T2) | `03_verificador_T3_T4.md` | Opus 5.5, low | `T4-parecer` |
-| 6 | T4 correcao | `04_corretor_T3_T4.md` | Sonnet 5.5, low | `T4-final` |
+| Ordem | Condição | Etapa (argumento) | Prompt | Modelo | Marcação |
+|---|---|---|---|---|---|
+| 1 | T1 | geração (`geracao`) | [`01_T1_geracao_direta.md`](../prompts/01_T1_geracao_direta.md) | Sonnet 5.5, `low` | `T1-final` |
+| 2 | T2 | geração (`geracao`) | [`02_T2_geracao_TDD.md`](../prompts/02_T2_geracao_TDD.md) | Sonnet 5.5, `low` | `T2-final` |
+| 3 | T3 | verificação (`verificacao`), base T1 | [`03_verificador_T3_T4.md`](../prompts/03_verificador_T3_T4.md) | Opus 5.5, `low` | `T3-parecer` |
+| 4 | T3 | correção (`correcao`) | [`04_corretor_T3_T4.md`](../prompts/04_corretor_T3_T4.md) | Sonnet 5.5, `low` | `T3-final` |
+| 5 | T4 | verificação (`verificacao`), base T2 | [`03_verificador_T3_T4.md`](../prompts/03_verificador_T3_T4.md) | Opus 5.5, `low` | `T4-parecer` |
+| 6 | T4 | correção (`correcao`) | [`04_corretor_T3_T4.md`](../prompts/04_corretor_T3_T4.md) | Sonnet 5.5, `low` | `T4-final` |
 
 Depois das quatro condições: `python3 avaliacao/scripts/consolidar.py`.
 
@@ -54,6 +56,7 @@ Na coleta:
 - **T4, 1ª verificação:** executada no modelo errado, porque `/model` sobrepôs a configuração. A etapa foi refeita, e a tentativa foi arquivada em `avaliacao/registros/descartados/T4_verificacao_tentativa1_modelo_errado/`, fora dos resultados.
 - **T1, 1ª avaliação:** executada dentro do iCloud, com falha causada pelo ambiente. A avaliação foi repetida sobre a cópia fora do iCloud, e a tentativa foi preservada em `avaliacao/resultados/T1/playwright_tentativa1_icloud/`.
 - **T3, correção:** o corretor concluiu, por engano, que o MongoDB estava indisponível. A etapa não foi refeita.
+- **T3/T4, base:** resíduos de avaliação (`node_modules`, `.scannerwork`) foram removidos de `geracoes/T1` antes de qualquer sessão, e a base foi conferida contra `T1-final`.
 
 ## Por que os plugins são desativados
 

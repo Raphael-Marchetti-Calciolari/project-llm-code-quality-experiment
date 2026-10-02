@@ -4,10 +4,10 @@ Prompts usados para gerar, verificar e corrigir os artefatos das quatro condiç�
 
 | Arquivo | Condição | Papel | Modelo / esforço | Saída esperada |
 |---|---|---|---|---|
-| `01_T1_geracao_direta.md` | T1 | Gerador (geração direta) | Sonnet 5.5 (`claude-sonnet-5-5`) / low | Aplicação + resumo breve |
-| `02_T2_geracao_TDD.md` | T2 | Gerador (geração com TDD) | Sonnet 5.5 (`claude-sonnet-5-5`) / low | Aplicação + testes + resumo breve |
-| `03_verificador_T3_T4.md` | T3, T4 | Verificador (somente leitura) | Opus 5.5 (`claude-opus-5-5`) / low | `VERIFICATION_REPORT.md` |
-| `04_corretor_T3_T4.md` | T3, T4 | Corretor (rodada única) | Sonnet 5.5 (`claude-sonnet-5-5`) / low | `CORRECTION_SUMMARY.md` |
+| [`01_T1_geracao_direta.md`](01_T1_geracao_direta.md) | T1 | Gerador (geração direta) | Sonnet 5.5 (`claude-sonnet-5-5`) / low | Aplicação + resumo breve |
+| [`02_T2_geracao_TDD.md`](02_T2_geracao_TDD.md) | T2 | Gerador (geração com TDD) | Sonnet 5.5 (`claude-sonnet-5-5`) / low | Aplicação + testes + resumo breve |
+| [`03_verificador_T3_T4.md`](03_verificador_T3_T4.md) | T3, T4 | Verificador (somente leitura) | Opus 5.5 (`claude-opus-5-5`) / low | `VERIFICATION_REPORT.md` |
+| [`04_corretor_T3_T4.md`](04_corretor_T3_T4.md) | T3, T4 | Corretor (rodada única) | Sonnet 5.5 (`claude-sonnet-5-5`) / low | `CORRECTION_SUMMARY.md` |
 
 ## Fluxo
 
@@ -19,7 +19,7 @@ T3: base restaurada de geracoes/T1 → prompt 03 → T3-parecer → prompt 04 �
 T4: base restaurada de geracoes/T2 → prompt 03 → T4-parecer → prompt 04 → T4-final
 ```
 
-Todas as etapas rodaram no mesmo diretório de execução (`~/new-app`), fora deste repositório, esvaziado antes de cada etapa. Ao fim de cada uma, o estado foi registrado com commit e marcação, sem alteração manual. Os snapshots de T1 e T2 em [`geracoes/`](../geracoes/) permanecem intocados para a comparação pareada.
+Todas as etapas rodaram no mesmo diretório de execução (`~/new-app`), fora deste repositório, esvaziado antes de cada geração e de cada verificação. Ao fim de cada uma, o estado foi registrado com commit e marcação, sem alteração manual. Os snapshots de T1 e T2 em [`geracoes/`](../geracoes/) permanecem intocados para a comparação pareada.
 
 ## Configuração das sessões
 

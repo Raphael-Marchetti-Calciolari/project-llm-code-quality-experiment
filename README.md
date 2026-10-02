@@ -12,8 +12,8 @@ As quatro condições geram a mesma aplicação: um catálogo de produtos para p
 |---|---|---|
 | T1 | direta | — |
 | T2 | com TDD | — |
-| T3 | base congelada de T1 | sim |
-| T4 | base congelada de T2 | sim |
+| T3 | base congelada de T1 | sim (T1 + verificação por agente seguida de correção) |
+| T4 | base congelada de T2 | sim (T2 + verificação por agente seguida de correção) |
 
 ```mermaid
 flowchart LR
@@ -24,9 +24,9 @@ flowchart LR
     T1 & T2 & T3 & T4 --> A[SonarQube + Playwright] --> D[Tabelas consolidadas]
 ```
 
-- **Modelos (Claude Code 2.1.287, esforço low):** gerador e corretor Claude Sonnet 5.5; verificador Claude Opus 5.5.
+- **Ferramenta e modelos:** Claude Code 2.1.287; gerador e corretor Claude Sonnet 5.5, verificador Claude Opus 5.5, com nível de raciocínio (*effort*) `low`.
 - **Instrumentos comuns:** SonarQube (modo MQR, perfil Sonar way padrão) para a qualidade estrutural e uma suíte Playwright congelada por hash, com cinco cenários (P1–P5), para a avaliação funcional.
-- **Comparações pareadas e descritivas:** T2−T1, T3−T1 e T4−T2; T4−T3 apenas descritiva.
+- **Comparações pareadas principais:** T2−T1, T3−T1 e T4−T2; T4−T3 é complementar (as bases diferem). Todas são descritivas.
 - **Uma execução por condição (n = 1):** os resultados não admitem inferência estatística.
 
 ## Resultados principais
@@ -45,8 +45,10 @@ Valores consolidados em [`avaliacao/resultados/tabelas/resultados.md`](avaliacao
 Leitura descritiva, restrita a esta amostra:
 
 - a suíte funcional atingiu o teto em todas as condições e não diferenciou os tratamentos;
-- a verificação por agente seguida de correção aumentou o tamanho e a complexidade do código sem reduzir a densidade de problemas; nenhuma correção removeu problemas apontados pelo SonarQube;
-- a geração com TDD resultou em menor densidade de problemas e maior complexidade cognitiva que a geração direta.
+- em T3 e T4, após a verificação por agente seguida de correção, observaram-se mais linhas e maior complexidade que nas bases T1 e T2, com densidade de problemas praticamente inalterada; nenhuma correção removeu problemas apontados pelo SonarQube, e os critérios do verificador quase não se sobrepõem ao perfil Sonar way;
+- T2 (TDD) apresentou menor densidade de problemas e maior complexidade cognitiva que T1; como as pilhas tecnológicas geradas diferem, a diferença não pode ser atribuída apenas ao TDD.
+
+Ocorrências que afetam a leitura: o corretor de T3 não validou a aplicação de ponta a ponta (concluiu, por engano, que o MongoDB estava indisponível), e a aderência ao TDD em T2 foi parcial (testes escritos em lotes).
 
 Discussão completa, limitações e ameaças à validade estão no texto do TCC.
 
@@ -79,13 +81,13 @@ Ambiente usado na coleta (registrado em [`avaliacao/registros/versoes_ambiente.t
 | SonarScanner CLI | 8.1.0.6389 |
 | Python | 3.8 ou superior (biblioteca padrão) |
 
-Os scripts de coleta e de avaliação são escritos para macOS (usam `sw_vers` e `lsof`). A suíte está congelada pelo SHA-256 `ed6b7cc531641ab932b5ecdb4e2eb06720fb1fcd293141643dc24ceeeb8b1685`; qualquer alteração exige nova validação e a reavaliação das quatro condições.
+Os scripts de avaliação foram escritos para macOS (`registrar_versoes.sh` usa `sw_vers`; `executar.sh`, `lsof`). A suíte está congelada pelo SHA-256 `ed6b7cc531641ab932b5ecdb4e2eb06720fb1fcd293141643dc24ceeeb8b1685`; qualquer alteração exige nova validação e a reavaliação das quatro condições.
 
-Como os modelos de linguagem não são determinísticos, uma nova execução produzirá artefatos diferentes. O que se reproduz exatamente é a avaliação dos snapshots em `geracoes/`.
+Como os modelos de linguagem não são determinísticos, uma nova coleta produzirá artefatos diferentes; repeti-la exige acesso ao Claude Code e aos modelos citados, que podem deixar de estar disponíveis. O que pode ser repetido é a avaliação dos snapshots em `geracoes/`, com as versões listadas acima.
 
 ## Rastreabilidade
 
-- **Decisões, desvios e eventos** da coleta e da redação: [`documentos/DECISOES_SESSAO_CLAUDE_CODE.md`](documentos/DECISOES_SESSAO_CLAUDE_CODE.md).
+- **Decisões, desvios e ocorrências** da coleta e da redação: [`documentos/DECISOES_SESSAO_CLAUDE_CODE.md`](documentos/DECISOES_SESSAO_CLAUDE_CODE.md).
 - **Sessões e esforço:** [`avaliacao/registros/`](avaliacao/registros/) (configuração de cada sessão, auditoria dos transcripts, duração, tokens e interações).
 - **Versões dos artefatos:** cada snapshot traz um `ORIGEM.txt` com a marcação e o commit de origem. Esses commits pertenciam ao repositório de execução, externo a este; os snapshots em `geracoes/` são a cópia preservada (ver [`geracoes/README.md`](geracoes/README.md)).
 - Alguns registros brutos contêm caminhos absolutos da máquina de coleta (`/Users/...`). Eles foram mantidos sem edição por serem saídas originais das ferramentas.
@@ -94,7 +96,7 @@ O texto do TCC, as entregas das etapas anteriores e o material de apoio do curso
 
 ## Uso de modelos de linguagem
 
-Além de serem o objeto do estudo, modelos de linguagem foram usados como ferramenta de apoio: o Claude Code auxiliou na escrita dos scripts, na condução da coleta, na análise qualitativa e na revisão do texto e desta documentação, sempre sob supervisão do autor. As decisões correspondentes estão registradas no log de decisões.
+Além de serem o objeto do estudo, modelos de linguagem foram usados como ferramenta de apoio: o Claude Code auxiliou na escrita dos scripts, na condução da coleta e na revisão do texto e desta documentação, sob supervisão do autor; a análise qualitativa foi conduzida por um subagente (Claude Opus 5.5) e conferida por amostragem pelo autor. As decisões correspondentes estão registradas no log de decisões.
 
 ## Como citar
 
@@ -104,8 +106,8 @@ Os metadados de citação estão em [`CITATION.cff`](CITATION.cff) (o GitHub ofe
 
 ## Licença
 
-- Código (scripts de `avaliacao/` e artefatos de `geracoes/`): [MIT](LICENSE).
-- Textos e dados (documentação, prompts, registros e resultados): [CC BY 4.0](LICENSE-CC-BY-4.0.md).
+- Código (scripts e configurações de `avaliacao/` e todo o conteúdo de `geracoes/`): [MIT](LICENSE).
+- Textos e dados (documentação fora de `geracoes/`, prompts, registros e resultados): [CC BY 4.0](LICENSE-CC-BY-4.0.md). A abrangência exata está nesse arquivo.
 
 ## Autoria
 

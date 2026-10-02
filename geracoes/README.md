@@ -8,8 +8,8 @@ Snapshots congelados, somente leitura, dos artefatos finais das quatro condiçõ
 |---|---|---|---|
 | `T1/` | Geração direta | `backend/` + `frontend/` | `ORIGEM.txt` |
 | `T2/` | Geração com TDD | `server/` + `client/`, com 6 arquivos de teste | `ORIGEM.txt`, `README.md` e `.gitignore` do próprio agente |
-| `T3/` | T1 após verificação por agente seguida de correção | `backend/` + `frontend/` | `ORIGEM.txt`, `VERIFICATION_REPORT.md`, `CORRECTION_SUMMARY.md` |
-| `T4/` | T2 após verificação por agente seguida de correção | `server/` + `client/`, com os mesmos 6 arquivos de teste | `ORIGEM.txt`, `README.md`, `.gitignore`, `VERIFICATION_REPORT.md`, `CORRECTION_SUMMARY.md` |
+| `T3/` | T1 + verificação por agente seguida de correção | `backend/` + `frontend/` | `ORIGEM.txt`, `VERIFICATION_REPORT.md`, `CORRECTION_SUMMARY.md` |
+| `T4/` | T2 + verificação por agente seguida de correção | `server/` + `client/`, com os mesmos 6 arquivos de teste | `ORIGEM.txt`, `README.md`, `.gitignore`, `VERIFICATION_REPORT.md`, `CORRECTION_SUMMARY.md` |
 
 - `VERIFICATION_REPORT.md` é o parecer do verificador e `CORRECTION_SUMMARY.md`, o relato do corretor. Ambos foram escritos pelos agentes e fazem parte do artefato.
 - Os layouts diferem porque cada gerador escolheu a própria estrutura; o contrato externo (portas, scripts, rotas, seed e `data-testid`) é o mesmo, fixado nos prompts.
@@ -17,7 +17,7 @@ Snapshots congelados, somente leitura, dos artefatos finais das quatro condiçõ
 
 ## Origem e marcações
 
-Os artefatos foram gerados no diretório de execução `~/new-app`, fora deste repositório e reutilizado em todas as etapas, que tinha um repositório git próprio. Ao fim de cada etapa, o estado foi registrado com commit e marcação (tag):
+Os artefatos foram gerados em `~/new-app`, diretório de execução externo a este repositório, reutilizado em todas as etapas e com repositório git próprio. Ao fim de cada etapa, o estado foi registrado com commit e marcação (tag git):
 
 | Marcação | Commit | Etapa |
 |---|---|---|
@@ -29,8 +29,8 @@ Os artefatos foram gerados no diretório de execução `~/new-app`, fora deste r
 | `T4-final` | `e9886459b6b3d545e2a5913777fd02614ef194c5` | Correção de T4 |
 
 - T3 e T4 **não foram clonados** do repositório original: a base foi restaurada a partir do snapshot `geracoes/T1` ou `geracoes/T2`, conferida arquivo a arquivo e registrada com um novo commit e a marcação de origem (`T1-final` ou `T2-final`).
-- Os commits da tabela não são publicados e, como `~/new-app` foi esvaziado a cada etapa, a maioria deles **não existe mais**. Os identificadores ficam como registro histórico, em `ORIGEM.txt` e no log de decisões.
-- Uma verificação de T4 foi descartada por violação de protocolo (`T4-parecer` = `0ffa2be1…`); está arquivada em [`avaliacao/registros/descartados/`](../avaliacao/registros/descartados/) e fica fora dos resultados.
+- Os commits da tabela não são publicados. Os de T1, T2 e T3 foram descartados ao esvaziar `~/new-app` entre as etapas; os de T4 restam apenas na máquina de coleta. Os identificadores ficam como registro histórico, em `ORIGEM.txt` e no log de decisões.
+- Uma verificação de T4 foi descartada por violação de protocolo (`T4-parecer` = `0ffa2be1a2dccfa22bcebe19a4625d154d5949fd`); está arquivada em [`avaliacao/registros/descartados/`](../avaliacao/registros/descartados/) e fica fora dos resultados.
 
 ## Exportação
 

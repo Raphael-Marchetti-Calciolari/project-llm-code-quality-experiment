@@ -10,7 +10,9 @@ O texto legal completo está em <https://creativecommons.org/licenses/by/4.0/leg
 
 | Licença | Arquivos |
 |---|---|
-| CC BY 4.0 (este arquivo) | Documentação (`*.md`), prompts (`prompts/`), registros (`avaliacao/registros/`) e resultados (`avaliacao/resultados/`) |
-| MIT ([`LICENSE`](LICENSE)) | Código: scripts e configurações de `avaliacao/` (exceto `registros/` e `resultados/`) e os artefatos gerados em `geracoes/` |
+| CC BY 4.0 (este arquivo) | Documentação (`*.md`) fora de `geracoes/`, prompts (`prompts/`), registros (`avaliacao/registros/`) e resultados (`avaliacao/resultados/` e `avaliacao/playwright/validacao/resultados/`) |
+| MIT ([`LICENSE`](LICENSE)) | Código: scripts e configurações de `avaliacao/` não listados acima e todo o conteúdo de `geracoes/`, inclusive os `.md` escritos pelos agentes, que integram os artefatos |
+
+Em caso de dúvida, vale a regra mais específica: `geracoes/` é integralmente MIT, e as pastas de resultados e registros são integralmente CC BY 4.0.
 
 Ao reutilizar os textos ou os dados, cite o repositório conforme [`CITATION.cff`](CITATION.cff).

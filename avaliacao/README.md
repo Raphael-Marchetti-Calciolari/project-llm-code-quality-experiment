@@ -9,7 +9,7 @@ avaliacao/
 ├── COMO_AVALIAR.md              # runbook da avaliação
 ├── coleta/                      # preparação, congelamento e auditoria das sessões (ver documentos/ROTEIRO_COLETA.md)
 │   ├── preparar.sh                # preparar.sh <Tn> <etapa>: prepara ~/new-app, fixa modelo/esforço, registra a sessão
-│   ├── congelar.sh                # congelar.sh <Tn> <tag>: commit + tag; nas tags *-final exporta para geracoes/ e ~/tcc-avaliacao/
+│   ├── congelar.sh                # congelar.sh <Tn> <tag>: commit + marcação; nas tags *-final exporta para geracoes/ e ~/tcc-avaliacao/
 │   └── auditar_sessao.py          # auditar_sessao.py <Tn> <etapa>: esforço e auditoria de caminhos a partir do transcript
 ├── infra/mongodb/               # docker-compose.yml (mongo:7.0 em tmpfs, contêiner tcc-mongodb) + reset.sh
 ├── sonar/                       # análise estática (qualidade estrutural)
@@ -82,6 +82,9 @@ A densidade de problemas (por 1.000 linhas de código) é calculada na consolida
 **Esforço (complementar):** duração do envio do prompt à última mensagem do agente, tokens (entrada, saída, criação e leitura de cache) e interações humanas, extraídos do transcript de cada sessão.
 
 ## Regras de integridade
+
+Resumo; as regras completas do protocolo estão em [`COMO_AVALIAR.md`](COMO_AVALIAR.md#5-regras-do-protocolo).
+
 
 - Suíte congelada por hash (`SUITE_SHA256`): hash divergente faz a execução ser recusada.
 - O artefato nunca é corrigido: falhas de build, seed, inicialização ou testes são resultados.

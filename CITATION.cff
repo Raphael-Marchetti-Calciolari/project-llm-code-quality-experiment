@@ -8,8 +8,9 @@ abstract: >-
   cada uma delas após verificação por agente seguida de correção) e avaliada
   com SonarQube e uma suíte Playwright congelada. Contém prompts, scripts de
   coleta e avaliação, snapshots dos artefatos, resultados brutos e consolidados
-  e o registro de decisões.
+  e o registro de decisões. Orientação: Vinicius Santos Andrade.
 type: software
+version: "1.0.0"
 authors:
   - given-names: Raphael Marchetti
     family-names: Calciolari

@@ -10,7 +10,7 @@ Procedimento para medir cada artefato congelado com os instrumentos comuns. Rode
 | Docker + Docker Compose v2 | — | SonarQube e MongoDB |
 | Node.js / npm | 20.20.2 / 10.8.2 | Executa os artefatos e a suíte |
 | Playwright / Chromium | 1.49.1 / 131.0.6778.33 | Fixados em `avaliacao/playwright/package-lock.json` |
-| SonarQube Community | 26.9.0.129388 | Imagem `sonarqube:community`, digest em `registros/versoes_ambiente.txt` |
+| SonarQube Community | 26.9.0.129388 | Imagem `sonarqube:community`, digest em `avaliacao/registros/versoes_ambiente.txt` |
 | SonarScanner CLI | 8.1.0.6389 | Comando `sonar-scanner` no `PATH` |
 | Python | 3.8 ou superior | Só a biblioteca padrão |
 | `curl`, `shasum`, `lsof` | do sistema | Usados pelos scripts |
@@ -24,7 +24,7 @@ curl -s localhost:9000/api/system/status        # aguardar "status":"UP"
 ```
 
 - Entre em `http://localhost:9000` com o usuário administrador e troque a senha inicial.
-- Mantenha o modo MQR (padrão da versão) e os perfis Sonar way padrão, sem personalização. `registrar_versoes.sh` registra os dois.
+- Mantenha o modo MQR (padrão da versão) e o perfil Sonar way padrão de cada linguagem, sem personalização. `registrar_versoes.sh` registra os dois.
 - Gere um token de análise e grave-o em `avaliacao/sonar/.sonar-token`, que não é versionado. Também é possível exportá-lo como `SONAR_TOKEN`.
 
 ```bash
@@ -40,10 +40,11 @@ curl -s -u admin:<senha> -X POST \
 docker start sonarqube
 (cd avaliacao/playwright && npm ci)                       # Playwright 1.49.1 fixado
 (cd avaliacao/playwright && npx playwright install chromium)
+./avaliacao/infra/mongodb/reset.sh                        # sobe o MongoDB para o registro de versões
 ./avaliacao/sonar/registrar_versoes.sh                    # grava avaliacao/registros/versoes_ambiente.txt
 ```
 
-O MongoDB não precisa ser iniciado à mão: `executar.sh` recria o contêiner `tcc-mongodb` vazio no início e o derruba ao final de cada rodada.
+`registrar_versoes.sh` só registra a imagem do MongoDB se o contêiner `tcc-mongodb` estiver ativo. Nas avaliações, o MongoDB não precisa ser iniciado à mão: `executar.sh` recria o contêiner vazio no início e o derruba ao final de cada rodada.
 
 ## 2. Antes de avaliar
 
@@ -75,7 +76,7 @@ Repita para T2, T3 e T4 com os mesmos comandos, sem ajuste por condição.
 
 Conferência rápida:
 
-- `execucao.json → inicializacao` deve valer `"ok"`. Se valer `"falha"`, o motivo fica registrado e os cenários aparecem como "não executado".
+- `execucao.json → inicializacao` deve valer `"ok"`. Se valer `"falha"`, o motivo fica registrado e os cenários aparecem como "não executado". `"abortado"` indica hash divergente ou porta ocupada; nesse caso, a suíte não chega a rodar.
 - `scanner.log` deve terminar em `EXECUTION SUCCESS`.
 
 ## 4. Consolidar (após as quatro condições)
@@ -88,7 +89,7 @@ Saídas em `avaliacao/resultados/tabelas/`:
 
 - `resultados.md`, o resumo legível;
 - `estrutural.csv`;
-- `comparacoes.csv`, com T2−T1, T3−T1, T4−T2 e T4−T3 (esta apenas descritiva);
+- `comparacoes.csv`, com as comparações principais T2−T1, T3−T1 e T4−T2 e a complementar T4−T3;
 - `funcional.csv`;
 - `testes_desenvolvimento.csv`.
 
