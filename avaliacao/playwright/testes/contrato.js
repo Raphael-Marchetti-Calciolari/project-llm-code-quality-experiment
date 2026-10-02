@@ -67,8 +67,9 @@ async function controleAtivo(page) {
   return el;
 }
 
-const VERDADEIRO = /^(true|1|ativo|active|sim|yes|on)$/i;
-const FALSO = /^(false|0|inativo|inactive|não|nao|no|off)$/i;
+const VERDADEIRO = /^(true|1|ativo|active|sim|yes|on|checked)$/i;
+const FALSO = /^(false|0|inativo|inactive|não|nao|no|off|unchecked)$/i;
+const ATRIBUTOS_ESTADO = ['aria-checked', 'aria-pressed', 'data-state', 'data-active', 'data-checked'];
 
 async function definirAtivo(page, valor) {
   const el = await controleAtivo(page);
@@ -97,9 +98,12 @@ async function lerAtivo(page) {
     if (v.some((x) => FALSO.test(x))) return false;
     throw new Error(`product-active: valor não reconhecido (${v.join(' / ')})`);
   }
-  const aria = (await el.getAttribute('aria-checked')) ?? (await el.getAttribute('aria-pressed'));
-  if (aria === 'true' || aria === 'false') return aria === 'true';
-  throw new Error('product-active: tipo de controle não suportado');
+  for (const attr of ATRIBUTOS_ESTADO) {
+    const v = await el.getAttribute(attr);
+    if (v !== null && VERDADEIRO.test(v)) return true;
+    if (v !== null && FALSO.test(v)) return false;
+  }
+  throw new Error('product-active: estado não identificável (checkbox, select, aria-* ou data-*)');
 }
 
 async function preencherProduto(page, p) {
@@ -112,9 +116,23 @@ async function preencherProduto(page, p) {
   if (p.ativo !== undefined) await definirAtivo(page, p.ativo);
 }
 
-async function salvarProduto(page) {
-  await page.getByTestId('product-save').click();
+// Aciona um controle que grava dados e aguarda a resposta da requisição de escrita (não GET).
+async function acionarEscrita(page, locator) {
+  const escrita = page.waitForResponse((r) => r.request().method() !== 'GET', { timeout: 15_000 });
+  await locator.click();
+  await escrita;
   await settle(page);
+}
+
+async function salvarProduto(page) {
+  await acionarEscrita(page, page.getByTestId('product-save'));
+}
+
+// Confirmações nativas (window.confirm/alert) são aceitas em todas as páginas.
+function aceitarDialogos(context, page) {
+  const aceitar = (p) => p.on('dialog', (d) => d.accept());
+  aceitar(page);
+  context.on('page', aceitar);
 }
 
 // Reabre o formulário de edição pelo painel e confere todos os campos persistidos.
@@ -135,5 +153,6 @@ async function conferirFormulario(page, slug, p) {
 module.exports = {
   url, resetDb, servirImagensDeTeste, settle, login, abrirPainel,
   definirAtivo, lerAtivo, preencherProduto, salvarProduto, conferirFormulario,
+  acionarEscrita, aceitarDialogos,
   CREDENCIAIS, WHATSAPP, FIXTURE,
 };

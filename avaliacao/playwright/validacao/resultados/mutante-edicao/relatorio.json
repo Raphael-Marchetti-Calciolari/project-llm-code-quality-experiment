@@ -75,12 +75,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 2053,
+                  "duration": 2106,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:02:42.094Z",
+                  "startTime": "2026-10-02T03:19:22.706Z",
                   "attachments": []
                 }
               ],
@@ -89,7 +89,7 @@
           ],
           "id": "8eba096eda7259abc12a-f45775ff0c9f9302df28",
           "file": "cenarios.spec.js",
-          "line": 10,
+          "line": 11,
           "column": 1
         },
         {
@@ -107,12 +107,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 4137,
+                  "duration": 4118,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:02:44.204Z",
+                  "startTime": "2026-10-02T03:19:24.874Z",
                   "attachments": []
                 }
               ],
@@ -121,7 +121,7 @@
           ],
           "id": "8eba096eda7259abc12a-6b8e09d2ce659f7fa1f5",
           "file": "cenarios.spec.js",
-          "line": 29,
+          "line": 30,
           "column": 1
         },
         {
@@ -139,45 +139,45 @@
                 {
                   "workerIndex": 0,
                   "status": "failed",
-                  "duration": 13046,
+                  "duration": 14182,
                   "error": {
-                    "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('product-detail')\n\u001b[32m- Expected string  - 1\u001b[39m\n\u001b[31m+ Received string  + 3\u001b[39m\n\n\u001b[32m- R$ 99,90\u001b[39m\n\u001b[31m+ Produto Fixture Editado\u001b[39m\n\u001b[31m+       Descrição completa editada no cenário P3R$ 10,00\u001b[39m\n\u001b[31m+       WhatsApp\u001b[39m\nCall log:\n\u001b[2m  - expect.toContainText with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('product-detail')\u001b[22m\n\u001b[2m    14 × locator resolved to <div data-testid=\"product-detail\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Produto Fixture Editado\u001b[22m\n\u001b[2m      Descrição completa editada no cenário P3R$ 10,00\u001b[22m\n\u001b[2m      WhatsApp\"\u001b[22m\n",
-                    "stack": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('product-detail')\n\u001b[32m- Expected string  - 1\u001b[39m\n\u001b[31m+ Received string  + 3\u001b[39m\n\n\u001b[32m- R$ 99,90\u001b[39m\n\u001b[31m+ Produto Fixture Editado\u001b[39m\n\u001b[31m+       Descrição completa editada no cenário P3R$ 10,00\u001b[39m\n\u001b[31m+       WhatsApp\u001b[39m\nCall log:\n\u001b[2m  - expect.toContainText with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('product-detail')\u001b[22m\n\u001b[2m    14 × locator resolved to <div data-testid=\"product-detail\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Produto Fixture Editado\u001b[22m\n\u001b[2m      Descrição completa editada no cenário P3R$ 10,00\u001b[22m\n\u001b[2m      WhatsApp\"\u001b[22m\n\n    at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:96:25",
+                    "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('product-price')\nExpected string: \u001b[32m\"R$ \u001b[7m99,9\u001b[27m0\"\u001b[39m\nReceived string: \u001b[31m\"R$ \u001b[7m10,0\u001b[27m0\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveValue with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('product-price')\u001b[22m\n\u001b[2m    14 × locator resolved to <input name=\"price\" value=\"R$ 10,00\" data-testid=\"product-price\"/>\u001b[22m\n\u001b[2m       - unexpected value \"R$ 10,00\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('product-price')\nExpected string: \u001b[32m\"R$ \u001b[7m99,9\u001b[27m0\"\u001b[39m\nReceived string: \u001b[31m\"R$ \u001b[7m10,0\u001b[27m0\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveValue with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('product-price')\u001b[22m\n\u001b[2m    14 × locator resolved to <input name=\"price\" value=\"R$ 10,00\" data-testid=\"product-price\"/>\u001b[22m\n\u001b[2m       - unexpected value \"R$ 10,00\"\u001b[22m\n\n    at Object.conferirFormulario (/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/contrato.js:148:51)\n    at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:93:3",
                     "matcherResult": {
-                      "name": "toContainText",
+                      "name": "toHaveValue",
                       "expected": "R$ 99,90",
-                      "message": "\u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('product-detail')\n\u001b[32m- Expected string  - 1\u001b[39m\n\u001b[31m+ Received string  + 3\u001b[39m\n\n\u001b[32m- R$ 99,90\u001b[39m\n\u001b[31m+ Produto Fixture Editado\u001b[39m\n\u001b[31m+       Descrição completa editada no cenário P3R$ 10,00\u001b[39m\n\u001b[31m+       WhatsApp\u001b[39m\nCall log:\n\u001b[2m  - expect.toContainText with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('product-detail')\u001b[22m\n\u001b[2m    14 × locator resolved to <div data-testid=\"product-detail\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Produto Fixture Editado\u001b[22m\n\u001b[2m      Descrição completa editada no cenário P3R$ 10,00\u001b[22m\n\u001b[2m      WhatsApp\"\u001b[22m\n",
+                      "message": "\u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('product-price')\nExpected string: \u001b[32m\"R$ \u001b[7m99,9\u001b[27m0\"\u001b[39m\nReceived string: \u001b[31m\"R$ \u001b[7m10,0\u001b[27m0\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveValue with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('product-price')\u001b[22m\n\u001b[2m    14 × locator resolved to <input name=\"price\" value=\"R$ 10,00\" data-testid=\"product-price\"/>\u001b[22m\n\u001b[2m       - unexpected value \"R$ 10,00\"\u001b[22m\n",
                       "pass": false,
-                      "actual": "Produto Fixture Editado\n      Descrição completa editada no cenário P3R$ 10,00\n      WhatsApp",
+                      "actual": "R$ 10,00",
                       "log": [
-                        "  - expect.toContainText with timeout 10000ms",
-                        "  - waiting for getByTestId('product-detail')",
-                        "    14 × locator resolved to <div data-testid=\"product-detail\">…</div>",
-                        "       - unexpected value \"Produto Fixture Editado\n      Descrição completa editada no cenário P3R$ 10,00\n      WhatsApp\""
+                        "  - expect.toHaveValue with timeout 10000ms",
+                        "  - waiting for getByTestId('product-price')",
+                        "    14 × locator resolved to <input name=\"price\" value=\"R$ 10,00\" data-testid=\"product-price\"/>",
+                        "       - unexpected value \"R$ 10,00\""
                       ],
                       "timeout": 10000
                     },
                     "location": {
-                      "file": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js",
-                      "column": 25,
-                      "line": 96
+                      "file": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/contrato.js",
+                      "column": 51,
+                      "line": 148
                     },
-                    "snippet": "  94 |   await expect(detalhe).toContainText(editado.nome);\n  95 |   await expect(detalhe).toContainText(editado.descricao);\n> 96 |   await expect(detalhe).toContainText(editado.preco);\n     |                         ^\n  97 |\n  98 |   await c.conferirFormulario(page, c.FIXTURE.slug, editado);\n  99 | });"
+                    "snippet": "   at contrato.js:148\n\n  146 |   await expect(page.getByTestId('product-short-description')).toHaveValue(p.descricaoCurta);\n  147 |   await expect(page.getByTestId('product-description')).toHaveValue(p.descricao);\n> 148 |   await expect(page.getByTestId('product-price')).toHaveValue(p.preco);\n      |                                                   ^\n  149 |   await expect(page.getByTestId('product-image-url')).toHaveValue(p.imagem);\n  150 |   expect(await lerAtivo(page)).toBe(p.ativo);\n  151 | }"
                   },
                   "errors": [
                     {
                       "location": {
-                        "file": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js",
-                        "column": 25,
-                        "line": 96
+                        "file": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/contrato.js",
+                        "column": 51,
+                        "line": 148
                       },
-                      "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('product-detail')\n\u001b[32m- Expected string  - 1\u001b[39m\n\u001b[31m+ Received string  + 3\u001b[39m\n\n\u001b[32m- R$ 99,90\u001b[39m\n\u001b[31m+ Produto Fixture Editado\u001b[39m\n\u001b[31m+       Descrição completa editada no cenário P3R$ 10,00\u001b[39m\n\u001b[31m+       WhatsApp\u001b[39m\nCall log:\n\u001b[2m  - expect.toContainText with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('product-detail')\u001b[22m\n\u001b[2m    14 × locator resolved to <div data-testid=\"product-detail\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Produto Fixture Editado\u001b[22m\n\u001b[2m      Descrição completa editada no cenário P3R$ 10,00\u001b[22m\n\u001b[2m      WhatsApp\"\u001b[22m\n\n\n  94 |   await expect(detalhe).toContainText(editado.nome);\n  95 |   await expect(detalhe).toContainText(editado.descricao);\n> 96 |   await expect(detalhe).toContainText(editado.preco);\n     |                         ^\n  97 |\n  98 |   await c.conferirFormulario(page, c.FIXTURE.slug, editado);\n  99 | });\n    at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:96:25"
+                      "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('product-price')\nExpected string: \u001b[32m\"R$ \u001b[7m99,9\u001b[27m0\"\u001b[39m\nReceived string: \u001b[31m\"R$ \u001b[7m10,0\u001b[27m0\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveValue with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('product-price')\u001b[22m\n\u001b[2m    14 × locator resolved to <input name=\"price\" value=\"R$ 10,00\" data-testid=\"product-price\"/>\u001b[22m\n\u001b[2m       - unexpected value \"R$ 10,00\"\u001b[22m\n\n\n   at contrato.js:148\n\n  146 |   await expect(page.getByTestId('product-short-description')).toHaveValue(p.descricaoCurta);\n  147 |   await expect(page.getByTestId('product-description')).toHaveValue(p.descricao);\n> 148 |   await expect(page.getByTestId('product-price')).toHaveValue(p.preco);\n      |                                                   ^\n  149 |   await expect(page.getByTestId('product-image-url')).toHaveValue(p.imagem);\n  150 |   expect(await lerAtivo(page)).toBe(p.ativo);\n  151 | }\n    at Object.conferirFormulario (/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/contrato.js:148:51)\n    at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:93:3"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:02:48.343Z",
+                  "startTime": "2026-10-02T03:19:28.994Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -191,9 +191,9 @@
                     }
                   ],
                   "errorLocation": {
-                    "file": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js",
-                    "column": 25,
-                    "line": 96
+                    "file": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/contrato.js",
+                    "column": 51,
+                    "line": 148
                   }
                 }
               ],
@@ -202,7 +202,7 @@
           ],
           "id": "8eba096eda7259abc12a-9e5a64fc0ca3008893be",
           "file": "cenarios.spec.js",
-          "line": 65,
+          "line": 63,
           "column": 1
         },
         {
@@ -225,7 +225,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:03:01.620Z",
+                  "startTime": "2026-10-02T03:19:43.392Z",
                   "attachments": []
                 }
               ],
@@ -234,7 +234,7 @@
           ],
           "id": "8eba096eda7259abc12a-f3f21c661f3266b07f0e",
           "file": "cenarios.spec.js",
-          "line": 101,
+          "line": 96,
           "column": 1
         },
         {
@@ -252,12 +252,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 759,
+                  "duration": 763,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:03:05.296Z",
+                  "startTime": "2026-10-02T03:19:47.059Z",
                   "attachments": []
                 }
               ],
@@ -266,7 +266,7 @@
           ],
           "id": "8eba096eda7259abc12a-fefea4322770aca43a60",
           "file": "cenarios.spec.js",
-          "line": 127,
+          "line": 121,
           "column": 1
         }
       ]
@@ -274,8 +274,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-02T03:02:41.905Z",
-    "duration": 24185.999,
+    "startTime": "2026-10-02T03:19:22.522Z",
+    "duration": 25335.621000000003,
     "expected": 4,
     "skipped": 0,
     "unexpected": 1,

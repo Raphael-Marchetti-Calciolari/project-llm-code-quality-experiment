@@ -70,16 +70,23 @@ Derivados de `Prompt de geração - T1 (LLM sem revisão).md`, mantendo a especi
 - Preparação independente: antes de cada cenário, `npm run reset-db` (contrato) no projeto avaliado; imagens de teste (`https://example.com/tcc/*`) respondidas localmente pelo Playwright.
 - Cenários:
   - **P1:** sessão limpa com credenciais válidas → linha `admin-product-row-produto-fixture` visível em `/admin`; outra sessão limpa com senha inválida → `/admin` não exibe a linha.
-  - **P2:** cria produto ativo em `/admin/produtos/novo` → após recarregar, card em `/` e detalhes em `/produtos/:slug` (nome, descrição completa, preço) → reabre a edição e confere os 7 campos persistidos.
-  - **P3:** edita o `Produto Fixture` (nome, descrições, preço, imagem; slug mantido) → após recarregar, vitrine e detalhes exibem os novos valores → reabre a edição e confere os campos.
+  - **P2:** cria produto ativo em `/admin/produtos/novo` → após recarregar, card em `/` e detalhes em `/produtos/:slug` contendo o nome → reabre a edição e confere os 7 campos persistidos.
+  - **P3:** edita o `Produto Fixture` (nome, descrições, preço, imagem; slug mantido) → após recarregar, vitrine e detalhes exibem o novo nome → reabre a edição e confere todos os campos editados.
   - **P4:** pré-condição (card visível) → `product-toggle-active-produto-fixture` → card ausente em `/` após recarregar → linha preservada em `/admin` com estado inativo no formulário.
   - **P5:** em `/produtos/produto-fixture`, o `whatsapp-button` aponta para WhatsApp (`wa.me`, `api/web.whatsapp.com` ou `whatsapp://`) com o número `5511999999999`; requisições ao WhatsApp são interceptadas e respondidas localmente (nada é enviado).
 - Tolerâncias aplicadas igualmente a todas as condições (não há exceções por tratamento): `product-active` pode ser checkbox/radio, select ou controle `aria-checked/aria-pressed`; o botão de WhatsApp pode ser link (`href`) ou botão com `window.open`; após o login, se a aplicação não redirecionar, a suíte acessa a rota `/admin` do contrato.
 - Premissa documentada: a sessão administrativa deve sobreviver à navegação direta para as rotas do contrato no mesmo navegador (cookie/localStorage).
 - Execução (`executar.sh <Tn> <dir>`): verifica o hash da suíte → exige portas 5173/3000 livres → MongoDB limpo (`infra/mongodb/reset.sh`) → `npm install` → `npm run seed` → `npm run dev` → aguarda até 180 s por `:5173` e `:3000/api` → executa P1–P5 → encerra todos os processos. Falhas de install/seed/inicialização são gravadas em `execucao.json` (cenários ficam "não executados"). Saídas em `avaliacao/resultados/<Tn>/playwright/`.
-- Congelamento: SHA-256 da suíte (config, dependências fixadas e testes) = **`e6033d6c065abca0a4a0e36da5847b0e7ffd06955b125c26d7152a4bcc71f299`** (`SUITE_SHA256`). A execução é recusada se o hash divergir. Qualquer correção futura exige novo hash e reavaliação de todas as condições.
+- Congelamento: SHA-256 da suíte (config, dependências fixadas e testes) = **`ed6b7cc531641ab932b5ecdb4e2eb06720fb1fcd293141643dc24ceeeb8b1685`** (`SUITE_SHA256`; versão anterior `e6033d6c065a…` substituída antes de qualquer coleta). A execução é recusada se o hash divergir. Qualquer correção futura exige novo hash e reavaliação de todas as condições.
 - Verificação antes do congelamento (`validacao/validar_suite.sh`), com aplicação de referência mínima que cumpre o contrato (`validacao/app-referencia/`) e falhas deliberadas: referência e variante com controles alternativos → 5/5 aprovados; cada mutante (login aceita qualquer senha, criação não persiste, edição ignora preço, inativo na vitrine, número de WhatsApp errado) → reprovado **exatamente** no cenário-alvo (P1…P5). Resultado: **SUÍTE VALIDADA** (`avaliacao/registros/validacao_suite.txt`).
 - Limitação a registrar no TCC: P1–P5 não cobrem exclusão de produto nem configurações da vitrine.
+- **Revisão de generalidade** (agente revisor, somente leitura) e ajustes aplicados antes de qualquer coleta, para que implementações válidas segundo os prompts não sejam reprovadas por suposições da suíte:
+  1. página de detalhes: verifica apenas o nome (os prompts não exigem exibir preço/descrição completa nem fixam formatação); todos os valores continuam conferidos no formulário de edição;
+  2. confirmações nativas (`window.confirm`) são aceitas automaticamente (ex.: confirmação ao inativar);
+  3. destino do WhatsApp lido do próprio elemento, de um link ancestral ou de um link descendente do `whatsapp-button`;
+  4. estado de `product-active` também lido de `data-state`, `data-active` e `data-checked` (além de checkbox/select/`aria-*`);
+  5. após salvar e após ativar/inativar, a suíte aguarda a resposta da requisição de escrita (não GET), em vez de depender só de `networkidle`.
+- Premissas remanescentes, a declarar como limitações: sessão administrativa persiste na navegação direta às rotas do contrato; `reset-db` com a aplicação em execução pressupõe ausência de cache em memória; URL da imagem armazenada sem normalização; listagem administrativa em `/admin` (única rota administrativa do contrato compatível).
 
 ## 6. Scripts de análise (saídas brutas → tabelas de resultados)
 

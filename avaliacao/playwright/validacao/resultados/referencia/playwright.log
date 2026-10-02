@@ -1,10 +1,10 @@
 
 Running 5 tests using 1 worker
 
-  ✓  1 [chromium] › cenarios.spec.js:10:1 › P1 — Autenticação administrativa (2.1s)
-  ✓  2 [chromium] › cenarios.spec.js:29:1 › P2 — Cadastro e publicação (4.1s)
-  ✓  3 [chromium] › cenarios.spec.js:65:1 › P3 — Edição de produto (4.1s)
-  ✓  4 [chromium] › cenarios.spec.js:101:1 › P4 — Inativação (3.6s)
-  ✓  5 [chromium] › cenarios.spec.js:127:1 › P5 — Contato via WhatsApp (763ms)
+  ✓  1 [chromium] › cenarios.spec.js:11:1 › P1 — Autenticação administrativa (2.2s)
+  ✓  2 [chromium] › cenarios.spec.js:30:1 › P2 — Cadastro e publicação (4.1s)
+  ✓  3 [chromium] › cenarios.spec.js:63:1 › P3 — Edição de produto (4.2s)
+  ✓  4 [chromium] › cenarios.spec.js:96:1 › P4 — Inativação (3.6s)
+  ✓  5 [chromium] › cenarios.spec.js:121:1 › P5 — Contato via WhatsApp (759ms)
 
-  5 passed (15.0s)
+  5 passed (15.2s)

@@ -1,42 +1,38 @@
 
 Running 5 tests using 1 worker
 
-  ✓  1 [chromium] › cenarios.spec.js:10:1 › P1 — Autenticação administrativa (2.1s)
-  ✓  2 [chromium] › cenarios.spec.js:29:1 › P2 — Cadastro e publicação (4.1s)
-  ✘  3 [chromium] › cenarios.spec.js:65:1 › P3 — Edição de produto (13.0s)
-  ✓  4 [chromium] › cenarios.spec.js:101:1 › P4 — Inativação (3.6s)
-  ✓  5 [chromium] › cenarios.spec.js:127:1 › P5 — Contato via WhatsApp (759ms)
+  ✓  1 [chromium] › cenarios.spec.js:11:1 › P1 — Autenticação administrativa (2.1s)
+  ✓  2 [chromium] › cenarios.spec.js:30:1 › P2 — Cadastro e publicação (4.1s)
+  ✘  3 [chromium] › cenarios.spec.js:63:1 › P3 — Edição de produto (14.2s)
+  ✓  4 [chromium] › cenarios.spec.js:96:1 › P4 — Inativação (3.6s)
+  ✓  5 [chromium] › cenarios.spec.js:121:1 › P5 — Contato via WhatsApp (763ms)
 
 
-  1) [chromium] › cenarios.spec.js:65:1 › P3 — Edição de produto ───────────────────────────────────
+  1) [chromium] › cenarios.spec.js:63:1 › P3 — Edição de produto ───────────────────────────────────
 
-    Error: [31mTimed out 10000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m
+    Error: [31mTimed out 10000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoHaveValue[2m([22m[32mexpected[39m[2m)[22m
 
-    Locator: getByTestId('product-detail')
-    [32m- Expected string  - 1[39m
-    [31m+ Received string  + 3[39m
-
-    [32m- R$ 99,90[39m
-    [31m+ Produto Fixture Editado[39m
-    [31m+       Descrição completa editada no cenário P3R$ 10,00[39m
-    [31m+       WhatsApp[39m
+    Locator: getByTestId('product-price')
+    Expected string: [32m"R$ [7m99,9[27m0"[39m
+    Received string: [31m"R$ [7m10,0[27m0"[39m
     Call log:
-    [2m  - expect.toContainText with timeout 10000ms[22m
-    [2m  - waiting for getByTestId('product-detail')[22m
-    [2m    14 × locator resolved to <div data-testid="product-detail">…</div>[22m
-    [2m       - unexpected value "Produto Fixture Editado[22m
-    [2m      Descrição completa editada no cenário P3R$ 10,00[22m
-    [2m      WhatsApp"[22m
+    [2m  - expect.toHaveValue with timeout 10000ms[22m
+    [2m  - waiting for getByTestId('product-price')[22m
+    [2m    14 × locator resolved to <input name="price" value="R$ 10,00" data-testid="product-price"/>[22m
+    [2m       - unexpected value "R$ 10,00"[22m
 
 
-      94 |   await expect(detalhe).toContainText(editado.nome);
-      95 |   await expect(detalhe).toContainText(editado.descricao);
-    > 96 |   await expect(detalhe).toContainText(editado.preco);
-         |                         ^
-      97 |
-      98 |   await c.conferirFormulario(page, c.FIXTURE.slug, editado);
-      99 | });
-        at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:96:25
+       at contrato.js:148
+
+      146 |   await expect(page.getByTestId('product-short-description')).toHaveValue(p.descricaoCurta);
+      147 |   await expect(page.getByTestId('product-description')).toHaveValue(p.descricao);
+    > 148 |   await expect(page.getByTestId('product-price')).toHaveValue(p.preco);
+          |                                                   ^
+      149 |   await expect(page.getByTestId('product-image-url')).toHaveValue(p.imagem);
+      150 |   expect(await lerAtivo(page)).toBe(p.ativo);
+      151 | }
+        at Object.conferirFormulario (/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/contrato.js:148:51)
+        at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:93:3
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     validacao/resultados/mutante-edicao/artefatos/cenarios-P3-—-Edição-de-produto-chromium/test-failed-1.png
@@ -51,5 +47,5 @@ Running 5 tests using 1 worker
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
   1 failed
-    [chromium] › cenarios.spec.js:65:1 › P3 — Edição de produto ────────────────────────────────────
-  4 passed (24.2s)
+    [chromium] › cenarios.spec.js:63:1 › P3 — Edição de produto ────────────────────────────────────
+  4 passed (25.3s)

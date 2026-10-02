@@ -75,10 +75,10 @@
                 {
                   "workerIndex": 0,
                   "status": "failed",
-                  "duration": 12062,
+                  "duration": 12118,
                   "error": {
                     "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('admin-product-row-produto-fixture')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveCount with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('admin-product-row-produto-fixture')\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n",
-                    "stack": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('admin-product-row-produto-fixture')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveCount with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('admin-product-row-produto-fixture')\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n    at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:25:71",
+                    "stack": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('admin-product-row-produto-fixture')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveCount with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('admin-product-row-produto-fixture')\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n    at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:26:71",
                     "matcherResult": {
                       "actual": 1,
                       "expected": 0,
@@ -96,25 +96,30 @@
                     "location": {
                       "file": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js",
                       "column": 71,
-                      "line": 25
+                      "line": 26
                     },
-                    "snippet": "  23 |   await p2.goto(c.url('/admin'));\n  24 |   await c.settle(p2);\n> 25 |   await expect(p2.getByTestId(`admin-product-row-${c.FIXTURE.slug}`)).toHaveCount(0);\n     |                                                                       ^\n  26 |   await invalida.close();\n  27 | });\n  28 |"
+                    "snippet": "  24 |   await p2.goto(c.url('/admin'));\n  25 |   await c.settle(p2);\n> 26 |   await expect(p2.getByTestId(`admin-product-row-${c.FIXTURE.slug}`)).toHaveCount(0);\n     |                                                                       ^\n  27 |   await invalida.close();\n  28 | });\n  29 |"
                   },
                   "errors": [
                     {
                       "location": {
                         "file": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js",
                         "column": 71,
-                        "line": 25
+                        "line": 26
                       },
-                      "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('admin-product-row-produto-fixture')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveCount with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('admin-product-row-produto-fixture')\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  23 |   await p2.goto(c.url('/admin'));\n  24 |   await c.settle(p2);\n> 25 |   await expect(p2.getByTestId(`admin-product-row-${c.FIXTURE.slug}`)).toHaveCount(0);\n     |                                                                       ^\n  26 |   await invalida.close();\n  27 | });\n  28 |\n    at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:25:71"
+                      "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: getByTestId('admin-product-row-produto-fixture')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveCount with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('admin-product-row-produto-fixture')\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  24 |   await p2.goto(c.url('/admin'));\n  25 |   await c.settle(p2);\n> 26 |   await expect(p2.getByTestId(`admin-product-row-${c.FIXTURE.slug}`)).toHaveCount(0);\n     |                                                                       ^\n  27 |   await invalida.close();\n  28 | });\n  29 |\n    at /Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js:26:71"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:01:38.548Z",
+                  "startTime": "2026-10-02T03:18:19.123Z",
                   "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/validacao/resultados/mutante-login/artefatos/cenarios-P1-—-Autenticação-administrativa-chromium/test-failed-2.png"
+                    },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
@@ -123,7 +128,7 @@
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/validacao/resultados/mutante-login/artefatos/cenarios-P1-—-Autenticação-administrativa-chromium/test-failed-2.png"
+                      "path": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/validacao/resultados/mutante-login/artefatos/cenarios-P1-—-Autenticação-administrativa-chromium/test-failed-3.png"
                     },
                     {
                       "name": "trace",
@@ -134,7 +139,7 @@
                   "errorLocation": {
                     "file": "/Users/raphael/Library/Mobile Documents/com~apple~CloudDocs/My Documents/Education/MBA Software Engineering/TCC/avaliacao/playwright/testes/cenarios.spec.js",
                     "column": 71,
-                    "line": 25
+                    "line": 26
                   }
                 }
               ],
@@ -143,7 +148,7 @@
           ],
           "id": "8eba096eda7259abc12a-f45775ff0c9f9302df28",
           "file": "cenarios.spec.js",
-          "line": 10,
+          "line": 11,
           "column": 1
         },
         {
@@ -161,12 +166,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 4194,
+                  "duration": 4159,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:01:50.896Z",
+                  "startTime": "2026-10-02T03:18:31.512Z",
                   "attachments": []
                 }
               ],
@@ -175,7 +180,7 @@
           ],
           "id": "8eba096eda7259abc12a-6b8e09d2ce659f7fa1f5",
           "file": "cenarios.spec.js",
-          "line": 29,
+          "line": 30,
           "column": 1
         },
         {
@@ -193,12 +198,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 4164,
+                  "duration": 4148,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:01:55.148Z",
+                  "startTime": "2026-10-02T03:18:35.727Z",
                   "attachments": []
                 }
               ],
@@ -207,7 +212,7 @@
           ],
           "id": "8eba096eda7259abc12a-9e5a64fc0ca3008893be",
           "file": "cenarios.spec.js",
-          "line": 65,
+          "line": 63,
           "column": 1
         },
         {
@@ -225,12 +230,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 3565,
+                  "duration": 3566,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:01:59.313Z",
+                  "startTime": "2026-10-02T03:18:39.877Z",
                   "attachments": []
                 }
               ],
@@ -239,7 +244,7 @@
           ],
           "id": "8eba096eda7259abc12a-f3f21c661f3266b07f0e",
           "file": "cenarios.spec.js",
-          "line": 101,
+          "line": 96,
           "column": 1
         },
         {
@@ -257,12 +262,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 782,
+                  "duration": 762,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:02:02.880Z",
+                  "startTime": "2026-10-02T03:18:43.445Z",
                   "attachments": []
                 }
               ],
@@ -271,7 +276,7 @@
           ],
           "id": "8eba096eda7259abc12a-fefea4322770aca43a60",
           "file": "cenarios.spec.js",
-          "line": 127,
+          "line": 121,
           "column": 1
         }
       ]
@@ -279,8 +284,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-02T03:01:38.354Z",
-    "duration": 25331.244,
+    "startTime": "2026-10-02T03:18:18.939Z",
+    "duration": 25291.941000000003,
     "expected": 4,
     "skipped": 0,
     "unexpected": 1,

@@ -75,12 +75,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 2068,
+                  "duration": 2153,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:00:53.415Z",
+                  "startTime": "2026-10-02T03:17:33.598Z",
                   "attachments": []
                 }
               ],
@@ -89,7 +89,7 @@
           ],
           "id": "8eba096eda7259abc12a-f45775ff0c9f9302df28",
           "file": "cenarios.spec.js",
-          "line": 10,
+          "line": 11,
           "column": 1
         },
         {
@@ -107,12 +107,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 4140,
+                  "duration": 4144,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:00:55.540Z",
+                  "startTime": "2026-10-02T03:17:35.814Z",
                   "attachments": []
                 }
               ],
@@ -121,7 +121,7 @@
           ],
           "id": "8eba096eda7259abc12a-6b8e09d2ce659f7fa1f5",
           "file": "cenarios.spec.js",
-          "line": 29,
+          "line": 30,
           "column": 1
         },
         {
@@ -139,12 +139,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 4149,
+                  "duration": 4198,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:00:59.682Z",
+                  "startTime": "2026-10-02T03:17:39.961Z",
                   "attachments": []
                 }
               ],
@@ -153,7 +153,7 @@
           ],
           "id": "8eba096eda7259abc12a-9e5a64fc0ca3008893be",
           "file": "cenarios.spec.js",
-          "line": 65,
+          "line": 63,
           "column": 1
         },
         {
@@ -171,12 +171,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 3565,
+                  "duration": 3584,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:01:03.833Z",
+                  "startTime": "2026-10-02T03:17:44.161Z",
                   "attachments": []
                 }
               ],
@@ -185,7 +185,7 @@
           ],
           "id": "8eba096eda7259abc12a-f3f21c661f3266b07f0e",
           "file": "cenarios.spec.js",
-          "line": 101,
+          "line": 96,
           "column": 1
         },
         {
@@ -203,12 +203,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 763,
+                  "duration": 759,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-02T03:01:07.400Z",
+                  "startTime": "2026-10-02T03:17:47.747Z",
                   "attachments": []
                 }
               ],
@@ -217,7 +217,7 @@
           ],
           "id": "8eba096eda7259abc12a-fefea4322770aca43a60",
           "file": "cenarios.spec.js",
-          "line": 127,
+          "line": 121,
           "column": 1
         }
       ]
@@ -225,8 +225,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-02T03:00:53.225Z",
-    "duration": 15005.627,
+    "startTime": "2026-10-02T03:17:33.407Z",
+    "duration": 15171.677,
     "expected": 5,
     "skipped": 0,
     "unexpected": 0,
